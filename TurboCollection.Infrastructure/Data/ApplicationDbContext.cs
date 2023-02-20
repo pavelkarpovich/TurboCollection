@@ -12,6 +12,7 @@ namespace TurboCollection.Infrastructure.Data
     public class ApplicationDbContext : DbContext
     {
         public DbSet<TurboItem> TurboItems { get; set; }
+        public DbSet<Collection> Collections { get; set; }
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {

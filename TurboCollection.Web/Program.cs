@@ -27,12 +27,19 @@ using (var scope = app.Services.CreateScope())
     var scopedProvider = scope.ServiceProvider;
     try
     {
-        var catalogContext = scopedProvider.GetRequiredService<AccountDbContext>();
-        if (catalogContext.Database.IsSqlServer())
+        var applicationContext = scopedProvider.GetRequiredService<ApplicationDbContext>();
+        if (applicationContext.Database.IsSqlServer())
         {
-            catalogContext.Database.Migrate();
+            applicationContext.Database.Migrate();
         }
-        //await ApplicationDbContextSeed.SeedAsync(catalogContext);
+        await ApplicationDbContextSeed.SeedAsync(applicationContext);
+
+        var accountContext = scopedProvider.GetRequiredService<AccountDbContext>();
+        if (accountContext.Database.IsSqlServer())
+        {
+            accountContext.Database.Migrate();
+        }
+        //await AccountDbContext.SeedAsync(accountContext);
     }
     catch (Exception ex)
     {
