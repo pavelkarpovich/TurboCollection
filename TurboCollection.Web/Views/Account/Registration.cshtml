@@ -1,0 +1,57 @@
+﻿@model TurboCollection.Web.ViewModels.RegisterViewModel
+@{
+}
+<form asp-controller="Account" asp-action="Registration" method="post">
+    <div asp-validation-summary="ModelOnly"></div>
+    <div class="form-check-label">
+        <div class="text-center">
+            <h1>Register</h1>
+            <p>Please fill in this form to create an account.</p>
+        </div>
+        <div class="form-floating">
+            <input class="form-control" asp-for="FirstName" type="text" placeholder="Enter First Name" required>
+            <label asp-for="FirstName"><b>First Name</b></label>
+            <span asp-validation-for="FirstName"></span>
+        </div>
+
+        <div class="form-floating mt-2">
+            <input class="form-control" asp-for="LastName" type="text" placeholder="Enter Last Name" required>
+            <label asp-for="LastName"><b>Last Name</b></label>
+            <span asp-validation-for="LastName"></span>
+        </div>
+
+
+        <div class="form-floating mt-2">
+
+            <input class="form-control" asp-for="Email" type="text" placeholder="Enter Email" required>
+            <label asp-for="Email"><b>Email</b></label>
+            <span asp-validation-for="Email"></span>
+        </div>
+
+
+        <div class="form-floating mt-2">
+            <input class="form-control" asp-for="PhoneNumber" type="text" placeholder="Enter Phone Number" required>
+            <label asp-for="PhoneNumber"><b>Phone</b></label>
+            <span asp-validation-for="PhoneNumber"></span>
+        </div>
+
+
+        <div class="form-floating mt-2">
+            <input class="form-control" asp-for="Password" type="password" placeholder="Enter Password" required>
+            <label asp-for="Password"><b>Password</b></label>
+            <span asp-validation-for="Password"></span>
+        </div>
+
+
+        <div class="form-floating mt-2">
+            <input class="form-control" asp-for="ConfirmPassword" type="password" placeholder="Repeat Password" required>
+            <label asp-for="ConfirmPassword"><b>Repeat Password</b></label>
+            <span class="text-danger" asp-validation-for="ConfirmPassword"></span>
+        </div>
+
+        <button class="btn btn-primary btn-lg mt-3" type="submit">Register</button>
+
+        <div class="text-center mt-5">
+            <p>Already have an account? <a asp-controller="Account" asp-action="Login">Login</a>.</p>
+        </div>
+</form>

@@ -33,13 +33,6 @@
 @section Scripts {
     <script src="~/js/InfinitiySroll5.js"></script>
     <script>
-        //var sort = @Model.CollectionFilerApplied;
-        //if (@Model.CollectionFilerApplied == null)
-        //    sort = 0;
-        //else sort = @Model.CollectionFilerApplied;
-        //    sort = sort;
-
-        var infinityScroll = new InfinitiySroll("anyTable", "/home/_TestData", { sortOrder: @p1, searchString: "@p2" });
-        //var infinityScroll = new InfinitiySroll("anyTable", "/home/_TestData", { collectionFilterApplied: @Model.CollectionFilerApplied, searchString: @Model.Search });
+        var infinityScroll = new InfinitiySroll("anyTable", "/collection/_TestData", { sortOrder: @p1, searchString: "@p2" });
     </script>
 }

@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Localization;
 using TurboCollection.ApplicationCore.Entities;
 using TurboCollection.Infrastructure;
 using TurboCollection.Infrastructure.Data;
@@ -12,11 +14,11 @@ var builder = WebApplication.CreateBuilder(args);
 Dependencies.ConfigureServices(builder.Configuration, builder.Services);
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
-//builder.Services.AddControllersWithViews(options =>
-//{
-//    options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute());
-//});
+builder.Services.AddMvc()
+                .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
+                .AddDataAnnotationsLocalization();
+builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
+builder.Services.AddControllersWithViews().AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix);
 
 //builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connection));
 builder.Services.AddIdentity<Account, IdentityRole>().AddEntityFrameworkStores<AccountDbContext>();
@@ -59,6 +61,9 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+app.UseRequestLocalization(new RequestLocalizationOptions().SetDefaultCulture("en-US")
+                .AddSupportedCultures(new[] { "en-US", "fr" })
+                .AddSupportedUICultures(new[] { "en-US", "fr" }));
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
