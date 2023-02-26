@@ -47,9 +47,6 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Brand")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<int>("CollectionId")
                         .HasColumnType("int");
 
@@ -59,7 +56,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                     b.Property<int?>("HorsePower")
                         .HasColumnType("int");
 
-                    b.Property<string>("Model")
+                    b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Number")

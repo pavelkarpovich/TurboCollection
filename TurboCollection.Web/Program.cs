@@ -4,21 +4,25 @@ using Microsoft.EntityFrameworkCore;
 using TurboCollection.ApplicationCore.Entities;
 using TurboCollection.Infrastructure;
 using TurboCollection.Infrastructure.Data;
+using TurboCollection.Web.Interfaces;
+using TurboCollection.Web.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 Dependencies.ConfigureServices(builder.Configuration, builder.Services);
 
 // Add services to the container.
-builder.Services.AddControllersWithViews(options =>
-{
-    options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute());
-});
+builder.Services.AddControllersWithViews();
+//builder.Services.AddControllersWithViews(options =>
+//{
+//    options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute());
+//});
 
 //builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connection));
 builder.Services.AddIdentity<Account, IdentityRole>().AddEntityFrameworkStores<AccountDbContext>();
 
 builder.Services.AddAuthorization();
+builder.Services.AddScoped<ICollectionViewModelService, CollectionViewModelServicecs>();
 
 var app = builder.Build();
 
