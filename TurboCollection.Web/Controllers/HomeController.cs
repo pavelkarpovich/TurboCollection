@@ -24,6 +24,9 @@ namespace TurboCollection.Controllers
         public IActionResult Index()
         {
             ViewData["Collection"] = _stringLocalizer["Collection"].Value;
+            ViewData["Registration"] = _stringLocalizer["Registration"].Value;
+            ViewData["Login"] = _stringLocalizer["Login"].Value;
+            ViewData["Welcome"] = _stringLocalizer["Welcome"].Value;
             return View();
         }
 
@@ -39,7 +42,5 @@ namespace TurboCollection.Controllers
             Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo(culture);
             return LocalRedirect(returnUrl);
         }
-
-
     }
 }

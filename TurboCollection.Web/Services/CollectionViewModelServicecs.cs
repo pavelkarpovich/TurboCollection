@@ -76,7 +76,7 @@ namespace TurboCollection.Web.Services
                 .Select(x => new SelectListItem() { Value = x.Id.ToString(), Text = x.Name })
                 //.OrderBy(x => x.Value)
                 .ToList();
-            var allitem = new SelectListItem() { Value = null, Text = "All", Selected = true };
+            var allitem = new SelectListItem() { Value = null, Text = "", Selected = true };
             collectionList.Insert(0, allitem);
 
             TurboItemsViewModel model = new TurboItemsViewModel();

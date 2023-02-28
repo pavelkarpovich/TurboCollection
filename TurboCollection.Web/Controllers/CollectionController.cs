@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Localization;
+using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using System.Globalization;
 using TurboCollection.Controllers;
 using TurboCollection.Models;
 using TurboCollection.Web.Interfaces;
@@ -19,7 +21,7 @@ namespace TurboCollection.Web.Controllers
         }
 
         private const int BATCH_SIZE = 50;
-        public async Task<IActionResult> TestData(TurboItemsViewModel model)
+        public async Task<IActionResult> FullCollection(TurboItemsViewModel model)
         {
             model = await _collectionViewModelService.GetTurboItems(model.CollectionFilerApplied, model.Search, 0, BATCH_SIZE);
 
@@ -35,22 +37,35 @@ namespace TurboCollection.Web.Controllers
             return PartialView(viewmodel);
         }
 
+        public async Task<IActionResult> MyCollection(TurboItemsViewModel model)
+        {
+            model = await _collectionViewModelService.GetTurboItems(model.CollectionFilerApplied, model.Search, 0, BATCH_SIZE);
+
+            return View(model);
+        }
+
         public IActionResult Index()
         {
             return View();
-        }
-
-        public async Task<IActionResult> Collection(TurboItemsViewModel model)
-        {
-            var viewmodel = await _collectionViewModelService.GetTurboItems(model.CollectionFilerApplied, model.Search);
-
-            return View(viewmodel);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        [HttpPost]
+        public IActionResult SetLanguage1(string culture, string returnUrl)
+        {
+            Response.Cookies.Append(
+                CookieRequestCultureProvider.DefaultCookieName,
+                CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(culture)),
+                new CookieOptions { Expires = DateTimeOffset.UtcNow.AddYears(1) }
+            );
+            Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo(culture);
+            Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo(culture);
+            return LocalRedirect(returnUrl);
         }
     }
 }

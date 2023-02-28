@@ -1,6 +1,7 @@
 ﻿@model TurboCollection.Web.ViewModels.LoginViewModel
+@inject IViewLocalizer Localizer
 
-<h1>Log in to your account</h1>
+@*<h1>Log in to your account</h1>*@
 <div class="container">
     <form method="post" asp-controller="Account" asp-action="Login" asp-route-returnUrl="@Model.ReturnUrl">
         <div asp-validation-summary="ModelOnly"></div>
@@ -19,12 +20,12 @@
             <input asp-for="RememberMe" />
         </div>
         <div>
-            <input type="submit" value="Enter" />
+            <input type="submit" value="@Localizer["Sign up"]" />
         </div>
     </form>
 </div>
 
-<div class="bottom-container">
+@*<div class="bottom-container">
     <div class="row">
         <div class="col">
             <a asp-controller="Account" asp-action="Registration" class="btn text-dark">Sign up</a>
@@ -33,4 +34,4 @@
             <a href="#" class="btn text-dark">Forgot Password?</a>
         </div>
     </div>
-</div>
+</div>*@

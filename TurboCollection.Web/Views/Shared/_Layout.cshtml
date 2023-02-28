@@ -18,14 +18,13 @@
     var returnUrl = string.IsNullOrEmpty(Context.Request.Path) ? "~/" : $"~{Context.Request.Path.Value}" + Context.Request.QueryString.Value;
 
     var parms1 = new Dictionary<string, string>
-{
+    {
                 { "culture", "en-US" },
                 { "returnUrl", returnUrl}
             };
     var parms2 = new Dictionary<string, string>
-{
-                //{ "culture", "ru-RU" },
-                { "culture", "fr" },
+    {
+                { "culture", "ru" },
                 { "returnUrl", returnUrl}
             };
 }
@@ -53,21 +52,13 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Collection" asp-action="TestData">@ViewData["Collection"]</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Collection" asp-action="FullCollection">@Localizer["Full Collection"]</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Collection" asp-action="MyCollection">@Localizer["My Collection"]</a>
                         </li>
                     </ul>
                 </div>
-
-                <table style="width:100%;">
-                    <tr style="width:100%;">
-                        <td style="width:50%;float:left;font-weight:bold;font-size:large;text-align:left;color:blue">
-                            @ViewData["Header"]
-                            <button class="navbar-toggler langcls " type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                                    aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-                        </td>
-                        <td style="width: 50%; float: right;">
                             <div class="btn-group border-bottom" style=" float: right;">
                                 <form id="selectLanguage1"
                                       asp-action="SetLanguage1" asp-all-route-data="parms1" asp-route-returnUrl="@returnUrl"
@@ -84,9 +75,6 @@
                                     <button type="submit" class="btn btn-primary border-bottom right">Рус</button>
                                 </form>
                             </div>
-                        </td>
-                </table>
-
                 <div class="mr-2">
                     <partial name="_LoginPartial" />
                 </div>

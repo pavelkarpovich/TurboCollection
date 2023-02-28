@@ -1,12 +1,12 @@
-﻿@if (User.Identity.IsAuthenticated)
+﻿@inject IViewLocalizer Localizer
+
+@if (User.Identity.IsAuthenticated)
 {
     <ul class="navbar-nav flex-grow-1">
         <li class="nav-item">
             <form method="post" class="form-inline" asp-controller="Account" asp-action="Logout">
-                @Html.ActionLink("Orders", "Orders", "Order")
-                @Html.ActionLink("Bucket", "Items", "Bucket")
                 <a asp-controller="Account" asp-action="">@User.Identity.Name</a>
-                <input type="submit" class="ml-2 btn btn-link" value="Logout">
+                <input type="submit" class="ml-2 btn btn-link" value="@Localizer["Logout"]">
             </form>
         </li>
     </ul>
@@ -15,10 +15,10 @@ else
 {
     <ul class="navbar-nav flex-grow-1">
         <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Registration">Registration</a>
+            <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Registration">@Localizer["Registration"]</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Login">Login</a>
+            <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Login">@Localizer["Login"]</a>
         </li>
     </ul>
 }

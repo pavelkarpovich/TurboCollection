@@ -15,10 +15,11 @@ Dependencies.ConfigureServices(builder.Configuration, builder.Services);
 
 // Add services to the container.
 builder.Services.AddMvc()
-                .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
-                .AddDataAnnotationsLocalization();
+                //.AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
+                //.AddDataAnnotationsLocalization()
+                ;
 builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
-builder.Services.AddControllersWithViews().AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix);
+builder.Services.AddControllersWithViews().AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix).AddDataAnnotationsLocalization();
 
 //builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connection));
 builder.Services.AddIdentity<Account, IdentityRole>().AddEntityFrameworkStores<AccountDbContext>();
@@ -62,8 +63,8 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseRequestLocalization(new RequestLocalizationOptions().SetDefaultCulture("en-US")
-                .AddSupportedCultures(new[] { "en-US", "fr" })
-                .AddSupportedUICultures(new[] { "en-US", "fr" }));
+                .AddSupportedCultures(new[] { "en-US", "ru" })
+                .AddSupportedUICultures(new[] { "en-US", "ru" }));
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();

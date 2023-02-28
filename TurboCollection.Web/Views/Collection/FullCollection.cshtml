@@ -1,4 +1,5 @@
 ﻿@model TurboCollection.Web.ViewModels.TurboItemsViewModel
+@inject IViewLocalizer Localizer
 
 @{
     ViewData["Title"] = "TestData";
@@ -8,9 +9,9 @@
         <form method="get">
             <label data-title="brand">
                 <select asp-for="@Model.CollectionFilerApplied" asp-items="@Model.Collections"></select>
-                <input asp-for="Search" type="text" placeholder="Search" >
+                <input asp-for="Search" type="text" placeholder="@Localizer["Search"]">
             </label>
-            <input type="submit" value="Apply Filters" />
+            <input type="submit" value="@Localizer["Apply Filters"]" />
         </form>
     </div>
 </section>

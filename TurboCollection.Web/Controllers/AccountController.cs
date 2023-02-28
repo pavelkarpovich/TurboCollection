@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
+using System.Globalization;
 using System.Text.RegularExpressions;
 using TurboCollection.ApplicationCore.Entities;
 using TurboCollection.Web.ViewModels;
@@ -42,7 +44,7 @@ namespace TurboCollection.Web.Controllers
 
                 if (result.Succeeded)
                 {
-                    await _userManager.AddToRoleAsync(account, "User");
+                    //await _userManager.AddToRoleAsync(account, "User");
                     await _signInManager.SignInAsync(account, isPersistent: false);
                     return RedirectToAction("Index", "Home");
                 }
@@ -108,6 +110,19 @@ namespace TurboCollection.Web.Controllers
         private static string RemovePrefixFromUrl(string url)
         {
             return new Regex(@"(.*):(\d*)").Replace(url, string.Empty);
+        }
+
+        [HttpPost]
+        public IActionResult SetLanguage1(string culture, string returnUrl)
+        {
+            Response.Cookies.Append(
+                CookieRequestCultureProvider.DefaultCookieName,
+                CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(culture)),
+                new CookieOptions { Expires = DateTimeOffset.UtcNow.AddYears(1) }
+            );
+            Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo(culture);
+            Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo(culture);
+            return LocalRedirect(returnUrl);
         }
     }
 }
