@@ -1,0 +1,75 @@
+﻿@*@model IEnumerable<TurboCollection.Web.ViewModels.ExtraTurboItemViewModel>*@
+@model TurboCollection.Web.ViewModels.ExtraTurboItemsViewModel
+@inject IViewLocalizer Localizer
+
+@{
+    ViewData["Title"] = @Localizer["My Extra"];
+}
+
+<div class="Parent">
+    <div class="leftcolumn">
+        @Model.User.FirstName @Model.User.LastName
+        <hr />
+        <ul class="navbar-nav flex-grow-1">
+            <li class="nav-item navitem">
+                @*<a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="UserCollection">User's Collection</a>*@
+                @Html.ActionLink("User's Collection", "UserCollection", new { userId=@Model.User.UserId })
+            </li>
+            <li class="nav-item navitem">
+                @*<a class="nav-link text-dark" asp-area="" asp-controller="Extra" asp-action="MyExtra">User's Extra</a>*@
+                @Html.ActionLink("User's Extra", "UserExtra", new { userId=@Model.User.UserId })
+            </li>
+        </ul>
+    </div>
+    <div class="rightcolumn">
+        <h4>Extra</h4>
+
+        @*<p>
+            <a asp-action="AddNewExtra">@Localizer["Add New"]</a>
+        </p>*@
+
+        <div id="anyTable" class="d-flex flex-wrap">
+            @foreach (var item in Model.Items)
+            {
+                <div class="turboitem">
+                    <img style="border-radius: 10px; border: 1px solid #ddd" width="250px" src="@Html.DisplayFor(modelItem => item.PictureUrl)" />
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+
+
+<style>
+    .navitem:hover {
+        background-color: bisque;
+    }
+
+    .body {
+        padding: 0;
+        margin: 0;
+    }
+
+    .Parent {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .leftcolumn {
+        width: 15%;
+        height: 100vh;
+        background-color: floralwhite;
+        /*text-align: center;
+                    color: white;*/
+    }
+
+    .rightcolumn {
+        width: 85%;
+        /*padding: 30px;*/
+        height: 100vh;
+        background-color: white;
+        /*border: green solid 5px;
+                    margin: 50px;*/
+    }
+</style>

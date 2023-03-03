@@ -28,4 +28,8 @@
     <ProjectReference Include="..\TurboCollection.Infrastructure\TurboCollection.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\images\extra\" />
+  </ItemGroup>
+
 </Project>

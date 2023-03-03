@@ -26,6 +26,8 @@ builder.Services.AddIdentity<Account, IdentityRole>().AddEntityFrameworkStores<A
 
 builder.Services.AddAuthorization();
 builder.Services.AddScoped<ICollectionViewModelService, CollectionViewModelServicecs>();
+builder.Services.AddScoped<IExtraViewModelService, ExtraViewModelService>();
+builder.Services.AddScoped<IUserViewModelService, UserViewModelService>();
 
 var app = builder.Build();
 

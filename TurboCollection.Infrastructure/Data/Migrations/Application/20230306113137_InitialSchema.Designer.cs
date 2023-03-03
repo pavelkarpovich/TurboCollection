@@ -12,7 +12,7 @@ using TurboCollection.Infrastructure.Data;
 namespace TurboCollection.Infrastructure.Data.Migrations.Application
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230222180411_InitialSchema")]
+    [Migration("20230306113137_InitialSchema")]
     partial class InitialSchema
     {
         /// <inheritdoc />
@@ -40,6 +40,59 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                     b.HasKey("Id");
 
                     b.ToTable("Collections");
+                });
+
+            modelBuilder.Entity("TurboCollection.ApplicationCore.Entities.ExtraTurboItem", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<int>("CollectionId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Number")
+                        .HasColumnType("int");
+
+                    b.Property<string>("PictureUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ExtraTurboItems");
+                });
+
+            modelBuilder.Entity("TurboCollection.ApplicationCore.Entities.PrivateTurboItem", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<int>("CollectionId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Number")
+                        .HasColumnType("int");
+
+                    b.Property<int>("StatusId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("PrivateTurboItems");
                 });
 
             modelBuilder.Entity("TurboCollection.ApplicationCore.Entities.TurboItem", b =>
@@ -81,6 +134,23 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                     b.HasKey("Id");
 
                     b.ToTable("TurboItems");
+                });
+
+            modelBuilder.Entity("TurboCollection.ApplicationCore.Entities.TurboItemStatus", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("TurboItemStatuses");
                 });
 #pragma warning restore 612, 618
         }

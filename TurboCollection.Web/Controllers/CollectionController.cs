@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using System.Globalization;
+using System.Security.Claims;
 using TurboCollection.Controllers;
 using TurboCollection.Models;
 using TurboCollection.Web.Interfaces;
@@ -13,14 +14,32 @@ namespace TurboCollection.Web.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly ICollectionViewModelService _collectionViewModelService;
+        private readonly IUserViewModelService _userViewModelService;
+        private const int BATCH_SIZE = 50;
+        //private readonly string _userId;
 
-        public CollectionController(ILogger<HomeController> logger, ICollectionViewModelService collectionViewModelService)
+        public CollectionController(ILogger<HomeController> logger, ICollectionViewModelService collectionViewModelService
+            , IUserViewModelService userViewModelService)
         {
             _logger = logger;
             _collectionViewModelService = collectionViewModelService;
+            _userViewModelService = userViewModelService;
+            //_userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
         }
 
-        private const int BATCH_SIZE = 50;
+        [HttpPost]
+        public IActionResult SetLanguage1(string culture, string returnUrl)
+        {
+            Response.Cookies.Append(
+                CookieRequestCultureProvider.DefaultCookieName,
+                CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(culture)),
+                new CookieOptions { Expires = DateTimeOffset.UtcNow.AddYears(1) }
+            );
+            Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo(culture);
+            Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo(culture);
+            return LocalRedirect(returnUrl);
+        }
+
         public async Task<IActionResult> FullCollection(TurboItemsViewModel model)
         {
             model = await _collectionViewModelService.GetTurboItems(model.CollectionFilerApplied, model.Search, 0, BATCH_SIZE);
@@ -37,11 +56,23 @@ namespace TurboCollection.Web.Controllers
             return PartialView(viewmodel);
         }
 
-        public async Task<IActionResult> MyCollection(TurboItemsViewModel model)
+        //[HttpPost("SetStatus")]
+        [HttpPost]
+        //public string SetStatus(string sortOrder, string searchString)
+        public string SetStatus(int privateTurboItemId, int statusId)
+        //public string GetProjects([FromBody] StatusModel model )
         {
-            model = await _collectionViewModelService.GetTurboItems(model.CollectionFilerApplied, model.Search, 0, BATCH_SIZE);
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            _collectionViewModelService.UpdateStatus(userId, privateTurboItemId, statusId);
+            return "dfdf";
+        }
 
-            return View(model);
+        [HttpPost]
+        public string GetStatus(int privateTurboItemId)
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var statusId = _collectionViewModelService.GetStatus(userId, privateTurboItemId);
+            return statusId.ToString();
         }
 
         public IActionResult Index()
@@ -53,19 +84,6 @@ namespace TurboCollection.Web.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
-
-        [HttpPost]
-        public IActionResult SetLanguage1(string culture, string returnUrl)
-        {
-            Response.Cookies.Append(
-                CookieRequestCultureProvider.DefaultCookieName,
-                CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(culture)),
-                new CookieOptions { Expires = DateTimeOffset.UtcNow.AddYears(1) }
-            );
-            Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo(culture);
-            Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo(culture);
-            return LocalRedirect(returnUrl);
         }
     }
 }

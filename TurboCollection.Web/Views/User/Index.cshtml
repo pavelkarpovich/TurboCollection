@@ -1,0 +1,40 @@
+﻿@model IEnumerable<TurboCollection.Web.ViewModels.UserViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container">
+    <main role="main" class="pb-3">
+        <h2 style="text-align: center">Users</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.ActionLink("Open", "UserPage", new { userId=item.UserId })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+    </main>
+</div>

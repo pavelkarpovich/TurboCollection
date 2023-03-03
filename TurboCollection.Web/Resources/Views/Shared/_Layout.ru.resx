@@ -123,4 +123,7 @@
   <data name="My Collection" xml:space="preserve">
     <value>Моя коллекция</value>
   </data>
+  <data name="My Extra" xml:space="preserve">
+    <value>Мои лишние</value>
+  </data>
 </root>

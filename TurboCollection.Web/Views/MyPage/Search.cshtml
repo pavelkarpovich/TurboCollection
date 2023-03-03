@@ -1,0 +1,92 @@
+﻿@model TurboCollection.Web.ViewModels.ExtraTurboItemSearchResultsViewModel
+
+<div class="Parent">
+    <div class="leftcolumn">
+        <ul class="navbar-nav flex-grow-1">
+            @Model.User.FirstName @Model.User.LastName
+            <hr />
+            <li class="nav-item navitem">
+                <a class="nav-link text-dark" asp-area="" asp-controller="MyPage" asp-action="MyCollection">My Collection</a>
+            </li>
+            <li class="nav-item navitem">
+                <a class="nav-link text-dark" asp-area="" asp-controller="MyPage" asp-action="MyExtra">My Extra</a>
+            </li>
+            <li class="nav-item navitem">
+                <a class="nav-link text-dark" style="font-weight: bold"  asp-area="" asp-controller="MyPage" asp-action="Search">Search</a>
+            </li>
+        </ul>
+    </div>
+    <div class="rightcolumn">
+        <h2 style="text-align: center">Search results</h2>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                         Picture
+                    </th>
+                    <th>
+                        Owner
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Items)
+                {
+                    <tr>
+                        <td>
+                            <img style="border-radius: 10px; border: 1px solid #ddd" width="250px" src="@Html.DisplayFor(modelItem => item.PictureUrl)" />
+                        </td>
+                        <td>
+                            @*@Html.DisplayFor(modelItem => item.UserViewModel.FirstName )*@
+                            <div style="font-size: 20px">
+                                @item.UserViewModel.FirstName @item.UserViewModel.LastName
+                            </div>
+                            
+                        </td>
+                        <td>
+                            @*Write to the owner*@
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        
+    </div>
+</div>
+
+
+
+<style>
+    .navitem:hover {
+        background-color: bisque;
+    }
+
+    .body {
+        padding: 0;
+        margin: 0;
+    }
+
+    .Parent {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .leftcolumn {
+        width: 15%;
+        height: 100vh;
+        background-color: floralwhite;
+        /*text-align: center;
+                        color: white;*/
+    }
+
+    .rightcolumn {
+        width: 85%;
+        /*padding: 30px;*/
+        height: 100vh;
+        background-color: white;
+        /*border: green solid 5px;
+                        margin: 50px;*/
+    }
+</style>

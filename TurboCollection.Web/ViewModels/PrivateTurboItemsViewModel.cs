@@ -1,12 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using TurboCollection.ApplicationCore.Entities;
 
 namespace TurboCollection.Web.ViewModels
 {
-    public class TurboItemsViewModel
+    public class PrivateTurboItemsViewModel
     {
-        public List<TurboItemViewModel> Items { get; set; }
+        public List<PrivateTurboItemViewModel> Items { get; set; }
         public List<SelectListItem>? Collections { get; set; }
         public int? CollectionFilerApplied { get; set; }
-        public string? Search { get; set; }
+        public UserViewModel User { get; set; }
     }
 }

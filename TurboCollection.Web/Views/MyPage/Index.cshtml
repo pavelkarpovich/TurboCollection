@@ -1,0 +1,58 @@
+﻿@model TurboCollection.Web.ViewModels.UserViewModel
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div class="Parent">
+    <div class="leftcolumn">
+        @Model.FirstName @Model.LastName
+        <hr />
+        <ul class="navbar-nav flex-grow-1">
+            <li class="nav-item navitem">
+                <a class="nav-link text-dark" asp-area="" asp-controller="MyPage" asp-action="MyCollection">My Collection</a>
+            </li>
+            <li class="nav-item navitem">
+                <a class="nav-link text-dark" asp-area="" asp-controller="MyPage" asp-action="MyExtra">My Extra</a>
+            </li>
+            <li class="nav-item navitem">
+                <a class="nav-link text-dark" asp-area="" asp-controller="MyPage" asp-action="Search">Search</a>
+            </li>
+        </ul>
+    </div>
+    <div class="rightcolumn">
+    </div>
+</div>
+
+<style>
+    .navitem:hover {
+        background-color: bisque;
+    }
+
+    .body {
+        padding: 0;
+        margin: 0;
+    }
+
+    .Parent {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .leftcolumn {
+        width: 15%;
+        height: 100vh;
+        background-color: floralwhite;
+        /*text-align: center;
+            color: white;*/
+    }
+
+    .rightcolumn {
+        width: 85%;
+        /*padding: 30px;*/
+        height: 100vh;
+        background-color: white;
+        /*border: green solid 5px;
+            margin: 50px;*/
+    }
+</style>

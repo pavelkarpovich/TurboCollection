@@ -1,0 +1,187 @@
+﻿@model TurboCollection.Web.ViewModels.PrivateTurboItemsViewModel
+@inject IViewLocalizer Localizer
+
+@{
+    ViewData["Title"] = "TestData";
+}
+@*<section>
+    <div>
+        <form method="get">
+            <label data-title="brand">
+                <select asp-for="@Model.CollectionFilerApplied" asp-items="@Model.Collections"></select>
+                <input asp-for="Search" type="text" placeholder="@Localizer["Search"]">
+            </label>
+            <input type="submit" value="@Localizer["Apply Filters"]" />
+        </form>
+    </div>
+</section>*@
+
+@*@{
+    int p1 = @Model.CollectionFilerApplied == null ? 0 : @Model.CollectionFilerApplied.Value;
+    string p2 = @Model.Search == null ? "" : @Model.Search;
+}*@
+
+<div class="Parent">
+    <div class="leftcolumn">
+        @Model.User.FirstName @Model.User.LastName
+        <hr />
+        <ul class="navbar-nav flex-grow-1">
+            <li class="nav-item navitem">
+                <a class="nav-link text-dark" style="font-weight: bold" asp-area="" asp-controller="MyPage" asp-action="MyCollection">My Collection</a>
+            </li>
+            <li class="nav-item navitem">
+                <a class="nav-link text-dark" asp-area="" asp-controller="MyPage" asp-action="MyExtra">My Extra</a>
+            </li>
+            <li class="nav-item navitem">
+                <a class="nav-link text-dark" asp-area="" asp-controller="MyPage" asp-action="Search">Search</a>
+            </li>
+        </ul>
+    </div>
+    <div class="rightcolumn">
+        <div id="anyTable" class="d-flex flex-wrap">
+            @foreach (var item in Model.Items)
+            {
+                string turboId = "turbo" + item.Id;
+                string backgroundColor = "#eee";
+                if (item.StatusId == 2) backgroundColor = "#FFC0CB";
+                if (item.StatusId == 3) backgroundColor = "#00FF7F";
+                <div id=@turboId style="padding-left:2px; padding-right:2px; margin: 3px; width: 70px; height: 50px; border-radius: 5px; border: 1px solid #333; background-color: @backgroundColor ">
+                    <div style="display: flex">
+                        <div style="flex-grow: 1;">
+                            @if (item.CollectionId == 12 || item.CollectionId == 13)
+                            {
+                                <span style="flex-grow: 1; font-family: serif;">Classic</span>
+                            }
+                            @if (item.CollectionId == 9 || item.CollectionId == 10 || item.CollectionId == 11)
+                            {
+                                <span>Sport</span>
+                            }
+                            @if (item.CollectionId == 6 || item.CollectionId == 7 || item.CollectionId == 8)
+                            {
+                                <span style="font-style: italic;">Super</span>
+                            }
+                        </div>
+                        <div number="@item.Number" status="@item.StatusId" itemid="@item.Id"
+                         onclick="myFunction(this)"
+                         style="padding-right: 2px; padding-left: 2px; width: 10px; font-weight: bold; cursor: pointer;">
+                            ⋮
+                        </div>
+                    </div>
+                    <div style="font-weight: bold">
+                        @item.Number
+                    </div>
+                </div>
+            }
+        </div>
+
+        @*<div class="wrapper1" style="position: absolute; visibility: hidden; width: 300px; background: #fff;">*@
+        <div class="wrapper1">
+            <div class="content">
+                <ul class="menu">
+                    <li class="item" onclick="clickingStatus(1)">
+                        <div id="notdefined">
+                            <object type="image/svg+xml" data="/images/baseline-check.svg"> </object>
+                        </div>
+                        @*<span>@Localizer["Not defined"]</span>*@
+                        <span>Not defined</span>
+                    </li>
+                    <li class="item" onclick="clickingStatus(2)">
+                        <div id="absent">
+                            <object type="image/svg+xml" data="/images/baseline-check.svg"> </object>
+                        </div>
+                        @*<span>@Localizer["Absent"]</span>*@
+                        <span>Absent</span>
+                    </li>
+                    <li class="item" onclick="clickingStatus(3)">
+                        <div id="present">
+                            <object type="image/svg+xml" data="/images/baseline-check.svg"> </object>
+                        </div>
+                        @*<span>@Localizer["Present"]</span>*@
+                        <span>Present</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    .wrapper1 {
+        position: absolute;
+        visibility: hidden;
+        /*visibility: visible;*/
+        width: 200px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 12px 35px rgba(0,0,0,0.1);
+    }
+
+        .wrapper1 .menu {
+            padding: 5px 6px;
+        }
+
+    .content .item {
+        list-style: none;
+        font-size: 16px;
+        height: 50px;
+        display: flex;
+        width: 100%;
+        cursor: pointer;
+        padding: 0 5px 0 10px;
+        align-items: center;
+        border-radius: 5px;
+        margin-bottom: 2px;
+    }
+
+        .content .item:hover {
+            background: #f2f2f2;
+        }
+
+        .content .item span {
+            font-size: 16px;
+            margin-left: 4px;
+        }
+
+    .content .setting {
+        display: flex;
+        margin-top: -5px;
+        padding: 5px 12px;
+        border-top: 1px solid #ccc;
+    }
+</style>
+<style>
+    .navitem:hover {
+        background-color: bisque;
+    }
+
+    .body {
+        padding: 0;
+        margin: 0;
+    }
+
+    .Parent {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .leftcolumn {
+        width: 15%;
+        height: 100vh;
+        background-color: floralwhite;
+        /*text-align: center;
+                color: white;*/
+    }
+
+    .rightcolumn {
+        width: 85%;
+        /*padding: 30px;*/
+        height: 100vh;
+        background-color: white;
+        /*border: green solid 5px;
+                margin: 50px;*/
+    }
+</style>
+<script>
+
+</script>

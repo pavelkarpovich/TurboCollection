@@ -26,6 +26,12 @@ namespace TurboCollection.Infrastructure.Data
                     await applicationDbContext.AddRangeAsync(GetPreconfiguredTurboItems());
                     await applicationDbContext.SaveChangesAsync();
                 }
+
+                if (!await applicationDbContext.TurboItemStatuses.AnyAsync())
+                {
+                    await applicationDbContext.AddRangeAsync(GetPreconfiguredTurboItemStatuses());
+                    await applicationDbContext.SaveChangesAsync();
+                }
             }
             catch (Exception ex)
             {
@@ -949,6 +955,17 @@ namespace TurboCollection.Infrastructure.Data
                 new("Sport 141-210"),
                 new("Classic 1-70"),
                 new("Classic 71-140"),
+            };
+        }
+
+        private static IEnumerable<TurboItemStatus> GetPreconfiguredTurboItemStatuses()
+        {
+            return new List<TurboItemStatus>()
+            {
+                new("Not Defined"),
+                new("Absent"),
+                new("Present"),
+                new("Double")
             };
         }
     }

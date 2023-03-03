@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
 using System.Globalization;
+using System.Security.Claims;
 using System.Text.RegularExpressions;
 using TurboCollection.ApplicationCore.Entities;
 using TurboCollection.Web.ViewModels;
@@ -46,7 +47,9 @@ namespace TurboCollection.Web.Controllers
                 {
                     //await _userManager.AddToRoleAsync(account, "User");
                     await _signInManager.SignInAsync(account, isPersistent: false);
-                    return RedirectToAction("Index", "Home");
+                    Thread.Sleep(2000);
+                    var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                    return RedirectToAction("PreIndex", "Home");
                 }
                 else
                 {

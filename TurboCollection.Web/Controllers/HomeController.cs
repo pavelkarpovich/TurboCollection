@@ -3,9 +3,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
 using System.Diagnostics;
 using System.Globalization;
+using System.Security.Claims;
 using TurboCollection.Models;
 using TurboCollection.Web.Interfaces;
 using TurboCollection.Web.Models;
+using TurboCollection.Web.Services;
 using TurboCollection.Web.ViewModels;
 
 namespace TurboCollection.Controllers
@@ -13,20 +15,27 @@ namespace TurboCollection.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly IStringLocalizer<HomeController> _stringLocalizer;
+        private readonly ICollectionViewModelService _collectionViewModelService;
+        private readonly IUserViewModelService _userViewModelService;
 
-        public HomeController(IStringLocalizer<HomeController> stringLocalizer, ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, ICollectionViewModelService collectionViewModelService,
+            IUserViewModelService userViewModelService)
         {
-            _stringLocalizer = stringLocalizer;
             _logger = logger;
+            _collectionViewModelService = collectionViewModelService;
+            _userViewModelService = userViewModelService;
         }
 
+        public async Task<IActionResult> PreIndex()
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            await _collectionViewModelService.SeedPrivateTurboItems(userId);
+            
+            return RedirectToAction("Index", "Home");
+        }
+        
         public IActionResult Index()
         {
-            ViewData["Collection"] = _stringLocalizer["Collection"].Value;
-            ViewData["Registration"] = _stringLocalizer["Registration"].Value;
-            ViewData["Login"] = _stringLocalizer["Login"].Value;
-            ViewData["Welcome"] = _stringLocalizer["Welcome"].Value;
             return View();
         }
 
