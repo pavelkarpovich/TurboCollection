@@ -12,6 +12,9 @@
                 <a class="nav-link text-dark" asp-area="" asp-controller="MyPage" asp-action="MyExtra">My Extra</a>
             </li>
             <li class="nav-item navitem">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Chat" asp-action="MyChats">My Chats</a>
+            </li>
+            <li class="nav-item navitem">
                 <a class="nav-link text-dark" style="font-weight: bold"  asp-area="" asp-controller="MyPage" asp-action="Search">Search</a>
             </li>
         </ul>
@@ -46,7 +49,7 @@
                             
                         </td>
                         <td>
-                            @*Write to the owner*@
+                            @Html.ActionLink("Go to chat", "ChatWith", "Chat", new { userId=item.UserViewModel.UserId })
                         </td>
                     </tr>
                 }

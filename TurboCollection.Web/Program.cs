@@ -8,6 +8,7 @@ using TurboCollection.Infrastructure;
 using TurboCollection.Infrastructure.Data;
 using TurboCollection.Web.Interfaces;
 using TurboCollection.Web.Services;
+using TurboCollection.Web.Hubs;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,6 +19,7 @@ builder.Services.AddMvc()
                 //.AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
                 //.AddDataAnnotationsLocalization()
                 ;
+builder.Services.AddSignalR();
 builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
 builder.Services.AddControllersWithViews().AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix).AddDataAnnotationsLocalization();
 
@@ -28,6 +30,7 @@ builder.Services.AddAuthorization();
 builder.Services.AddScoped<ICollectionViewModelService, CollectionViewModelServicecs>();
 builder.Services.AddScoped<IExtraViewModelService, ExtraViewModelService>();
 builder.Services.AddScoped<IUserViewModelService, UserViewModelService>();
+builder.Services.AddScoped<IChatViewModelService, ChatViewModelService>();
 
 var app = builder.Build();
 
@@ -77,5 +80,6 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+app.MapHub<ChatHub>("/chatHub");
 
 app.Run();

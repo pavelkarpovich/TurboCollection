@@ -16,6 +16,8 @@ namespace TurboCollection.Infrastructure.Data
         public DbSet<PrivateTurboItem> PrivateTurboItems { get; set; }
         public DbSet<TurboItemStatus> TurboItemStatuses { get; set; }
         public DbSet<ExtraTurboItem> ExtraTurboItems { get; set; }
+        public DbSet<ChatPost> ChatPosts { get; set; }
+        public DbSet<Unread> Unreads { get; set; }
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {

@@ -12,7 +12,7 @@ using TurboCollection.Infrastructure.Data;
 namespace TurboCollection.Infrastructure.Data.Migrations.Application
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230306113137_InitialSchema")]
+    [Migration("20230319132701_InitialSchema")]
     partial class InitialSchema
     {
         /// <inheritdoc />
@@ -24,6 +24,37 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+
+            modelBuilder.Entity("TurboCollection.ApplicationCore.Entities.ChatPost", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<DateTime>("DateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("FromUserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsRead")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Text")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ToUserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ChatPosts");
+                });
 
             modelBuilder.Entity("TurboCollection.ApplicationCore.Entities.Collection", b =>
                 {
@@ -151,6 +182,26 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                     b.HasKey("Id");
 
                     b.ToTable("TurboItemStatuses");
+                });
+
+            modelBuilder.Entity("TurboCollection.ApplicationCore.Entities.Unread", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<bool>("IsUnreadPost")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Unreads");
                 });
 #pragma warning restore 612, 618
         }

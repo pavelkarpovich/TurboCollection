@@ -1,12 +1,8 @@
-﻿@model TurboCollection.Web.ViewModels.UserViewModel
-@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@model TurboCollection.Web.ViewModels.ChatViewModel
+
 <div class="Parent">
     <div class="leftcolumn">
-        @Model.FirstName @Model.LastName
+        @Model.User.FirstName @Model.User.LastName
         <hr />
         <ul class="navbar-nav flex-grow-1">
             <li class="nav-item navitem">
@@ -16,14 +12,37 @@
                 <a class="nav-link text-dark" asp-area="" asp-controller="MyPage" asp-action="MyExtra">My Extra</a>
             </li>
             <li class="nav-item navitem">
-                <a class="nav-link text-dark" asp-area="" asp-controller="Chat" asp-action="MyChats">My Chats</a>
-            </li>
-            <li class="nav-item navitem">
                 <a class="nav-link text-dark" asp-area="" asp-controller="MyPage" asp-action="Search">Search</a>
             </li>
         </ul>
     </div>
     <div class="rightcolumn">
+        <h3>Chat with @Model.ChatWithUser.FirstName @Model.ChatWithUser.LastName</h3>
+        @foreach (var item in Model.ChatPosts)
+        {
+            <div style="width: 700px; display: flex;">
+                @if (item.FromUserId == Model.User.UserId)
+                {
+                    <div style="margin-left: auto;">
+                        @item.Text
+                    </div>
+                }
+                else
+                {
+                    <div>
+                        @item.Text
+                    </div>
+                }
+                
+            </div>
+        }
+
+        <form method="post" class="form-inline" asp-controller="Chat" asp-action="ChatWith">
+            @*@Html.HiddenFor(m => m.User.UserId)*@
+            <input name="toUserId" type="hidden" value="@Model.ChatWithUser.UserId" />
+            <textarea id="w3review" name="text" rows="4" cols="93"></textarea>
+            <input type="submit" value="Send">
+        </form>
     </div>
 </div>
 
@@ -47,7 +66,7 @@
         height: 100vh;
         background-color: floralwhite;
         /*text-align: center;
-            color: white;*/
+                        color: white;*/
     }
 
     .rightcolumn {
@@ -56,6 +75,6 @@
         height: 100vh;
         background-color: white;
         /*border: green solid 5px;
-            margin: 50px;*/
+                        margin: 50px;*/
     }
 </style>

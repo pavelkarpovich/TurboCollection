@@ -18,6 +18,7 @@
                 @Html.DisplayNameFor(model => model.LastName)
             </th>
             <th></th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -31,6 +32,9 @@
             </td>
             <td>
                 @Html.ActionLink("Open", "UserPage", new { userId=item.UserId })
+            </td>
+            <td>
+                @Html.ActionLink("Go to chat", "ChatWith", "Chat", new { userId=item.UserId })
             </td>
         </tr>
 }
