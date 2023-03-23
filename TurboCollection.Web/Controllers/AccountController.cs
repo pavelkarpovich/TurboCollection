@@ -38,7 +38,8 @@ namespace TurboCollection.Web.Controllers
                     FirstName = viewModel.FirstName,
                     LastName = viewModel.LastName,
                     Email = viewModel.Email,
-                    PhoneNumber = viewModel.PhoneNumber,
+                    //PhoneNumber = viewModel.PhoneNumber,
+                    PictureUrl = string.Empty
                 };
 
                 var result = await _userManager.CreateAsync(account, viewModel.Password);

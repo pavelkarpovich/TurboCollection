@@ -9,7 +9,8 @@ namespace TurboCollection.Web.Interfaces
         Task AddChatPost(string text, string fromUserId, string toUserId);
         Task<List<ChatPostViewModel>> GetChatPosts(string fromUserId, string toUserId);
         Task<List<UserViewModel>> GetChatUsers(string userId);
+        Task<bool> IsNewChatPost(string userId);
         //Task SetUnread(string userId);
-        //Task ResetUnread(string userId);
+        Task ResetUnread(string myUserId, string userId);
     }
 }

@@ -19,6 +19,7 @@ namespace TurboCollection.Web.Controllers
         {
             ChatViewModel model = new ChatViewModel();
             string myUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            await _chatViewModelService.ResetUnread(myUserId, userId);
             model.ChatPosts = await _chatViewModelService.GetChatPosts(myUserId, userId);
             model.User = await _userViewModelService.GetUser(myUserId);
             model.ChatWithUser = await _userViewModelService.GetUser(userId);
@@ -43,6 +44,7 @@ namespace TurboCollection.Web.Controllers
             ChatsViewModel model = new ChatsViewModel();
             model.User = await _userViewModelService.GetUser(myUserId);
             model.Users = await _chatViewModelService.GetChatUsers(myUserId);
+            model.User.IsNewChatPost = await _chatViewModelService.IsNewChatPost(myUserId);
             return View(model);
         }
     }

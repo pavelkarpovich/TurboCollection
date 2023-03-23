@@ -44,20 +44,25 @@ namespace TurboCollection.Web.Services
         //    throw new NotImplementedException();
         //}
 
-        //public Task ResetUnread(string userId)
-        //{
-        //    throw new NotImplementedException();
-        //}
+        public async Task ResetUnread(string myUserId, string userId)
+        {
+            var unreadPosts = await _dbContext.ChatPosts
+            .Where(x => x.FromUserId == userId && x.ToUserId == myUserId && x.IsRead == false).ToListAsync();
+            //.Where(x => x.IsRead == false)
+            //.ToList();
+            unreadPosts.ForEach(x => x.IsRead = true);
+            await _dbContext.SaveChangesAsync();
+        }
 
-        public async Task<List<UserViewModel>> GetChatUsers(string userId)
+        public async Task<List<UserViewModel>> GetChatUsers(string myUserId)
         {
             var fromUsers = _dbContext.ChatPosts
-                .Where(x => x.FromUserId == userId || x.ToUserId == userId)
+                .Where(x => x.FromUserId == myUserId || x.ToUserId == myUserId)
                 .Select(x => x.FromUserId).ToArray();
             var toUsers = _dbContext.ChatPosts
-                .Where(x => x.FromUserId == userId || x.ToUserId == userId)
+                .Where(x => x.FromUserId == myUserId || x.ToUserId == myUserId)
                 .Select(x => x.ToUserId).ToArray();
-            string[] users = { userId };
+            string[] users = { myUserId };
             var allUsers = fromUsers.Except(users).Union(toUsers.Except(users));
 
             //var user = await _dbContext.Accounts.Where(x => x.Id == userId).Select(x =>
@@ -67,12 +72,28 @@ namespace TurboCollection.Web.Services
             foreach (var itemUserId in allUsers)
             {
                 var user = _dbContextAccount.Accounts.Where(x => x.Id == itemUserId).Select(x =>
-                    new UserViewModel(x.Id, x.FirstName, x.LastName)).FirstOrDefault();
+                    new UserViewModel(x.Id, x.FirstName, x.LastName, x.PictureUrl)).FirstOrDefault();
+
+                bool isNew = await _dbContext.ChatPosts
+                //.Where(x => ((x.FromUserId == myUserId && x.ToUserId == itemUserId) || (x.ToUserId == myUserId && x.FromUserId == itemUserId)) && x.IsRead == false)
+                .Where(x => x.ToUserId == myUserId && x.FromUserId == itemUserId)
+                .AnyAsync();
+
+                user.IsNewChatPost = isNew;
                 userList.Add(user);
             }
             return userList;
-            //var allUsers = fromUsers.Except<string>(userId).Union(toUsers).Except<string>(userId);
-            throw new NotImplementedException();
+        }
+
+        public async Task<bool> IsNewChatPost(string userId)
+        {
+            return await _dbContext.ChatPosts
+                //.Where(x => (x.FromUserId == userId || x.ToUserId == userId) && x.IsRead == false)
+                .Where(x => (x.ToUserId == userId) && x.IsRead == false)
+                .AnyAsync();
+
+            //return await await IsNewChatPost;
+
         }
     }
 }

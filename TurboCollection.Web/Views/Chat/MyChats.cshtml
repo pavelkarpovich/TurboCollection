@@ -11,13 +11,23 @@
             @Model.User.FirstName @Model.User.LastName
             <hr />
             <li class="nav-item navitem">
+                <a class="nav-link text-dark" asp-area="" asp-controller="MyPage" asp-action="Info">Info</a>
+            </li>
+            <li class="nav-item navitem">
                 <a class="nav-link text-dark" asp-area="" asp-controller="MyPage" asp-action="MyCollection">My Collection</a>
             </li>
             <li class="nav-item navitem">
                 <a class="nav-link text-dark" asp-area="" asp-controller="MyPage" asp-action="MyExtra">My Extra</a>
             </li>
             <li class="nav-item navitem">
-                <a class="nav-link text-dark" style="font-weight: bold" asp-area="" asp-controller="Chat" asp-action="MyChats">My Chats</a>
+                <a class="nav-link text-dark" style="font-weight: bold" asp-area="" asp-controller="Chat" asp-action="MyChats">My Chats
+                    @if (Model.User.IsNewChatPost)
+                    {
+                        <span style="color: red; padding-left: 5px;">
+                            New!
+                        </span>
+                    }
+                </a>
             </li>
             <li class="nav-item navitem">
                 <a class="nav-link text-dark" asp-area="" asp-controller="MyPage" asp-action="Search">Search</a>
@@ -50,6 +60,14 @@
                 <td>
                             @Html.ActionLink("Open chat", "ChatWith", "Chat", new { userId=item.UserId })
                 </td>
+                <td>
+                    @if (item.IsNewChatPost)
+                            {
+                                <span style="color: red;">
+                                    New!
+                                </span>
+                            }
+                        </td>
             </tr>
                 }
 

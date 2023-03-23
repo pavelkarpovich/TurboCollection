@@ -30,18 +30,11 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
-                        @*<img style="border-radius: 10px; border: 1px solid #ddd" width="150px" src="@Model.PictureUrl" />*@
                         <output>
-                            @*<div class="image" style="height: 250px;">
-                                <img src="" alt="image">
-                            </div>*@
                         </output>
-                        @*<label asp-for="Picture" class="control-label"></label>*@
                         <div class="custom-file">
                             <input asp-for="Picture" class="custom-file-input" id="customFile">
-                            @*<label class="custom-file-label" for="customFile">Choose picture</label>*@
                         </div>
-                        @*<span asp-validation-for="Picture" class="text-danger"></span>*@
                     </div>
                 </div>
             </div>
@@ -60,10 +53,8 @@
 @section Scripts {
     @*@{await Html.RenderPartialAsync("_ValidationScriptsPartial");}*@
     <script type="text/javascript">
-        // Add the following code if you want the name of the file appear on select
         const output = document.querySelector("output");
         const input = document.querySelector("#customFile");
-        //let imagesArray = [];
         let imagesArray;
 
         $(".custom-file-input").on("change", function () {
@@ -72,9 +63,7 @@
 
         input.addEventListener("change", () => {
             const file = input.files
-            //imagesArray.push(file[0])
             imagesArray = file[0]
-            //displayImages()
             let image = `<div class="image">
                                                                 <img style='height: 250px;' src="${URL.createObjectURL(imagesArray)}" alt="image">
                                               </div>`

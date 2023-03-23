@@ -8,6 +8,9 @@ namespace TurboCollection.Web.Interfaces
         Task<List<UserViewModel>> GetUsers();
 
         Task<UserViewModel> GetUser(string userId);
+        Task<UserEditViewModel> GetUserEdit(string userId);
         UserViewModel GetUserSync(string userId);
+        Task UpdateUser(UserEditViewModel model);
+
     }
 }

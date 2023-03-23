@@ -12,7 +12,7 @@ using TurboCollection.Infrastructure.Data;
 namespace TurboCollection.Infrastructure.Data.Migrations.Application
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230319132701_InitialSchema")]
+    [Migration("20230320155000_InitialSchema")]
     partial class InitialSchema
     {
         /// <inheritdoc />

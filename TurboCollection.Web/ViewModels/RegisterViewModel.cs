@@ -13,9 +13,9 @@ namespace TurboCollection.Web.ViewModels
         [Required]
         [Display(Name = "Email")]
         public string Email { get; set; }
-        [Required]
-        [Display(Name = "Phone number")]
-        public string PhoneNumber { get; set; }
+        //[Required]
+        //[Display(Name = "Phone number")]
+        //public string PhoneNumber { get; set; }
         [Required]
         [DataType(DataType.Password)]
         [Display(Name = "Password")]

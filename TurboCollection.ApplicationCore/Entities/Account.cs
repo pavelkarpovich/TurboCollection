@@ -6,6 +6,6 @@ namespace TurboCollection.ApplicationCore.Entities
     {
         public required string FirstName { get; set; }
         public required string LastName { get; set; }
-        //public string PictureUrl { get; set; }
+        public string PictureUrl { get; set; }
     }
 }

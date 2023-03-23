@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<TurboCollection.Web.ViewModels.UserViewModel>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Info";
 }
 
 <div class="container">
@@ -11,6 +11,8 @@
 <table class="table">
     <thead>
         <tr>
+            <th>
+            </th>
             <th>
                 @Html.DisplayNameFor(model => model.FirstName)
             </th>
@@ -24,6 +26,9 @@
     <tbody>
 @foreach (var item in Model) {
         <tr>
+            <td>
+                <img style="border-radius: 10px; border: 1px solid #ddd" width="150px" src="@Html.DisplayFor(modelItem => item.PictureUrl)" />
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.FirstName)
             </td>
