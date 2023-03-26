@@ -42,9 +42,10 @@ namespace TurboCollection.Web.Controllers
 
         public async Task<IActionResult> FullCollection(TurboItemsViewModel model)
         {
-            model = await _collectionViewModelService.GetTurboItems(model.CollectionFilerApplied, model.Search, 0, BATCH_SIZE);
+            //model = await _collectionViewModelService.GetTurboItems(model.CollectionFilerApplied, model.Search, 0, BATCH_SIZE);
+            var modelOutput = await _collectionViewModelService.GetTurboItems(model);
 
-            return View(model);
+            return View(modelOutput);
         }
 
         [HttpPost]

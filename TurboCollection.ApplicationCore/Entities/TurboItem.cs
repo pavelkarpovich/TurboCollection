@@ -8,6 +8,20 @@ namespace TurboCollection.ApplicationCore.Entities
 {
     public sealed class TurboItem
     {
+        public TurboItem(int id, int collectionId, int number, string picture, string? name = null, int? speed = null,
+            int? engineCapacity = null, int? horsePower = null, int? year = null, string? tags = null)
+        {
+            Id = id;
+            CollectionId = collectionId;
+            Number = number;
+            Picture = picture;
+            Name = name;
+            Speed = speed;
+            EngineCapacity = engineCapacity;
+            HorsePower = horsePower;
+            Year = year;
+            Tags = tags;
+        }
         public TurboItem(int collectionId, int number, string picture, string? name = null, int? speed = null,
             int? engineCapacity = null, int? horsePower = null, int? year = null, string? tags = null)
         {

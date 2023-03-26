@@ -40,8 +40,16 @@
         <h1>Info</h1>
 
         <div>
-            <img style="border: 1px solid #ddd" width="250px" src="@Html.DisplayFor(model => model.PictureUrl)" />
+            @if(string.IsNullOrEmpty(Model.PictureUrl))
+            {
+                <img style="border: 1px solid #ddd" width="250px" src="/images/no-image.png" />
+            }
+            else
+            {
+                <img style="border: 1px solid #ddd" width="250px" src="@Html.DisplayFor(model => model.PictureUrl)" />
+            }
             <dl class="row">
+                @*<img style="border: 1px solid #ddd" width="250px" src="@Html.DisplayFor(model => model.PictureUrl)" />*@
                 <dt class="col-sm-2">
                     @Html.DisplayNameFor(model => model.FirstName)
                 </dt>

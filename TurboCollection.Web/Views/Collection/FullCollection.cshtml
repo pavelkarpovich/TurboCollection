@@ -4,14 +4,15 @@
 @{
     ViewData["Title"] = "TestData";
 }
-<div class="container">
-    <main role="main" class="pb-3">
+@*<div class="container">*@
+<div style="padding-left: 30px">
 <section>
     <div>
         <form method="get">
             <label data-title="brand">
                 <select asp-for="@Model.CollectionFilerApplied" asp-items="@Model.Collections"></select>
                 <input asp-for="Search" type="text" placeholder="@Localizer["Search"]">
+                @Html.ListBoxFor(m => m.TagIds, Model.Tags, new { @id = "months" })
             </label>
             <input type="submit" value="@Localizer["Apply Filters"]" />
         </form>
@@ -31,12 +32,25 @@
         </div>
     }
 </div>
-    </main>
 </div>
 
 
 @section Scripts {
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bootstrap-multiselect.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.js"></script>
     <script src="~/js/InfinitiySroll5.js"></script>
+    <script type="text/javascript">
+            $(document).ready(function () {
+            $('#months').multiselect(
+            {
+                 allSelectedText: false
+            });
+        });
+    </script>
     <script>
         var infinityScroll = new InfinitiySroll("anyTable", "/collection/_TestData", { sortOrder: @p1, searchString: "@p2" });
     </script>

@@ -6,18 +6,14 @@ using System.Threading.Tasks;
 
 namespace TurboCollection.ApplicationCore.Entities
 {
-    public sealed class Collection
+    public class Tag
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public Collection(string name)
-        {
-            Name = name;
-        }
-        public Collection(int id, string name)
+        public Tag(int id, string name)
         {
             Id = id;
             Name = name;
         }
+        public int Id { get; set; }
+        public string Name { get; set; }
     }
 }

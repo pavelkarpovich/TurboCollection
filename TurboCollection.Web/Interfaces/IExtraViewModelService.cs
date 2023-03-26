@@ -7,7 +7,10 @@ namespace TurboCollection.Web.Interfaces
     public interface IExtraViewModelService
     {
         Task<List<ExtraTurboItemViewModel>> GetExtraTurboItems(string userId);
-        Task<IEnumerable<SelectListItem>> GetCollections();
+        Task<ExtraTurboItemEditViewModel> GetExtraTurboItem(int id);
+        List<SelectListItem> GetCollections();
         Task AddNewExtra(ExtraTurboItemEditViewModel productIndexViewModel, string userId);
+        Task UpdateExtra(ExtraTurboItemEditViewModel productIndexViewModel);
+        Task DeleteExtra(int id);
     }
 }

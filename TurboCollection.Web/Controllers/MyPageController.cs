@@ -70,7 +70,7 @@ namespace TurboCollection.Web.Controllers
         {
             var model = new ExtraTurboItemEditViewModel()
             {
-                Collections = (await _extraViewModelService.GetCollections()).ToList()
+                Collections = _extraViewModelService.GetCollections()
             };
             return View(model);
         }
@@ -78,13 +78,34 @@ namespace TurboCollection.Web.Controllers
         [HttpPost]
         public async Task<IActionResult> AddNewExtra(ExtraTurboItemEditViewModel model)
         {
-            if (ModelState.IsValid)
-            {
+            //if (ModelState.IsValid)
+            //{
                 string userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
                 await _extraViewModelService.AddNewExtra(model, userId);
                 return RedirectToAction(nameof(MyExtra));
-            }
-            return View();
+            //}
+            //return View();
+        }
+        
+        public async Task<IActionResult> EditExtra(int id)
+        {
+            var model = await _extraViewModelService.GetExtraTurboItem(id);
+            return View(model);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> EditExtra(ExtraTurboItemEditViewModel model)
+        {
+
+            //string userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            await _extraViewModelService.UpdateExtra(model);
+            return RedirectToAction(nameof(MyExtra));
+        }
+
+        public async Task<IActionResult> DeleteExtra(int id)
+        {
+                await _extraViewModelService.DeleteExtra(id);
+                return RedirectToAction(nameof(MyExtra));
         }
 
         public async Task<IActionResult> Search()

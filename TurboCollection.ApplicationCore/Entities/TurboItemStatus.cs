@@ -14,5 +14,10 @@ namespace TurboCollection.ApplicationCore.Entities
         {
             Name = name;
         }
+        public TurboItemStatus(int id, string name)
+        {
+            Id = id;
+            Name = name;
+        }
     }
 }

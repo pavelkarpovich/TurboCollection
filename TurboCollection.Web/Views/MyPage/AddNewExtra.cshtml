@@ -5,53 +5,69 @@
     ViewData["Title"] = "AddNewExtra";
 }
 
-<h3>@Localizer["Add New Extra"]</h3>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form enctype="multipart/form-data"  asp-action="AddNewExtra">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label data-title="Category">
-                            <select asp-for="CollectionId" asp-items="@Model.Collections"></select>
-                            </label>
+<div class="container">
+    <main role="main" class="pb-3">
+        <h3>@Localizer["Add New Extra"]</h3>
+        <hr />
+        <div class="row">
+            <div class="col-md-4">
+                <form enctype="multipart/form-data" asp-action="AddNewExtra" id="editExtraForm">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <output>
+                                    @if (string.IsNullOrEmpty(Model.PictureUrl))
+                                    {
+                                        <img style="border: 1px solid #ddd" height="250" src="/images/no-image1.jpg" />
+                                    }
+                                    else
+                                    {
+                                        <img style="border-radius: 6px; border: 1px solid #ddd" height="250" src="@Html.DisplayFor(item => item.PictureUrl)" />
+                                    }
+                                </output>
+                                <div class="custom-file" style="margin-top:3px">
+                                    <label class="btn btn-outline-dark btn-sm">
+                                        <i asp-for="Picture" class="fa fa-image"></i>Choose image<input asp-for="Picture" type="file" style="display: none;" id="customFile">
+                                    </label>
+                                    @*<input asp-for="Picture" class="custom-file-input" id="customFile">*@
+                                </div>
+                                <span id="errorPicture" style="color: red"></span>
+                            </div>
                         </div>
                     </div>
-                </div>
-            <br />
-            <div class="form-group">
-                <label asp-for="Number" class="control-label"></label>
-                <input asp-for="Number" class="form-control" />
-                <span asp-validation-for="Number" class="text-danger"></span>
-            </div>
-            <br />
-            <div class="row">
-                <div class="col-md-6">
+                    <br />
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                @*<label data-title="Category">*@
+                                <label asp-for="Collections" class="control-label"></label>
+                                <select asp-for="CollectionId" asp-items="@Model.Collections" id="selectCollection"></select>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
                     <div class="form-group">
-                        <output>
-                        </output>
-                        <div class="custom-file">
-                            <input asp-for="Picture" class="custom-file-input" id="customFile">
-                        </div>
+                        <label asp-for="Number" class="control-label"></label>
+                        <input asp-for="Number" class="form-control" id="editExtraNumber" />
+                        <span asp-validation-for="Number" class="text-danger"></span>
                     </div>
-                </div>
-            </div>
-            <br />
-            <div class="form-group">
-                <input type="submit" value=@Localizer["Add New Extra"] class="btn btn-sm btn-primary rounded-0 text-uppercase" />
-            </div>
-        </form>
-    </div>
-</div>
+                    <span id="errorNumber" style="color: red"></span>
+                    <br />
 
-<div>
-    <a asp-action="Index">@Localizer["Back to List"]</a>
+                    <div class="form-group">
+                        <input type="submit" value=@Localizer["Add New Extra"] class="btn btn-sm btn-primary rounded-0 text-uppercase" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
 </div>
 
 @section Scripts {
     @*@{await Html.RenderPartialAsync("_ValidationScriptsPartial");}*@
+    <script src="~/js/validation.js"></script>
     <script type="text/javascript">
         const output = document.querySelector("output");
         const input = document.querySelector("#customFile");
@@ -65,9 +81,20 @@
             const file = input.files
             imagesArray = file[0]
             let image = `<div class="image">
-                                                                <img style='height: 250px;' src="${URL.createObjectURL(imagesArray)}" alt="image">
-                                              </div>`
+                            <img style='height: 250px;' src="${URL.createObjectURL(imagesArray)}" alt="image" name="PictureUrl">
+                         </div>`
             output.innerHTML = image
         })
+
+
+        //const form = document.getElementById("editExtraForm");
+
+        //form.addEventListener("submit", (event) => {
+        //    //var number = document.getElementById("editExtraNumber");
+        //    //var fileName = $("#custom-file-input").val().split("\\").pop();
+
+        //    alert(fileName);
+        //});
+
     </script>
 }

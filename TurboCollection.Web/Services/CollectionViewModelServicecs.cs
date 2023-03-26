@@ -1,10 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using TurboCollection.ApplicationCore.Entities;
 using TurboCollection.Infrastructure.Data;
 using TurboCollection.Web.Interfaces;
 using TurboCollection.Web.Models;
 using TurboCollection.Web.ViewModels;
+using static NuGet.Packaging.PackagingConstants;
 
 namespace TurboCollection.Web.Services
 {
@@ -46,11 +48,71 @@ namespace TurboCollection.Web.Services
             var allitem = new SelectListItem() { Value = null, Text = "", Selected = true };
             collectionList.Insert(0, allitem);
 
+            var tags = await _dbContext.Tags.ToListAsync();
+            var tagList = tags
+                .Select(x => new SelectListItem() { Value = x.Id.ToString(), Text = x.Name })
+                .ToList();
+
             TurboItemsViewModel model = new TurboItemsViewModel();
             model.Items = items;
             model.Collections = collectionList;
             model.CollectionFilerApplied = collectionId;
-            model.Search= search;
+            model.Search = search;
+            model.Tags = tagList;
+
+            return model;
+        }
+
+        public async Task<TurboItemsViewModel> GetTurboItems(TurboItemsViewModel modelInput)
+        {
+            List<TurboItemTag> turboItemTagList = new List<TurboItemTag>();
+            turboItemTagList = _dbContext.TurboItemTags.ToList();
+
+            var turboItemsList = await _dbContext.TurboItems.ToListAsync();
+            var items = turboItemsList
+                .Where(x => (!modelInput.CollectionFilerApplied.HasValue || modelInput.CollectionFilerApplied == 0 || x.CollectionId == modelInput.CollectionFilerApplied)
+            && (string.IsNullOrEmpty(modelInput.Search) || x.Name.Contains(modelInput.Search))
+                &&
+                (
+                modelInput.TagIds == null || modelInput.TagIds.Count() == 0 ||
+            turboItemTagList.Where(y => y.TurboItemId == x.Id && modelInput.TagIds.Contains(y.TagId)).Any()
+            //turboItemTagList.Where(y => y.TurboItemId == x.Id).Any()
+            )
+            )
+                .Select(x => new TurboItemViewModel()
+                {
+                    Id = x.Id,
+                    CollectionId = x.CollectionId,
+                    Picture = x.Picture,
+                    Name = x.Name,
+                    Speed = x.Speed,
+                    EngineCapacity = x.EngineCapacity,
+                    HorsePower = x.HorsePower,
+                    Year = x.Year,
+                    Tags = x.Tags
+                }).Take(50)
+                .ToList();
+
+            var collections = await _dbContext.Collections.ToListAsync();
+            var collectionList = collections
+                .Select(x => new SelectListItem() { Value = x.Id.ToString(), Text = x.Name })
+                //.OrderBy(x => x.Value)
+                .ToList();
+            var allitem = new SelectListItem() { Value = null, Text = "", Selected = true };
+            collectionList.Insert(0, allitem);
+
+            var tags = await _dbContext.Tags.ToListAsync();
+            var tagList = tags
+                .Select(x => new SelectListItem() { Value = x.Id.ToString(), Text = x.Name })
+                .ToList();
+
+            TurboItemsViewModel model = new TurboItemsViewModel();
+            model.Items = items;
+            model.Collections = collectionList;
+            model.CollectionFilerApplied = modelInput.CollectionFilerApplied;
+            model.Search = modelInput.Search;
+            model.Tags = tagList;
+            model.TagIds = modelInput.TagIds;
 
             return model;
         }

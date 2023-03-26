@@ -12,7 +12,15 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                     <div class="form-group">
                         <output>
-                            <img style="border: 1px solid #ddd" width="250px" src="@Html.DisplayFor(model => model.PictureUrl)" />
+                            @if(string.IsNullOrEmpty(Model.PictureUrl))
+            {
+                <img style="border: 1px solid #ddd" width="250px" src="/images/no-image.png" />
+            }
+            else
+            {
+                <img style="border: 1px solid #ddd" width="250px" src="@Html.DisplayFor(model => model.PictureUrl)" />
+            }
+                            @*<img style="border: 1px solid #ddd" width="250px" src="@Html.DisplayFor(model => model.PictureUrl)" />*@
                         </output>
                         <div class="custom-file">
                             <input asp-for="Picture" class="custom-file-input" id="customFile">
