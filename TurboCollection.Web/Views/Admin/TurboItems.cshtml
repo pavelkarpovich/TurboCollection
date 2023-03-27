@@ -1,0 +1,64 @@
+﻿@model TurboCollection.Web.ViewModels.TurboItemsViewModel
+@inject IViewLocalizer Localizer
+
+@{
+    ViewData["Title"] = "Admin";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@*<div class="container">*@
+<div style="padding-left: 30px">
+    <section>
+        <div>
+            <form method="get">
+                <label data-title="brand">
+                    <select asp-for="@Model.CollectionFilerApplied" asp-items="@Model.Collections"></select>
+                    <input asp-for="Search" type="text" placeholder="Search">
+                    @Html.ListBoxFor(m => m.TagIds, Model.Tags, new { @id = "tags" })
+                </label>
+                <input type="submit" value="Apply Fileters" />
+            </form>
+        </div>
+    </section>
+
+    @{
+        int p1 = @Model.CollectionFilerApplied == null ? 0 : @Model.CollectionFilerApplied.Value;
+        string p2 = @Model.Search == null ? "" : @Model.Search;
+    }
+
+    <div id="anyTable" class="d-flex flex-wrap">
+        @foreach (var item in Model.Items)
+        {
+            <div style="margin: 3px" width="250px" height="350">
+                <div class="turboitem" style="float:right; ">
+                    <img style="border-radius: 6px; border: 1px solid #ddd" width="250px" height="180" src="@Html.DisplayFor(modelItem => item.PictureUrl)" />
+                </div>
+                <div style="clear:both;">
+                    @Html.ActionLink("Edit", "EditTurboItem", new {  id = item.Id  })
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+
+@section Scripts {
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bootstrap-multiselect.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.js"></script>
+    <script src="~/js/InfinitiySroll5.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#tags').multiselect(
+                {
+                    allSelectedText: false
+                });
+        });
+    </script>
+    <script>
+        var infinityScroll = new InfinitiySroll("anyTable", "/admin/LoadTurboItems", { collectionId: @p1, searchString: "@p2" });
+    </script>
+}

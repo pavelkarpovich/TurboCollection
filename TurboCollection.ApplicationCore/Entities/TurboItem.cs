@@ -8,13 +8,13 @@ namespace TurboCollection.ApplicationCore.Entities
 {
     public sealed class TurboItem
     {
-        public TurboItem(int id, int collectionId, int number, string picture, string? name = null, int? speed = null,
+        public TurboItem(int id, int collectionId, int number, string pictureUrl, string? name = null, int? speed = null,
             int? engineCapacity = null, int? horsePower = null, int? year = null, string? tags = null)
         {
             Id = id;
             CollectionId = collectionId;
             Number = number;
-            Picture = picture;
+            PictureUrl = pictureUrl;
             Name = name;
             Speed = speed;
             EngineCapacity = engineCapacity;
@@ -22,12 +22,12 @@ namespace TurboCollection.ApplicationCore.Entities
             Year = year;
             Tags = tags;
         }
-        public TurboItem(int collectionId, int number, string picture, string? name = null, int? speed = null,
+        public TurboItem(int collectionId, int number, string pictureUrl, string? name = null, int? speed = null,
             int? engineCapacity = null, int? horsePower = null, int? year = null, string? tags = null)
         {
             CollectionId = collectionId;
             Number = number;
-            Picture = picture;
+            PictureUrl = pictureUrl;
             Name = name;
             Speed = speed;
             EngineCapacity = engineCapacity;
@@ -38,7 +38,7 @@ namespace TurboCollection.ApplicationCore.Entities
         public int Id { get; set; }
         public int CollectionId { get; set; }
         public int Number { get; set; }
-        public string Picture { get; set; }
+        public string PictureUrl { get; set; }
         public string? Name { get; set; }
         public int? Speed { get; set; }
         public int? EngineCapacity { get; set; }

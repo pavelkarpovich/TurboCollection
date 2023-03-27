@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc.Rendering;
+﻿using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using TurboCollection.ApplicationCore.Entities;
@@ -14,23 +15,35 @@ namespace TurboCollection.Web.Services
     {
         private readonly ApplicationDbContext _dbContext;
         private readonly IUserViewModelService _userViewModelService;
+        private readonly IWebHostEnvironment _webHostEnvironment;
 
-        public CollectionViewModelServicecs(ApplicationDbContext dbContext, IUserViewModelService userViewModelService)
+        public CollectionViewModelServicecs(ApplicationDbContext dbContext, IUserViewModelService userViewModelService, IWebHostEnvironment webHostEnvironment)
         {
             _dbContext = dbContext;
             _userViewModelService = userViewModelService;
+            _webHostEnvironment = webHostEnvironment;
         }
 
-        public async Task<TurboItemsViewModel> GetTurboItems(int? collectionId, string? search, int skip, int take)
+        public async Task<TurboItemsViewModel> GetTurboItems(int? collectionId, string? search, int[] tagValues, int skip, int take)
         {
-            var items = await _dbContext.TurboItems
+            List<TurboItemTag> turboItemTagList = new List<TurboItemTag>();
+            turboItemTagList = _dbContext.TurboItemTags.ToList();
+
+            var turboItemsList = await _dbContext.TurboItems.ToListAsync();
+            var items = turboItemsList
                 .Where(x => (!collectionId.HasValue || collectionId == 0 || x.CollectionId == collectionId)
-            && (string.IsNullOrEmpty(search) || x.Name.Contains(search)))
+            && (string.IsNullOrEmpty(search) || x.Name.Contains(search))
+                &&
+                (
+                tagValues == null || tagValues.Count() == 0 ||
+            turboItemTagList.Where(y => y.TurboItemId == x.Id && tagValues.Contains(y.TagId)).Any()
+            )
+            )
                 .Select(x => new TurboItemViewModel()
                 {
                     Id = x.Id,
                     CollectionId = x.CollectionId,
-                    Picture = x.Picture,
+                    PictureUrl = x.PictureUrl,
                     Name = x.Name,
                     Speed = x.Speed,
                     EngineCapacity = x.EngineCapacity,
@@ -38,7 +51,7 @@ namespace TurboCollection.Web.Services
                     Year = x.Year,
                     Tags = x.Tags
                 }).Skip(skip).Take(take)
-                .ToListAsync();
+                .ToList();
 
             var collections = await _dbContext.Collections.ToListAsync();
             var collectionList = collections
@@ -59,6 +72,7 @@ namespace TurboCollection.Web.Services
             model.CollectionFilerApplied = collectionId;
             model.Search = search;
             model.Tags = tagList;
+            model.TagIds = tagValues;
 
             return model;
         }
@@ -76,14 +90,13 @@ namespace TurboCollection.Web.Services
                 (
                 modelInput.TagIds == null || modelInput.TagIds.Count() == 0 ||
             turboItemTagList.Where(y => y.TurboItemId == x.Id && modelInput.TagIds.Contains(y.TagId)).Any()
-            //turboItemTagList.Where(y => y.TurboItemId == x.Id).Any()
             )
             )
                 .Select(x => new TurboItemViewModel()
                 {
                     Id = x.Id,
                     CollectionId = x.CollectionId,
-                    Picture = x.Picture,
+                    PictureUrl = x.PictureUrl,
                     Name = x.Name,
                     Speed = x.Speed,
                     EngineCapacity = x.EngineCapacity,
@@ -146,6 +159,15 @@ namespace TurboCollection.Web.Services
             return model;
         }
 
+        public async Task<List<TagViewModel>> GetAllTags()
+        {
+            return await _dbContext.Tags.Select(x => new TagViewModel()
+            {
+                Id = x.Id,
+                Name = x.Name
+            }).ToListAsync();
+        }
+
         public async Task SeedPrivateTurboItems(string userId)
         {
             var privateCount = _dbContext.PrivateTurboItems.Where(x => x.UserId == userId).Count();
@@ -182,6 +204,100 @@ namespace TurboCollection.Web.Services
                 extraListFull.AddRange(extraList);
             }
             return extraListFull;
+        }
+
+        public async Task<TurboItemEditViewModel> GetTurboItem(int id)
+        {
+            var tagIds = await _dbContext.TurboItemTags.Where(x => x.TurboItemId == id).Select(x => x.TagId).ToArrayAsync();
+            var collections = GetCollections();
+            var tags = GetTags();
+            TurboItemEditViewModel model = await _dbContext.TurboItems
+                .Where(x => x.Id == id)
+                .Select(x => new TurboItemEditViewModel()
+                {
+                    Id = x.Id,
+                    CollectionId = x.CollectionId,
+                    Number = x.Number,
+                    Name = x.Name,
+                    PictureUrl = x.PictureUrl,
+                    Collections = collections,
+                    Tags = tags,
+                    TagIds = tagIds
+            
+                })
+                .FirstOrDefaultAsync();
+            return model;
+        }
+
+        public void UpdateTurboItem(TurboItemEditViewModel model)
+        {
+            _dbContext.TurboItemTags.RemoveRange(_dbContext.TurboItemTags.Where(x => x.TurboItemId == model.Id));
+            _dbContext.SaveChanges();
+
+            if (model.TagIds != null)
+            {
+                foreach (var tagId in model.TagIds)
+                {
+                    var itemtag = new TurboItemTag(model.Id, tagId);
+                    _dbContext.TurboItemTags.Add(itemtag);
+                    _dbContext.SaveChanges();
+                }
+            }
+
+            var turboItem = _dbContext.TurboItems.Where(x => x.Id == model.Id).FirstOrDefault();
+            if (model.Picture != null && turboItem.PictureUrl != model.PictureUrl)
+            {
+                DeleteFile(turboItem.PictureUrl);
+                string uniqueFileName = UploadedFile(model);
+                turboItem.PictureUrl = uniqueFileName;
+            }
+            turboItem.Name = model.Name;
+            _dbContext.SaveChanges();
+        }
+
+        public List<SelectListItem> GetCollections()
+        {
+            var items = _dbContext.Collections
+                .Select(x => new SelectListItem() { Value = x.Id.ToString(), Text = x.Name })
+                //.OrderBy(brand => brand.Text)
+                .ToList();
+            return items;
+        }
+
+        public List<SelectListItem> GetTags()
+        {
+            var items = _dbContext.Tags
+                .Select(x => new SelectListItem() { Value = x.Id.ToString(), Text = x.Name })
+                //.OrderBy(brand => brand.Text)
+                .ToList();
+            return items;
+        }
+
+        private void DeleteFile(string fileName)
+        {
+            string fullPath = _webHostEnvironment.WebRootPath + fileName;
+
+            if (File.Exists(fullPath))
+            {
+                File.Delete(fullPath);
+            }
+        }
+
+        private string UploadedFile(TurboItemEditViewModel model)
+        {
+            string uniqueFileName = "";
+
+            if (model.Picture != null)
+            {
+                string uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "images/collection");
+                uniqueFileName = Guid.NewGuid().ToString() + "_" + model.Picture.FileName;
+                string filePath = Path.Combine(uploadsFolder, uniqueFileName);
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+                    model.Picture.CopyTo(fileStream);
+                }
+            }
+            return "/images/collection/" + uniqueFileName;
         }
 
         private static IEnumerable<PrivateTurboItem> GetPreconfiguredPrivateTurboItems(string userId)
@@ -1079,6 +1195,13 @@ namespace TurboCollection.Web.Services
                 new(13, 139, 1, userId),
                 new(13, 140, 1, userId),
             };
+        }
+
+        public void CreateNewTag(TagViewModel model)
+        {
+            Tag tag = new Tag(model.Name);
+            _dbContext.Tags.Add(tag);
+            _dbContext.SaveChanges();
         }
     }
 }

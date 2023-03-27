@@ -8,6 +8,10 @@ namespace TurboCollection.ApplicationCore.Entities
 {
     public class Tag
     {
+        public Tag( string name)
+        {
+            Name = name;
+        }
         public Tag(int id, string name)
         {
             Id = id;

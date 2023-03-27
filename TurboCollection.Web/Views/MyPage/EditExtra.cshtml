@@ -9,12 +9,6 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                @*<output>
-                                    <img style="border-radius: 6px; border: 1px solid #ddd" width="250px" height="180" src="@Html.DisplayFor(item => item.PictureUrl)" />
-                                </output>
-                                <div class="custom-file">
-                                    <input asp-for="Picture" class="custom-file-input" id="customFile">
-                                </div>*@
                                 <output>
                                     @if (string.IsNullOrEmpty(Model.PictureUrl))
                                     {

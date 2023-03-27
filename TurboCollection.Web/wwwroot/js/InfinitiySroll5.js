@@ -4,9 +4,13 @@
     this.params = iParams;      // Additional parameters to pass to the controller
     this.loading = false;       // true if asynchronous loading is in process
     this.skip = 50;
+
+    var tagValues = $("#tags").val();
+
     this.AddTableLines = function (firstItem) {
         this.loading = true;
         this.params.firstItem = firstItem;
+        this.params.tagValues = tagValues;
         // $("#footer").css("display", "block"); // show loading info
         $.ajax({
             type: 'POST',

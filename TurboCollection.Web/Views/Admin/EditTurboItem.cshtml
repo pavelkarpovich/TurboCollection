@@ -1,0 +1,92 @@
+﻿@model TurboCollection.Web.ViewModels.TurboItemEditViewModel
+
+@{
+    ViewData["Title"] = "Edit Turbo Item";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="container">
+    <main role="main" class="pb-3">
+        <div class="row">
+            <div class="col-md-4">
+                <form id="editExtraForm" enctype="multipart/form-data" asp-action="EditTurboItem">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label data-title="Category">
+                                    <label asp-for="Collections" class="control-label"></label>
+                                    <select asp-for="CollectionId" asp-items="@Model.Collections" id="selectCollection" style="pointer-events: none;"></select>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <label asp-for="Number" class="control-label"></label>
+                        <input id="editExtraNumber" asp-for="Number" class="form-control" style="pointer-events: none;" />
+                        <span asp-validation-for="Number" class="text-danger"></span>
+                    </div>
+                    <span id="errorNumber" style="color: red"></span>
+                    <br />
+                    <div class="form-group">
+                        <label asp-for="Name" class="control-label"></label>
+                        <input asp-for="Name" class="form-control" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                    <span id="errorNumber" style="color: red"></span>
+                    <br />
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <output>
+                                    @if (string.IsNullOrEmpty(Model.PictureUrl))
+                                    {
+                                        <img style="border: 1px solid #ddd" src="/images/no-image.png" />
+                                    }
+                                    else
+                                    {
+                                        <img style="border-radius: 6px; border: 1px solid #ddd" height="250" src="@Html.DisplayFor(item => item.PictureUrl)" />
+                                    }
+                                </output>
+                                <div class="custom-file" style="margin-top:3px">
+                                    <label class="btn btn-outline-dark btn-sm">
+                                        <i asp-for="Picture" class="fa fa-image"></i>Choose image<input asp-for="Picture" type="file" style="display: none;" id="customFile">
+                                    </label>
+                                    @*<input asp-for="Picture" class="custom-file-input" id="customFile">*@
+                                </div>
+                            </div>
+                            <span id="errorPicture" style="color: red"></span>
+                        </div>
+                    </div>
+                    <br />
+                    @foreach (var tag in Model.Tags)
+                    {
+                        <span>
+                            @if (Model.TagIds.Contains(int.Parse(tag.Value)))
+                            {
+                                <input type="checkbox" class="checkbox" name="TagIds" value="@tag.Value" checked="checked" />
+                            }
+                            else
+                            {
+                                <input type="checkbox" class="checkbox" name="TagIds" value="@tag.Value"/>
+                            }  
+                            <label for="@tag.Text">@tag.Text</label>
+                        </span>
+                    }
+
+                    <div class="form-group">
+                        <input type="submit" value="Save" class="btn btn-sm btn-primary rounded-0 text-uppercase" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+</div>
+
+@section Scripts {
+    @*@{await Html.RenderPartialAsync("_ValidationScriptsPartial");}*@
+    @*<script src="~/js/validation.js"></script>*@
+    <script src="~/js/openimage.js"></script>
+}

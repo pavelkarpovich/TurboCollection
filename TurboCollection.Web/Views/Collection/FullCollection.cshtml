@@ -12,7 +12,7 @@
             <label data-title="brand">
                 <select asp-for="@Model.CollectionFilerApplied" asp-items="@Model.Collections"></select>
                 <input asp-for="Search" type="text" placeholder="@Localizer["Search"]">
-                @Html.ListBoxFor(m => m.TagIds, Model.Tags, new { @id = "months" })
+                @Html.ListBoxFor(m => m.TagIds, Model.Tags, new { @id = "tags" })
             </label>
             <input type="submit" value="@Localizer["Apply Filters"]" />
         </form>
@@ -22,13 +22,14 @@
 @{
     int p1 = @Model.CollectionFilerApplied == null ? 0 : @Model.CollectionFilerApplied.Value;
     string p2 = @Model.Search == null ? "" : @Model.Search;
+    
 }
 
 <div id="anyTable" class="d-flex flex-wrap">
     @foreach (var item in Model.Items)
     {
         <div class="turboitem">
-            <img style="border-radius: 10px; border: 1px solid #ddd" width="250px" src="@Html.DisplayFor(modelItem => item.Picture)" />
+                <img style="border-radius: 10px; border: 1px solid #ddd" width="250px" src="@Html.DisplayFor(modelItem => item.PictureUrl)" />
         </div>
     }
 </div>
@@ -45,13 +46,15 @@
     <script src="~/js/InfinitiySroll5.js"></script>
     <script type="text/javascript">
             $(document).ready(function () {
-            $('#months').multiselect(
+            $('#tags').multiselect(
             {
                  allSelectedText: false
             });
         });
     </script>
     <script>
-        var infinityScroll = new InfinitiySroll("anyTable", "/collection/_TestData", { sortOrder: @p1, searchString: "@p2" });
+
+        //var infinityScroll = new InfinitiySroll("anyTable", "/collection/_TestData", { collectionId: @p1, searchString: "@p2" tags: $("#tags").val() });
+        var infinityScroll = new InfinitiySroll("anyTable", "/collection/_TestData", { collectionId: @p1, searchString: "@p2" });
     </script>
 }

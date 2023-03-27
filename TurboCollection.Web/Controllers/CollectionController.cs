@@ -49,10 +49,10 @@ namespace TurboCollection.Web.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> _TestData(int sortOrder, string searchString, int firstItem = 0)
+        public async Task<IActionResult> _TestData(int collectionId, string searchString, int[] tagValues, int firstItem = 0)
         {
 
-            var viewmodel = await _collectionViewModelService.GetTurboItems(sortOrder, searchString, firstItem, BATCH_SIZE);
+            var viewmodel = await _collectionViewModelService.GetTurboItems(collectionId, searchString, tagValues, firstItem, BATCH_SIZE);
 
             return PartialView(viewmodel);
         }

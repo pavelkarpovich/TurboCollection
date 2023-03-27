@@ -12,7 +12,7 @@ using TurboCollection.Infrastructure.Data;
 namespace TurboCollection.Infrastructure.Data.Migrations.Application
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230325160505_InitialSchema")]
+    [Migration("20230326221210_InitialSchema")]
     partial class InitialSchema
     {
         /// <inheritdoc />
@@ -245,7 +245,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                     b.Property<int>("Number")
                         .HasColumnType("int");
 
-                    b.Property<string>("Picture")
+                    b.Property<string>("PictureUrl")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -269,7 +269,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 1,
                             Name = "OPEL ASCONA CD",
                             Number = 1,
-                            Picture = "/images/collection/001.jpg"
+                            PictureUrl = "/images/collection/001.jpg"
                         },
                         new
                         {
@@ -277,7 +277,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 1,
                             Name = "TVR 390-SE CONVERTIBLE",
                             Number = 2,
-                            Picture = "/images/collection/002.jpg"
+                            PictureUrl = "/images/collection/002.jpg"
                         },
                         new
                         {
@@ -285,7 +285,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 1,
                             Name = "ROLLS ROYCE SILVER",
                             Number = 3,
-                            Picture = "/images/collection/003.jpg"
+                            PictureUrl = "/images/collection/003.jpg"
                         },
                         new
                         {
@@ -293,7 +293,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 1,
                             Name = "MERCEDES BENZ 300 E",
                             Number = 4,
-                            Picture = "/images/collection/004.jpg"
+                            PictureUrl = "/images/collection/004.jpg"
                         },
                         new
                         {
@@ -301,7 +301,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 1,
                             Name = "HONDA ACCORD",
                             Number = 5,
-                            Picture = "/images/collection/005.jpg"
+                            PictureUrl = "/images/collection/005.jpg"
                         },
                         new
                         {
@@ -309,7 +309,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 1,
                             Name = "LAMBORGHINI",
                             Number = 6,
-                            Picture = "/images/collection/006.jpg"
+                            PictureUrl = "/images/collection/006.jpg"
                         },
                         new
                         {
@@ -317,7 +317,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 1,
                             Name = "ASTON MARTIN",
                             Number = 7,
-                            Picture = "/images/collection/007.jpg"
+                            PictureUrl = "/images/collection/007.jpg"
                         },
                         new
                         {
@@ -325,7 +325,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 1,
                             Name = "ISDERA IMPERATOR",
                             Number = 8,
-                            Picture = "/images/collection/008.jpg"
+                            PictureUrl = "/images/collection/008.jpg"
                         },
                         new
                         {
@@ -333,7 +333,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 1,
                             Name = "BMW RT80",
                             Number = 9,
-                            Picture = "/images/collection/009.jpg"
+                            PictureUrl = "/images/collection/009.jpg"
                         },
                         new
                         {
@@ -341,7 +341,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 1,
                             Name = "TOYOTA LAND CRUISER",
                             Number = 10,
-                            Picture = "/images/collection/010.jpg"
+                            PictureUrl = "/images/collection/010.jpg"
                         },
                         new
                         {
@@ -349,7 +349,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 1,
                             Name = "CAGIVA FERRARI",
                             Number = 11,
-                            Picture = "/images/collection/011.jpg"
+                            PictureUrl = "/images/collection/011.jpg"
                         },
                         new
                         {
@@ -357,7 +357,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 1,
                             Name = "HONDA CIVIC",
                             Number = 12,
-                            Picture = "/images/collection/012.jpg"
+                            PictureUrl = "/images/collection/012.jpg"
                         },
                         new
                         {
@@ -365,7 +365,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 1,
                             Name = "SUBARU 4 W D",
                             Number = 13,
-                            Picture = "/images/collection/013.jpg"
+                            PictureUrl = "/images/collection/013.jpg"
                         },
                         new
                         {
@@ -373,7 +373,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 1,
                             Name = "KODIAK",
                             Number = 14,
-                            Picture = "/images/collection/014.jpg"
+                            PictureUrl = "/images/collection/014.jpg"
                         },
                         new
                         {
@@ -381,7 +381,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 1,
                             Name = "VOLVO 760-GLE",
                             Number = 15,
-                            Picture = "/images/collection/015.jpg"
+                            PictureUrl = "/images/collection/015.jpg"
                         },
                         new
                         {
@@ -389,7 +389,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 1,
                             Name = "TOYOTA STARLET",
                             Number = 16,
-                            Picture = "/images/collection/016.jpg"
+                            PictureUrl = "/images/collection/016.jpg"
                         },
                         new
                         {
@@ -397,7 +397,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 1,
                             Name = "AUSTIN MG METRO TURBO",
                             Number = 17,
-                            Picture = "/images/collection/017.jpg"
+                            PictureUrl = "/images/collection/017.jpg"
                         },
                         new
                         {
@@ -405,7 +405,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 1,
                             Name = "FORD SIERRA",
                             Number = 18,
-                            Picture = "/images/collection/018.jpg"
+                            PictureUrl = "/images/collection/018.jpg"
                         },
                         new
                         {
@@ -413,7 +413,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 1,
                             Name = "LAMBORGHINI",
                             Number = 19,
-                            Picture = "/images/collection/019.jpg"
+                            PictureUrl = "/images/collection/019.jpg"
                         },
                         new
                         {
@@ -421,7 +421,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 1,
                             Name = "FORD ESCORT RS TURBO",
                             Number = 20,
-                            Picture = "/images/collection/020.jpg"
+                            PictureUrl = "/images/collection/020.jpg"
                         },
                         new
                         {
@@ -429,7 +429,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 1,
                             Name = "FORD THUNDERBIRD",
                             Number = 21,
-                            Picture = "/images/collection/021.jpg"
+                            PictureUrl = "/images/collection/021.jpg"
                         },
                         new
                         {
@@ -437,7 +437,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 1,
                             Name = "FERRARI GTO-308",
                             Number = 22,
-                            Picture = "/images/collection/022.jpg"
+                            PictureUrl = "/images/collection/022.jpg"
                         },
                         new
                         {
@@ -445,7 +445,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 1,
                             Name = "HONDA VF 400",
                             Number = 23,
-                            Picture = "/images/collection/023.jpg"
+                            PictureUrl = "/images/collection/023.jpg"
                         },
                         new
                         {
@@ -453,7 +453,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 1,
                             Name = "FORD MUSTANG SVO",
                             Number = 24,
-                            Picture = "/images/collection/024.jpg"
+                            PictureUrl = "/images/collection/024.jpg"
                         },
                         new
                         {
@@ -461,7 +461,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 1,
                             Name = "FERRARI",
                             Number = 25,
-                            Picture = "/images/collection/025.jpg"
+                            PictureUrl = "/images/collection/025.jpg"
                         },
                         new
                         {
@@ -469,7 +469,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 1,
                             Name = "DODGE CHARGER",
                             Number = 26,
-                            Picture = "/images/collection/026.jpg"
+                            PictureUrl = "/images/collection/026.jpg"
                         },
                         new
                         {
@@ -477,7 +477,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 1,
                             Name = "RENAULT 5",
                             Number = 27,
-                            Picture = "/images/collection/027.jpg"
+                            PictureUrl = "/images/collection/027.jpg"
                         },
                         new
                         {
@@ -485,7 +485,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 1,
                             Name = "MITSUBISHI",
                             Number = 28,
-                            Picture = "/images/collection/028.jpg"
+                            PictureUrl = "/images/collection/028.jpg"
                         },
                         new
                         {
@@ -493,7 +493,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 1,
                             Name = "BMW K-100",
                             Number = 29,
-                            Picture = "/images/collection/029.jpg"
+                            PictureUrl = "/images/collection/029.jpg"
                         },
                         new
                         {
@@ -501,7 +501,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 1,
                             Name = "DODGE CONQUEST",
                             Number = 30,
-                            Picture = "/images/collection/030.jpg"
+                            PictureUrl = "/images/collection/030.jpg"
                         },
                         new
                         {
@@ -509,7 +509,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 1,
                             Name = "FERRARI",
                             Number = 31,
-                            Picture = "/images/collection/031.jpg"
+                            PictureUrl = "/images/collection/031.jpg"
                         },
                         new
                         {
@@ -517,7 +517,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 1,
                             Name = "LAMBORGHINI",
                             Number = 32,
-                            Picture = "/images/collection/032.jpg"
+                            PictureUrl = "/images/collection/032.jpg"
                         },
                         new
                         {
@@ -525,7 +525,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 1,
                             Name = "PONTIAC FIERO",
                             Number = 33,
-                            Picture = "/images/collection/033.jpg"
+                            PictureUrl = "/images/collection/033.jpg"
                         },
                         new
                         {
@@ -533,7 +533,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 1,
                             Name = "SUZUKI GS X 550",
                             Number = 34,
-                            Picture = "/images/collection/034.jpg"
+                            PictureUrl = "/images/collection/034.jpg"
                         },
                         new
                         {
@@ -541,7 +541,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 1,
                             Name = "DODGE COLT",
                             Number = 35,
-                            Picture = "/images/collection/035.jpg"
+                            PictureUrl = "/images/collection/035.jpg"
                         },
                         new
                         {
@@ -549,7 +549,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 1,
                             Name = "PEUGEOT",
                             Number = 36,
-                            Picture = "/images/collection/036.jpg"
+                            PictureUrl = "/images/collection/036.jpg"
                         },
                         new
                         {
@@ -557,7 +557,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 1,
                             Name = "NISSAN SUNNY",
                             Number = 37,
-                            Picture = "/images/collection/037.jpg"
+                            PictureUrl = "/images/collection/037.jpg"
                         },
                         new
                         {
@@ -565,7 +565,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 1,
                             Name = "JAGUAR XJ-6",
                             Number = 38,
-                            Picture = "/images/collection/038.jpg"
+                            PictureUrl = "/images/collection/038.jpg"
                         },
                         new
                         {
@@ -573,7 +573,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 1,
                             Name = "BMW 5-ER SERIE",
                             Number = 39,
-                            Picture = "/images/collection/039.jpg"
+                            PictureUrl = "/images/collection/039.jpg"
                         },
                         new
                         {
@@ -581,7 +581,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 1,
                             Name = "MERCEDES 190E",
                             Number = 40,
-                            Picture = "/images/collection/040.jpg"
+                            PictureUrl = "/images/collection/040.jpg"
                         },
                         new
                         {
@@ -589,7 +589,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 1,
                             Name = "LOTUS ESPRIT TURBO",
                             Number = 41,
-                            Picture = "/images/collection/041.jpg"
+                            PictureUrl = "/images/collection/041.jpg"
                         },
                         new
                         {
@@ -597,7 +597,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 1,
                             Name = "ALFA ROMEO",
                             Number = 42,
-                            Picture = "/images/collection/042.jpg"
+                            PictureUrl = "/images/collection/042.jpg"
                         },
                         new
                         {
@@ -605,7 +605,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 1,
                             Name = "TYRRELL P34",
                             Number = 43,
-                            Picture = "/images/collection/043.jpg"
+                            PictureUrl = "/images/collection/043.jpg"
                         },
                         new
                         {
@@ -613,7 +613,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 1,
                             Name = "PORSCHE 928-TTE",
                             Number = 44,
-                            Picture = "/images/collection/044.jpg"
+                            PictureUrl = "/images/collection/044.jpg"
                         },
                         new
                         {
@@ -621,7 +621,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 1,
                             Name = "INNOCENTI MINI DE TOMASO",
                             Number = 45,
-                            Picture = "/images/collection/045.jpg"
+                            PictureUrl = "/images/collection/045.jpg"
                         },
                         new
                         {
@@ -629,7 +629,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 1,
                             Name = "PORSCHE 911 TURBO",
                             Number = 46,
-                            Picture = "/images/collection/046.jpg"
+                            PictureUrl = "/images/collection/046.jpg"
                         },
                         new
                         {
@@ -637,7 +637,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 1,
                             Name = "NISSAN 300 Z X",
                             Number = 47,
-                            Picture = "/images/collection/047.jpg"
+                            PictureUrl = "/images/collection/047.jpg"
                         },
                         new
                         {
@@ -645,7 +645,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 1,
                             Name = "BMW RT80",
                             Number = 48,
-                            Picture = "/images/collection/048.jpg"
+                            PictureUrl = "/images/collection/048.jpg"
                         },
                         new
                         {
@@ -653,7 +653,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 1,
                             Name = "CAMARO R CONVERTIBLE",
                             Number = 49,
-                            Picture = "/images/collection/049.jpg"
+                            PictureUrl = "/images/collection/049.jpg"
                         },
                         new
                         {
@@ -661,7 +661,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 1,
                             Name = "LEDL",
                             Number = 50,
-                            Picture = "/images/collection/050.jpg"
+                            PictureUrl = "/images/collection/050.jpg"
                         },
                         new
                         {
@@ -669,7 +669,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "FERRARI TESTAROSSA",
                             Number = 51,
-                            Picture = "/images/collection/051.jpg"
+                            PictureUrl = "/images/collection/051.jpg"
                         },
                         new
                         {
@@ -677,7 +677,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "HONDA INTERCEPTORS",
                             Number = 52,
-                            Picture = "/images/collection/052.jpg"
+                            PictureUrl = "/images/collection/052.jpg"
                         },
                         new
                         {
@@ -685,7 +685,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "LINCOLN CONTINENTAL",
                             Number = 53,
-                            Picture = "/images/collection/053.jpg"
+                            PictureUrl = "/images/collection/053.jpg"
                         },
                         new
                         {
@@ -693,7 +693,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "JAGUAR ÖZEL YAPIM",
                             Number = 54,
-                            Picture = "/images/collection/054.jpg"
+                            PictureUrl = "/images/collection/054.jpg"
                         },
                         new
                         {
@@ -701,7 +701,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "FIAT",
                             Number = 55,
-                            Picture = "/images/collection/055.jpg"
+                            PictureUrl = "/images/collection/055.jpg"
                         },
                         new
                         {
@@ -709,7 +709,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "DODGE SHADOW",
                             Number = 56,
-                            Picture = "/images/collection/056.jpg"
+                            PictureUrl = "/images/collection/056.jpg"
                         },
                         new
                         {
@@ -717,7 +717,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "OPEL OMEGA GL",
                             Number = 57,
-                            Picture = "/images/collection/057.jpg"
+                            PictureUrl = "/images/collection/057.jpg"
                         },
                         new
                         {
@@ -725,7 +725,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "FORD MUSTANG GT",
                             Number = 58,
-                            Picture = "/images/collection/058.jpg"
+                            PictureUrl = "/images/collection/058.jpg"
                         },
                         new
                         {
@@ -733,7 +733,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "HONDA VF 1000 R",
                             Number = 59,
-                            Picture = "/images/collection/059.jpg"
+                            PictureUrl = "/images/collection/059.jpg"
                         },
                         new
                         {
@@ -741,7 +741,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "MERCEDES 190 E",
                             Number = 60,
-                            Picture = "/images/collection/060.jpg"
+                            PictureUrl = "/images/collection/060.jpg"
                         },
                         new
                         {
@@ -749,7 +749,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "VW SCIROCCO GT 16 V",
                             Number = 61,
-                            Picture = "/images/collection/061.jpg"
+                            PictureUrl = "/images/collection/061.jpg"
                         },
                         new
                         {
@@ -757,7 +757,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "FORD TYRRELL-011",
                             Number = 62,
-                            Picture = "/images/collection/062.jpg"
+                            PictureUrl = "/images/collection/062.jpg"
                         },
                         new
                         {
@@ -765,7 +765,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "OPEL KADETT GS-I",
                             Number = 63,
-                            Picture = "/images/collection/063.jpg"
+                            PictureUrl = "/images/collection/063.jpg"
                         },
                         new
                         {
@@ -773,7 +773,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "ALBAR SONIC",
                             Number = 64,
-                            Picture = "/images/collection/064.jpg"
+                            PictureUrl = "/images/collection/064.jpg"
                         },
                         new
                         {
@@ -781,7 +781,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "SUBARU ALEYONE TURBO",
                             Number = 65,
-                            Picture = "/images/collection/065.jpg"
+                            PictureUrl = "/images/collection/065.jpg"
                         },
                         new
                         {
@@ -789,7 +789,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "CHEVROLET CORVETTE",
                             Number = 66,
-                            Picture = "/images/collection/066.jpg"
+                            PictureUrl = "/images/collection/066.jpg"
                         },
                         new
                         {
@@ -797,7 +797,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "BMW 735 I",
                             Number = 67,
-                            Picture = "/images/collection/067.jpg"
+                            PictureUrl = "/images/collection/067.jpg"
                         },
                         new
                         {
@@ -805,7 +805,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "LAMBORGHINI COUNTACH S",
                             Number = 68,
-                            Picture = "/images/collection/068.jpg"
+                            PictureUrl = "/images/collection/068.jpg"
                         },
                         new
                         {
@@ -813,7 +813,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "CHEVROLET CAMARO IROC-Z",
                             Number = 69,
-                            Picture = "/images/collection/069.jpg"
+                            PictureUrl = "/images/collection/069.jpg"
                         },
                         new
                         {
@@ -821,7 +821,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "BMW K 100 RS",
                             Number = 70,
-                            Picture = "/images/collection/070.jpg"
+                            PictureUrl = "/images/collection/070.jpg"
                         },
                         new
                         {
@@ -829,7 +829,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "LINCOLN MERCÜR",
                             Number = 71,
-                            Picture = "/images/collection/071.jpg"
+                            PictureUrl = "/images/collection/071.jpg"
                         },
                         new
                         {
@@ -837,7 +837,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "CHEVROLET TURBO SPRINT",
                             Number = 72,
-                            Picture = "/images/collection/072.jpg"
+                            PictureUrl = "/images/collection/072.jpg"
                         },
                         new
                         {
@@ -845,7 +845,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "MITSUBISHI STARION",
                             Number = 73,
-                            Picture = "/images/collection/073.jpg"
+                            PictureUrl = "/images/collection/073.jpg"
                         },
                         new
                         {
@@ -853,7 +853,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "ROLLS ROYCE",
                             Number = 74,
-                            Picture = "/images/collection/074.jpg"
+                            PictureUrl = "/images/collection/074.jpg"
                         },
                         new
                         {
@@ -861,7 +861,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "VW GOLF GTI",
                             Number = 75,
-                            Picture = "/images/collection/075.jpg"
+                            PictureUrl = "/images/collection/075.jpg"
                         },
                         new
                         {
@@ -869,7 +869,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "FERRARI GTS TURBO",
                             Number = 76,
-                            Picture = "/images/collection/076.jpg"
+                            PictureUrl = "/images/collection/076.jpg"
                         },
                         new
                         {
@@ -877,7 +877,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "PORSCHE 959",
                             Number = 77,
-                            Picture = "/images/collection/077.jpg"
+                            PictureUrl = "/images/collection/077.jpg"
                         },
                         new
                         {
@@ -885,7 +885,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "ALFA ROMEO 179",
                             Number = 78,
-                            Picture = "/images/collection/078.jpg"
+                            PictureUrl = "/images/collection/078.jpg"
                         },
                         new
                         {
@@ -893,7 +893,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "RENAULT ALPINE TURBO",
                             Number = 79,
-                            Picture = "/images/collection/079.jpg"
+                            PictureUrl = "/images/collection/079.jpg"
                         },
                         new
                         {
@@ -901,7 +901,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "AUDI 200 QUATTRO",
                             Number = 80,
-                            Picture = "/images/collection/080.jpg"
+                            PictureUrl = "/images/collection/080.jpg"
                         },
                         new
                         {
@@ -909,7 +909,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "ABC (ÖZEL YAPIM) MERCEDES MOTOR",
                             Number = 81,
-                            Picture = "/images/collection/081.jpg"
+                            PictureUrl = "/images/collection/081.jpg"
                         },
                         new
                         {
@@ -917,7 +917,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "BMW K 100 RT",
                             Number = 82,
-                            Picture = "/images/collection/082.jpg"
+                            PictureUrl = "/images/collection/082.jpg"
                         },
                         new
                         {
@@ -925,7 +925,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "PORSCHE 944",
                             Number = 83,
-                            Picture = "/images/collection/083.jpg"
+                            PictureUrl = "/images/collection/083.jpg"
                         },
                         new
                         {
@@ -933,7 +933,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "SUZUKI SWIFT 1,3",
                             Number = 84,
-                            Picture = "/images/collection/084.jpg"
+                            PictureUrl = "/images/collection/084.jpg"
                         },
                         new
                         {
@@ -941,7 +941,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "JAGUAR XJS 3,6",
                             Number = 85,
-                            Picture = "/images/collection/085.jpg"
+                            PictureUrl = "/images/collection/085.jpg"
                         },
                         new
                         {
@@ -949,7 +949,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "CHEVROLET CELEBRITY",
                             Number = 86,
-                            Picture = "/images/collection/086.jpg"
+                            PictureUrl = "/images/collection/086.jpg"
                         },
                         new
                         {
@@ -957,7 +957,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "MERCEDES 500 SL",
                             Number = 87,
-                            Picture = "/images/collection/087.jpg"
+                            PictureUrl = "/images/collection/087.jpg"
                         },
                         new
                         {
@@ -965,7 +965,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "LANCIA",
                             Number = 88,
-                            Picture = "/images/collection/088.jpg"
+                            PictureUrl = "/images/collection/088.jpg"
                         },
                         new
                         {
@@ -973,7 +973,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "ISDERA SPYDER 033-I",
                             Number = 89,
-                            Picture = "/images/collection/089.jpg"
+                            PictureUrl = "/images/collection/089.jpg"
                         },
                         new
                         {
@@ -981,7 +981,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "NISSAN SKYLINE GTS TURBO",
                             Number = 90,
-                            Picture = "/images/collection/090.jpg"
+                            PictureUrl = "/images/collection/090.jpg"
                         },
                         new
                         {
@@ -989,7 +989,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "LAMBORGHINI JALPA 3500",
                             Number = 91,
-                            Picture = "/images/collection/091.jpg"
+                            PictureUrl = "/images/collection/091.jpg"
                         },
                         new
                         {
@@ -997,7 +997,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "CITROEN BX-16 TRS",
                             Number = 92,
-                            Picture = "/images/collection/092.jpg"
+                            PictureUrl = "/images/collection/092.jpg"
                         },
                         new
                         {
@@ -1005,7 +1005,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "AUDI 100 QUATTRO",
                             Number = 93,
-                            Picture = "/images/collection/093.jpg"
+                            PictureUrl = "/images/collection/093.jpg"
                         },
                         new
                         {
@@ -1013,7 +1013,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "DODGE DAYTONA SHELBY",
                             Number = 94,
-                            Picture = "/images/collection/094.jpg"
+                            PictureUrl = "/images/collection/094.jpg"
                         },
                         new
                         {
@@ -1021,7 +1021,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "HONDA CIVIC CRX",
                             Number = 95,
-                            Picture = "/images/collection/095.jpg"
+                            PictureUrl = "/images/collection/095.jpg"
                         },
                         new
                         {
@@ -1029,7 +1029,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "FORD",
                             Number = 96,
-                            Picture = "/images/collection/096.jpg"
+                            PictureUrl = "/images/collection/096.jpg"
                         },
                         new
                         {
@@ -1037,7 +1037,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "FORD",
                             Number = 97,
-                            Picture = "/images/collection/097.jpg"
+                            PictureUrl = "/images/collection/097.jpg"
                         },
                         new
                         {
@@ -1045,7 +1045,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "TOYOTA SUPRA",
                             Number = 98,
-                            Picture = "/images/collection/098.jpg"
+                            PictureUrl = "/images/collection/098.jpg"
                         },
                         new
                         {
@@ -1053,7 +1053,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "NISSAN FAIRLADY-Z",
                             Number = 99,
-                            Picture = "/images/collection/099.jpg"
+                            PictureUrl = "/images/collection/099.jpg"
                         },
                         new
                         {
@@ -1061,7 +1061,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "BMW 635 CSI",
                             Number = 100,
-                            Picture = "/images/collection/100.jpg"
+                            PictureUrl = "/images/collection/100.jpg"
                         },
                         new
                         {
@@ -1069,7 +1069,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "PEUGEOT 205 TURBO",
                             Number = 101,
-                            Picture = "/images/collection/101.jpg"
+                            PictureUrl = "/images/collection/101.jpg"
                         },
                         new
                         {
@@ -1077,7 +1077,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "MAZDA RX-7",
                             Number = 102,
-                            Picture = "/images/collection/102.jpg"
+                            PictureUrl = "/images/collection/102.jpg"
                         },
                         new
                         {
@@ -1085,7 +1085,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "ASTON MARTIN VANTAGE",
                             Number = 103,
-                            Picture = "/images/collection/103.jpg"
+                            PictureUrl = "/images/collection/103.jpg"
                         },
                         new
                         {
@@ -1093,7 +1093,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "COBRA 427",
                             Number = 104,
-                            Picture = "/images/collection/104.jpg"
+                            PictureUrl = "/images/collection/104.jpg"
                         },
                         new
                         {
@@ -1101,7 +1101,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "TVR 420",
                             Number = 105,
-                            Picture = "/images/collection/105.jpg"
+                            PictureUrl = "/images/collection/105.jpg"
                         },
                         new
                         {
@@ -1109,7 +1109,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "FORD ARROWS-A4",
                             Number = 106,
-                            Picture = "/images/collection/106.jpg"
+                            PictureUrl = "/images/collection/106.jpg"
                         },
                         new
                         {
@@ -1117,7 +1117,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "SUZUKI GSX-R1100",
                             Number = 107,
-                            Picture = "/images/collection/107.jpg"
+                            PictureUrl = "/images/collection/107.jpg"
                         },
                         new
                         {
@@ -1125,7 +1125,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "HONDA VF 1000 F",
                             Number = 108,
-                            Picture = "/images/collection/108.jpg"
+                            PictureUrl = "/images/collection/108.jpg"
                         },
                         new
                         {
@@ -1133,7 +1133,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "LANCIA DELTA ECV",
                             Number = 109,
-                            Picture = "/images/collection/109.jpg"
+                            PictureUrl = "/images/collection/109.jpg"
                         },
                         new
                         {
@@ -1141,7 +1141,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "VECTOR TWIN TURBO",
                             Number = 110,
-                            Picture = "/images/collection/110.jpg"
+                            PictureUrl = "/images/collection/110.jpg"
                         },
                         new
                         {
@@ -1149,7 +1149,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "LOTUS ESPRIT TURBO",
                             Number = 111,
-                            Picture = "/images/collection/111.jpg"
+                            PictureUrl = "/images/collection/111.jpg"
                         },
                         new
                         {
@@ -1157,7 +1157,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "LOTUS ESPRIT 53",
                             Number = 112,
-                            Picture = "/images/collection/112.jpg"
+                            PictureUrl = "/images/collection/112.jpg"
                         },
                         new
                         {
@@ -1165,7 +1165,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "PANTHER SOLO",
                             Number = 113,
-                            Picture = "/images/collection/113.jpg"
+                            PictureUrl = "/images/collection/113.jpg"
                         },
                         new
                         {
@@ -1173,7 +1173,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "ALFA ROMEO 75",
                             Number = 114,
-                            Picture = "/images/collection/114.jpg"
+                            PictureUrl = "/images/collection/114.jpg"
                         },
                         new
                         {
@@ -1181,7 +1181,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "FORD ÖZEL YAPIM",
                             Number = 115,
-                            Picture = "/images/collection/115.jpg"
+                            PictureUrl = "/images/collection/115.jpg"
                         },
                         new
                         {
@@ -1189,7 +1189,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "MC LAREN M16",
                             Number = 116,
-                            Picture = "/images/collection/116.jpg"
+                            PictureUrl = "/images/collection/116.jpg"
                         },
                         new
                         {
@@ -1197,7 +1197,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "DE TOMASO PANTERA",
                             Number = 117,
-                            Picture = "/images/collection/117.jpg"
+                            PictureUrl = "/images/collection/117.jpg"
                         },
                         new
                         {
@@ -1205,7 +1205,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "LANCIA DELTA HF4WD",
                             Number = 118,
-                            Picture = "/images/collection/118.jpg"
+                            PictureUrl = "/images/collection/118.jpg"
                         },
                         new
                         {
@@ -1213,7 +1213,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "BMW R 80",
                             Number = 119,
-                            Picture = "/images/collection/119.jpg"
+                            PictureUrl = "/images/collection/119.jpg"
                         },
                         new
                         {
@@ -1221,7 +1221,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 2,
                             Name = "TOYOTA COROLLA ÖZEL YAPIM",
                             Number = 120,
-                            Picture = "/images/collection/120.jpg"
+                            PictureUrl = "/images/collection/120.jpg"
                         },
                         new
                         {
@@ -1229,7 +1229,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "ALFA ROMEO SZ",
                             Number = 121,
-                            Picture = "/images/collection/121.jpg"
+                            PictureUrl = "/images/collection/121.jpg"
                         },
                         new
                         {
@@ -1237,7 +1237,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "BMW 850 I",
                             Number = 122,
-                            Picture = "/images/collection/122.jpg"
+                            PictureUrl = "/images/collection/122.jpg"
                         },
                         new
                         {
@@ -1245,7 +1245,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "BMW Z1",
                             Number = 123,
-                            Picture = "/images/collection/123.jpg"
+                            PictureUrl = "/images/collection/123.jpg"
                         },
                         new
                         {
@@ -1253,7 +1253,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "BMW 318",
                             Number = 124,
-                            Picture = "/images/collection/124.jpg"
+                            PictureUrl = "/images/collection/124.jpg"
                         },
                         new
                         {
@@ -1261,7 +1261,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "BMW M3 CABRIO",
                             Number = 125,
-                            Picture = "/images/collection/125.jpg"
+                            PictureUrl = "/images/collection/125.jpg"
                         },
                         new
                         {
@@ -1269,7 +1269,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "BMW K1",
                             Number = 126,
-                            Picture = "/images/collection/126.jpg"
+                            PictureUrl = "/images/collection/126.jpg"
                         },
                         new
                         {
@@ -1277,7 +1277,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "BUGATTI 1D 90",
                             Number = 127,
-                            Picture = "/images/collection/127.jpg"
+                            PictureUrl = "/images/collection/127.jpg"
                         },
                         new
                         {
@@ -1285,7 +1285,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "BUICK REATTA CONVERTIBLE",
                             Number = 128,
-                            Picture = "/images/collection/128.jpg"
+                            PictureUrl = "/images/collection/128.jpg"
                         },
                         new
                         {
@@ -1293,7 +1293,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "CHEVROLET CERV III",
                             Number = 129,
-                            Picture = "/images/collection/129.jpg"
+                            PictureUrl = "/images/collection/129.jpg"
                         },
                         new
                         {
@@ -1301,7 +1301,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "CITROEN AX K-WAY",
                             Number = 130,
-                            Picture = "/images/collection/130.jpg"
+                            PictureUrl = "/images/collection/130.jpg"
                         },
                         new
                         {
@@ -1309,7 +1309,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "PH. MARCO GUIDETTI PENTERA DE TOMASO",
                             Number = 131,
-                            Picture = "/images/collection/131.jpg"
+                            PictureUrl = "/images/collection/131.jpg"
                         },
                         new
                         {
@@ -1317,7 +1317,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "FERRARI 328 GTB",
                             Number = 132,
-                            Picture = "/images/collection/132.jpg"
+                            PictureUrl = "/images/collection/132.jpg"
                         },
                         new
                         {
@@ -1325,7 +1325,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "FIAT UNO TURBO IE",
                             Number = 133,
-                            Picture = "/images/collection/133.jpg"
+                            PictureUrl = "/images/collection/133.jpg"
                         },
                         new
                         {
@@ -1333,7 +1333,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "FIAT PANDA 4x4 SISLEY",
                             Number = 134,
-                            Picture = "/images/collection/134.jpg"
+                            PictureUrl = "/images/collection/134.jpg"
                         },
                         new
                         {
@@ -1341,7 +1341,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "FORD V6",
                             Number = 135,
-                            Picture = "/images/collection/135.jpg"
+                            PictureUrl = "/images/collection/135.jpg"
                         },
                         new
                         {
@@ -1349,7 +1349,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "FORD SIERRA GLS",
                             Number = 136,
-                            Picture = "/images/collection/136.jpg"
+                            PictureUrl = "/images/collection/136.jpg"
                         },
                         new
                         {
@@ -1357,7 +1357,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "FORD SCORPIO GL HATCBACK",
                             Number = 137,
-                            Picture = "/images/collection/137.jpg"
+                            PictureUrl = "/images/collection/137.jpg"
                         },
                         new
                         {
@@ -1365,7 +1365,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "FORD",
                             Number = 138,
-                            Picture = "/images/collection/138.jpg"
+                            PictureUrl = "/images/collection/138.jpg"
                         },
                         new
                         {
@@ -1373,7 +1373,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "FORD",
                             Number = 139,
-                            Picture = "/images/collection/139.jpg"
+                            PictureUrl = "/images/collection/139.jpg"
                         },
                         new
                         {
@@ -1381,7 +1381,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "GEO TRACKER HUGGER",
                             Number = 140,
-                            Picture = "/images/collection/140.jpg"
+                            PictureUrl = "/images/collection/140.jpg"
                         },
                         new
                         {
@@ -1389,7 +1389,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "HEULEL",
                             Number = 141,
-                            Picture = "/images/collection/141.jpg"
+                            PictureUrl = "/images/collection/141.jpg"
                         },
                         new
                         {
@@ -1397,7 +1397,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "HONDA NSX",
                             Number = 142,
-                            Picture = "/images/collection/142.jpg"
+                            PictureUrl = "/images/collection/142.jpg"
                         },
                         new
                         {
@@ -1405,7 +1405,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "HONDA CIVIC1 CRX SI",
                             Number = 143,
-                            Picture = "/images/collection/143.jpg"
+                            PictureUrl = "/images/collection/143.jpg"
                         },
                         new
                         {
@@ -1413,7 +1413,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "HONDA V6",
                             Number = 144,
-                            Picture = "/images/collection/144.jpg"
+                            PictureUrl = "/images/collection/144.jpg"
                         },
                         new
                         {
@@ -1421,7 +1421,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "HYUNDAI PONY XP",
                             Number = 145,
-                            Picture = "/images/collection/145.jpg"
+                            PictureUrl = "/images/collection/145.jpg"
                         },
                         new
                         {
@@ -1429,7 +1429,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "IAD MINI MPV",
                             Number = 146,
-                            Picture = "/images/collection/146.jpg"
+                            PictureUrl = "/images/collection/146.jpg"
                         },
                         new
                         {
@@ -1437,7 +1437,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "IAD VENUS",
                             Number = 147,
-                            Picture = "/images/collection/147.jpg"
+                            PictureUrl = "/images/collection/147.jpg"
                         },
                         new
                         {
@@ -1445,7 +1445,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "KODIAK F1",
                             Number = 148,
-                            Picture = "/images/collection/148.jpg"
+                            PictureUrl = "/images/collection/148.jpg"
                         },
                         new
                         {
@@ -1453,7 +1453,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "LAMBORGHINI DIABLO",
                             Number = 149,
-                            Picture = "/images/collection/149.jpg"
+                            PictureUrl = "/images/collection/149.jpg"
                         },
                         new
                         {
@@ -1461,7 +1461,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "LAMBORGHINI",
                             Number = 150,
-                            Picture = "/images/collection/150.jpg"
+                            PictureUrl = "/images/collection/150.jpg"
                         },
                         new
                         {
@@ -1469,7 +1469,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "LANCIA DEDRA",
                             Number = 151,
-                            Picture = "/images/collection/151.jpg"
+                            PictureUrl = "/images/collection/151.jpg"
                         },
                         new
                         {
@@ -1477,7 +1477,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "LANCIA DELTA INTERGAL",
                             Number = 152,
-                            Picture = "/images/collection/152.jpg"
+                            PictureUrl = "/images/collection/152.jpg"
                         },
                         new
                         {
@@ -1485,7 +1485,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "LOTUS ELAN",
                             Number = 153,
-                            Picture = "/images/collection/153.jpg"
+                            PictureUrl = "/images/collection/153.jpg"
                         },
                         new
                         {
@@ -1493,7 +1493,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "LOTUS ESPRIT",
                             Number = 154,
-                            Picture = "/images/collection/154.jpg"
+                            PictureUrl = "/images/collection/154.jpg"
                         },
                         new
                         {
@@ -1501,7 +1501,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "MASERATI SHAMAL",
                             Number = 155,
-                            Picture = "/images/collection/155.jpg"
+                            PictureUrl = "/images/collection/155.jpg"
                         },
                         new
                         {
@@ -1509,7 +1509,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "MAZDA HATCBACK 323",
                             Number = 156,
-                            Picture = "/images/collection/156.jpg"
+                            PictureUrl = "/images/collection/156.jpg"
                         },
                         new
                         {
@@ -1517,7 +1517,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "MERCEDES BENZ 300 GE",
                             Number = 157,
-                            Picture = "/images/collection/157.jpg"
+                            PictureUrl = "/images/collection/157.jpg"
                         },
                         new
                         {
@@ -1525,7 +1525,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "MERCEDES 300",
                             Number = 158,
-                            Picture = "/images/collection/158.jpg"
+                            PictureUrl = "/images/collection/158.jpg"
                         },
                         new
                         {
@@ -1533,7 +1533,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "MERCEDES 300 SL-24",
                             Number = 159,
-                            Picture = "/images/collection/159.jpg"
+                            PictureUrl = "/images/collection/159.jpg"
                         },
                         new
                         {
@@ -1541,7 +1541,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "MASERATI 222 SE",
                             Number = 160,
-                            Picture = "/images/collection/160.jpg"
+                            PictureUrl = "/images/collection/160.jpg"
                         },
                         new
                         {
@@ -1549,7 +1549,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "MG",
                             Number = 161,
-                            Picture = "/images/collection/161.jpg"
+                            PictureUrl = "/images/collection/161.jpg"
                         },
                         new
                         {
@@ -1557,7 +1557,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "MICHOMOTTI VILLEUXMILLE",
                             Number = 162,
-                            Picture = "/images/collection/162.jpg"
+                            PictureUrl = "/images/collection/162.jpg"
                         },
                         new
                         {
@@ -1565,7 +1565,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "MITSUBISHI L 300",
                             Number = 163,
-                            Picture = "/images/collection/163.jpg"
+                            PictureUrl = "/images/collection/163.jpg"
                         },
                         new
                         {
@@ -1573,7 +1573,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "MITSUBISHI SPORT-COUPE ECLIPSE",
                             Number = 164,
-                            Picture = "/images/collection/164.jpg"
+                            PictureUrl = "/images/collection/164.jpg"
                         },
                         new
                         {
@@ -1581,7 +1581,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "MITSUBISHI MINI",
                             Number = 165,
-                            Picture = "/images/collection/165.jpg"
+                            PictureUrl = "/images/collection/165.jpg"
                         },
                         new
                         {
@@ -1589,7 +1589,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "MONTEGO METRO",
                             Number = 166,
-                            Picture = "/images/collection/166.jpg"
+                            PictureUrl = "/images/collection/166.jpg"
                         },
                         new
                         {
@@ -1597,7 +1597,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "MONTEGO 1 6",
                             Number = 167,
-                            Picture = "/images/collection/167.jpg"
+                            PictureUrl = "/images/collection/167.jpg"
                         },
                         new
                         {
@@ -1605,7 +1605,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "NISSAN S-CARGO",
                             Number = 168,
-                            Picture = "/images/collection/168.jpg"
+                            PictureUrl = "/images/collection/168.jpg"
                         },
                         new
                         {
@@ -1613,7 +1613,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "NISSAN EXA",
                             Number = 169,
-                            Picture = "/images/collection/169.jpg"
+                            PictureUrl = "/images/collection/169.jpg"
                         },
                         new
                         {
@@ -1621,7 +1621,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "OLDSMOBILE",
                             Number = 170,
-                            Picture = "/images/collection/170.jpg"
+                            PictureUrl = "/images/collection/170.jpg"
                         },
                         new
                         {
@@ -1629,7 +1629,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "OPEL KADETT CABRIO GSI",
                             Number = 171,
-                            Picture = "/images/collection/171.jpg"
+                            PictureUrl = "/images/collection/171.jpg"
                         },
                         new
                         {
@@ -1637,7 +1637,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "PANTHER KALLISTA",
                             Number = 172,
-                            Picture = "/images/collection/172.jpg"
+                            PictureUrl = "/images/collection/172.jpg"
                         },
                         new
                         {
@@ -1645,7 +1645,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "PONTIAC TRANS SPORT 5E",
                             Number = 173,
-                            Picture = "/images/collection/173.jpg"
+                            PictureUrl = "/images/collection/173.jpg"
                         },
                         new
                         {
@@ -1653,7 +1653,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "RENAULT LAGUNA",
                             Number = 174,
-                            Picture = "/images/collection/174.jpg"
+                            PictureUrl = "/images/collection/174.jpg"
                         },
                         new
                         {
@@ -1661,7 +1661,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "RENAULT 25 GTX",
                             Number = 175,
-                            Picture = "/images/collection/175.jpg"
+                            PictureUrl = "/images/collection/175.jpg"
                         },
                         new
                         {
@@ -1669,7 +1669,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "ROVER 216 GSI",
                             Number = 176,
-                            Picture = "/images/collection/176.jpg"
+                            PictureUrl = "/images/collection/176.jpg"
                         },
                         new
                         {
@@ -1677,7 +1677,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "RANGE ROVER POWERFUL 4,5 V 8",
                             Number = 177,
-                            Picture = "/images/collection/177.jpg"
+                            PictureUrl = "/images/collection/177.jpg"
                         },
                         new
                         {
@@ -1685,7 +1685,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "SUBARU SEDAN 1,8 DL FWD",
                             Number = 178,
-                            Picture = "/images/collection/178.jpg"
+                            PictureUrl = "/images/collection/178.jpg"
                         },
                         new
                         {
@@ -1693,7 +1693,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "SUZUKI GSX 750 F",
                             Number = 179,
-                            Picture = "/images/collection/179.jpg"
+                            PictureUrl = "/images/collection/179.jpg"
                         },
                         new
                         {
@@ -1701,7 +1701,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "SUZUKI VITARA",
                             Number = 180,
-                            Picture = "/images/collection/180.jpg"
+                            PictureUrl = "/images/collection/180.jpg"
                         },
                         new
                         {
@@ -1709,7 +1709,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "TOYOTA CELICA TURBO 4X4",
                             Number = 181,
-                            Picture = "/images/collection/181.jpg"
+                            PictureUrl = "/images/collection/181.jpg"
                         },
                         new
                         {
@@ -1717,7 +1717,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "TOYOTA FXV-II",
                             Number = 182,
-                            Picture = "/images/collection/182.jpg"
+                            PictureUrl = "/images/collection/182.jpg"
                         },
                         new
                         {
@@ -1725,7 +1725,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "TOYOTA MR2",
                             Number = 183,
-                            Picture = "/images/collection/183.jpg"
+                            PictureUrl = "/images/collection/183.jpg"
                         },
                         new
                         {
@@ -1733,7 +1733,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "VAUXHALL CALIBRA 2.0I 16 V",
                             Number = 184,
-                            Picture = "/images/collection/184.jpg"
+                            PictureUrl = "/images/collection/184.jpg"
                         },
                         new
                         {
@@ -1741,7 +1741,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "VECTOR",
                             Number = 185,
-                            Picture = "/images/collection/185.jpg"
+                            PictureUrl = "/images/collection/185.jpg"
                         },
                         new
                         {
@@ -1749,7 +1749,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "VW GOLF CABRIOLET",
                             Number = 186,
-                            Picture = "/images/collection/186.jpg"
+                            PictureUrl = "/images/collection/186.jpg"
                         },
                         new
                         {
@@ -1757,7 +1757,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "VW SCOOTER",
                             Number = 187,
-                            Picture = "/images/collection/187.jpg"
+                            PictureUrl = "/images/collection/187.jpg"
                         },
                         new
                         {
@@ -1765,7 +1765,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "VOLKSWAGEN GP SPYDER",
                             Number = 188,
-                            Picture = "/images/collection/188.jpg"
+                            PictureUrl = "/images/collection/188.jpg"
                         },
                         new
                         {
@@ -1773,7 +1773,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "VOLKSWAGEN ELECTRIKLI",
                             Number = 189,
-                            Picture = "/images/collection/189.jpg"
+                            PictureUrl = "/images/collection/189.jpg"
                         },
                         new
                         {
@@ -1781,7 +1781,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 3,
                             Name = "YUGO FLORIDA",
                             Number = 190,
-                            Picture = "/images/collection/190.jpg"
+                            PictureUrl = "/images/collection/190.jpg"
                         },
                         new
                         {
@@ -1789,7 +1789,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "ROVER BRAVO PROTOTIP",
                             Number = 191,
-                            Picture = "/images/collection/191.jpg"
+                            PictureUrl = "/images/collection/191.jpg"
                         },
                         new
                         {
@@ -1797,7 +1797,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "SYD MEAD ILLUSTRATION",
                             Number = 192,
-                            Picture = "/images/collection/192.jpg"
+                            PictureUrl = "/images/collection/192.jpg"
                         },
                         new
                         {
@@ -1805,7 +1805,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "ASTON MARTIN LAGONDA",
                             Number = 193,
-                            Picture = "/images/collection/193.jpg"
+                            PictureUrl = "/images/collection/193.jpg"
                         },
                         new
                         {
@@ -1813,7 +1813,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "CHEVROLET ÖZEL YAPIM",
                             Number = 194,
-                            Picture = "/images/collection/194.jpg"
+                            PictureUrl = "/images/collection/194.jpg"
                         },
                         new
                         {
@@ -1821,7 +1821,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "MERCEDES-BENZ C112",
                             Number = 195,
-                            Picture = "/images/collection/195.jpg"
+                            PictureUrl = "/images/collection/195.jpg"
                         },
                         new
                         {
@@ -1829,7 +1829,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "AUDI AVUS QUATTRO",
                             Number = 196,
-                            Picture = "/images/collection/196.jpg"
+                            PictureUrl = "/images/collection/196.jpg"
                         },
                         new
                         {
@@ -1837,7 +1837,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "DODGE VIPER",
                             Number = 197,
-                            Picture = "/images/collection/197.jpg"
+                            PictureUrl = "/images/collection/197.jpg"
                         },
                         new
                         {
@@ -1845,7 +1845,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "SILVER ARROW 1933",
                             Number = 198,
-                            Picture = "/images/collection/198.jpg"
+                            PictureUrl = "/images/collection/198.jpg"
                         },
                         new
                         {
@@ -1853,7 +1853,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "BERTONE SPIDER PROTOTIP",
                             Number = 199,
-                            Picture = "/images/collection/199.jpg"
+                            PictureUrl = "/images/collection/199.jpg"
                         },
                         new
                         {
@@ -1861,7 +1861,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "GATTO ÖZEL YAPIM",
                             Number = 200,
-                            Picture = "/images/collection/200.jpg"
+                            PictureUrl = "/images/collection/200.jpg"
                         },
                         new
                         {
@@ -1869,7 +1869,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "CORVETTE SPYDER",
                             Number = 201,
-                            Picture = "/images/collection/201.jpg"
+                            PictureUrl = "/images/collection/201.jpg"
                         },
                         new
                         {
@@ -1877,7 +1877,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "FERRARI TRIA DESIGN PROTOTIP",
                             Number = 202,
-                            Picture = "/images/collection/202.jpg"
+                            PictureUrl = "/images/collection/202.jpg"
                         },
                         new
                         {
@@ -1885,7 +1885,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "LAMBORGHINI DIABLO",
                             Number = 203,
-                            Picture = "/images/collection/203.jpg"
+                            PictureUrl = "/images/collection/203.jpg"
                         },
                         new
                         {
@@ -1893,7 +1893,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "ALFA ROMEO BERTONE 1953",
                             Number = 204,
-                            Picture = "/images/collection/204.jpg"
+                            PictureUrl = "/images/collection/204.jpg"
                         },
                         new
                         {
@@ -1901,7 +1901,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "JAGUAR XJR-15",
                             Number = 205,
-                            Picture = "/images/collection/205.jpg"
+                            PictureUrl = "/images/collection/205.jpg"
                         },
                         new
                         {
@@ -1909,7 +1909,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "HONDA FS-X",
                             Number = 206,
-                            Picture = "/images/collection/206.jpg"
+                            PictureUrl = "/images/collection/206.jpg"
                         },
                         new
                         {
@@ -1917,7 +1917,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "MG TD 1953",
                             Number = 207,
-                            Picture = "/images/collection/207.jpg"
+                            PictureUrl = "/images/collection/207.jpg"
                         },
                         new
                         {
@@ -1925,7 +1925,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "TALBOT LAGO 126 1948",
                             Number = 208,
-                            Picture = "/images/collection/208.jpg"
+                            PictureUrl = "/images/collection/208.jpg"
                         },
                         new
                         {
@@ -1933,7 +1933,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "CONDUITE INTERIEURE SALA 1929",
                             Number = 209,
-                            Picture = "/images/collection/209.jpg"
+                            PictureUrl = "/images/collection/209.jpg"
                         },
                         new
                         {
@@ -1941,7 +1941,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "BUGATTI 57 S 1936",
                             Number = 210,
-                            Picture = "/images/collection/210.jpg"
+                            PictureUrl = "/images/collection/210.jpg"
                         },
                         new
                         {
@@ -1949,7 +1949,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "CONSULIER GTP LX",
                             Number = 211,
-                            Picture = "/images/collection/211.jpg"
+                            PictureUrl = "/images/collection/211.jpg"
                         },
                         new
                         {
@@ -1957,7 +1957,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "FORD GHAI ZAG PROTOTI",
                             Number = 212,
-                            Picture = "/images/collection/212.jpg"
+                            PictureUrl = "/images/collection/212.jpg"
                         },
                         new
                         {
@@ -1965,7 +1965,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "FORD CONTOUR PROTOTIP",
                             Number = 213,
-                            Picture = "/images/collection/213.jpg"
+                            PictureUrl = "/images/collection/213.jpg"
                         },
                         new
                         {
@@ -1973,7 +1973,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "HONDA LEGENT",
                             Number = 214,
-                            Picture = "/images/collection/214.jpg"
+                            PictureUrl = "/images/collection/214.jpg"
                         },
                         new
                         {
@@ -1981,7 +1981,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "DAIHATSU LEEZA",
                             Number = 215,
-                            Picture = "/images/collection/215.jpg"
+                            PictureUrl = "/images/collection/215.jpg"
                         },
                         new
                         {
@@ -1989,7 +1989,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "MAZDA CAROL",
                             Number = 216,
-                            Picture = "/images/collection/216.jpg"
+                            PictureUrl = "/images/collection/216.jpg"
                         },
                         new
                         {
@@ -1997,7 +1997,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "BUGATTI 110 PROTOTIP",
                             Number = 217,
-                            Picture = "/images/collection/217.jpg"
+                            PictureUrl = "/images/collection/217.jpg"
                         },
                         new
                         {
@@ -2005,7 +2005,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "GINETTA G 33C",
                             Number = 218,
-                            Picture = "/images/collection/218.jpg"
+                            PictureUrl = "/images/collection/218.jpg"
                         },
                         new
                         {
@@ -2013,7 +2013,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "SEAT IBIZA",
                             Number = 219,
-                            Picture = "/images/collection/219.jpg"
+                            PictureUrl = "/images/collection/219.jpg"
                         },
                         new
                         {
@@ -2021,7 +2021,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "HONDA BEAT",
                             Number = 220,
-                            Picture = "/images/collection/220.jpg"
+                            PictureUrl = "/images/collection/220.jpg"
                         },
                         new
                         {
@@ -2029,7 +2029,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "BUICK 1941",
                             Number = 221,
-                            Picture = "/images/collection/221.jpg"
+                            PictureUrl = "/images/collection/221.jpg"
                         },
                         new
                         {
@@ -2037,7 +2037,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "BIZZARRINI GT STRADA",
                             Number = 222,
-                            Picture = "/images/collection/222.jpg"
+                            PictureUrl = "/images/collection/222.jpg"
                         },
                         new
                         {
@@ -2045,7 +2045,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "CHRONO-BMW",
                             Number = 223,
-                            Picture = "/images/collection/223.jpg"
+                            PictureUrl = "/images/collection/223.jpg"
                         },
                         new
                         {
@@ -2053,7 +2053,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "MAZDA HR-X",
                             Number = 224,
-                            Picture = "/images/collection/224.jpg"
+                            PictureUrl = "/images/collection/224.jpg"
                         },
                         new
                         {
@@ -2061,7 +2061,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "MAZDA RX-7",
                             Number = 225,
-                            Picture = "/images/collection/225.jpg"
+                            PictureUrl = "/images/collection/225.jpg"
                         },
                         new
                         {
@@ -2069,7 +2069,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "RUXTON SALOON 1930",
                             Number = 226,
-                            Picture = "/images/collection/226.jpg"
+                            PictureUrl = "/images/collection/226.jpg"
                         },
                         new
                         {
@@ -2077,7 +2077,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "ALFA ROMEO PROTOTIPLER",
                             Number = 227,
-                            Picture = "/images/collection/227.jpg"
+                            PictureUrl = "/images/collection/227.jpg"
                         },
                         new
                         {
@@ -2085,7 +2085,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "AUDI S6",
                             Number = 228,
-                            Picture = "/images/collection/228.jpg"
+                            PictureUrl = "/images/collection/228.jpg"
                         },
                         new
                         {
@@ -2093,7 +2093,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "MITSUBISHI mS 1000",
                             Number = 229,
-                            Picture = "/images/collection/229.jpg"
+                            PictureUrl = "/images/collection/229.jpg"
                         },
                         new
                         {
@@ -2101,7 +2101,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "LOTUS SUPER SEVEN",
                             Number = 230,
-                            Picture = "/images/collection/230.jpg"
+                            PictureUrl = "/images/collection/230.jpg"
                         },
                         new
                         {
@@ -2109,7 +2109,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "GENERAL MOTORS HX3",
                             Number = 231,
-                            Picture = "/images/collection/231.jpg"
+                            PictureUrl = "/images/collection/231.jpg"
                         },
                         new
                         {
@@ -2117,7 +2117,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "LOTUS ESPRIT SE",
                             Number = 232,
-                            Picture = "/images/collection/232.jpg"
+                            PictureUrl = "/images/collection/232.jpg"
                         },
                         new
                         {
@@ -2125,7 +2125,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "HONDA CBR 600F",
                             Number = 233,
-                            Picture = "/images/collection/233.jpg"
+                            PictureUrl = "/images/collection/233.jpg"
                         },
                         new
                         {
@@ -2133,7 +2133,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "YAMAHA SRV 250",
                             Number = 234,
-                            Picture = "/images/collection/234.jpg"
+                            PictureUrl = "/images/collection/234.jpg"
                         },
                         new
                         {
@@ -2141,7 +2141,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "KAWASAKI",
                             Number = 235,
-                            Picture = "/images/collection/235.jpg"
+                            PictureUrl = "/images/collection/235.jpg"
                         },
                         new
                         {
@@ -2149,7 +2149,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "DELAHAYE 135 M 1948",
                             Number = 236,
-                            Picture = "/images/collection/236.jpg"
+                            PictureUrl = "/images/collection/236.jpg"
                         },
                         new
                         {
@@ -2157,7 +2157,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "CHEVROLET  ÖZEL YAPIM",
                             Number = 237,
-                            Picture = "/images/collection/237.jpg"
+                            PictureUrl = "/images/collection/237.jpg"
                         },
                         new
                         {
@@ -2165,7 +2165,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "NISSAN FERIE",
                             Number = 238,
-                            Picture = "/images/collection/238.jpg"
+                            PictureUrl = "/images/collection/238.jpg"
                         },
                         new
                         {
@@ -2173,7 +2173,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "CHRYSLER 300 PROTOTIP",
                             Number = 239,
-                            Picture = "/images/collection/239.jpg"
+                            PictureUrl = "/images/collection/239.jpg"
                         },
                         new
                         {
@@ -2181,7 +2181,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "OLDSMOBILE CRUISER WAGON",
                             Number = 240,
-                            Picture = "/images/collection/240.jpg"
+                            PictureUrl = "/images/collection/240.jpg"
                         },
                         new
                         {
@@ -2189,7 +2189,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "RENAULT 19 CABRIOLET",
                             Number = 241,
-                            Picture = "/images/collection/241.jpg"
+                            PictureUrl = "/images/collection/241.jpg"
                         },
                         new
                         {
@@ -2197,7 +2197,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "TRIUMPH 1800 ROADSTER 1948",
                             Number = 242,
-                            Picture = "/images/collection/242.jpg"
+                            PictureUrl = "/images/collection/242.jpg"
                         },
                         new
                         {
@@ -2205,7 +2205,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "NISSAN TRI-X",
                             Number = 243,
-                            Picture = "/images/collection/243.jpg"
+                            PictureUrl = "/images/collection/243.jpg"
                         },
                         new
                         {
@@ -2213,7 +2213,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "GENERAL MOTORS",
                             Number = 244,
-                            Picture = "/images/collection/244.jpg"
+                            PictureUrl = "/images/collection/244.jpg"
                         },
                         new
                         {
@@ -2221,7 +2221,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "TOYOTA CELICA",
                             Number = 245,
-                            Picture = "/images/collection/245.jpg"
+                            PictureUrl = "/images/collection/245.jpg"
                         },
                         new
                         {
@@ -2229,7 +2229,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "SUZUKI ALTO",
                             Number = 246,
-                            Picture = "/images/collection/246.jpg"
+                            PictureUrl = "/images/collection/246.jpg"
                         },
                         new
                         {
@@ -2237,7 +2237,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "FORD SKYLINER 1948",
                             Number = 247,
-                            Picture = "/images/collection/247.jpg"
+                            PictureUrl = "/images/collection/247.jpg"
                         },
                         new
                         {
@@ -2245,7 +2245,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "PONTIAC GRAND PRIX SE",
                             Number = 248,
-                            Picture = "/images/collection/248.jpg"
+                            PictureUrl = "/images/collection/248.jpg"
                         },
                         new
                         {
@@ -2253,7 +2253,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "OLDSMOBILE",
                             Number = 249,
-                            Picture = "/images/collection/249.jpg"
+                            PictureUrl = "/images/collection/249.jpg"
                         },
                         new
                         {
@@ -2261,7 +2261,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "NISSAN 200 SX",
                             Number = 250,
-                            Picture = "/images/collection/250.jpg"
+                            PictureUrl = "/images/collection/250.jpg"
                         },
                         new
                         {
@@ -2269,7 +2269,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "MERCEDES BENZ 500 SL",
                             Number = 251,
-                            Picture = "/images/collection/251.jpg"
+                            PictureUrl = "/images/collection/251.jpg"
                         },
                         new
                         {
@@ -2277,7 +2277,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "LINCOLN MERCURY",
                             Number = 252,
-                            Picture = "/images/collection/252.jpg"
+                            PictureUrl = "/images/collection/252.jpg"
                         },
                         new
                         {
@@ -2285,7 +2285,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "SUBARU SVX COUPE",
                             Number = 253,
-                            Picture = "/images/collection/253.jpg"
+                            PictureUrl = "/images/collection/253.jpg"
                         },
                         new
                         {
@@ -2293,7 +2293,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "SUZUKI SWIFT",
                             Number = 254,
-                            Picture = "/images/collection/254.jpg"
+                            PictureUrl = "/images/collection/254.jpg"
                         },
                         new
                         {
@@ -2301,7 +2301,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "BUICK SCEPTRE",
                             Number = 255,
-                            Picture = "/images/collection/255.jpg"
+                            PictureUrl = "/images/collection/255.jpg"
                         },
                         new
                         {
@@ -2309,7 +2309,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "BMW NAZCA M 12",
                             Number = 256,
-                            Picture = "/images/collection/256.jpg"
+                            PictureUrl = "/images/collection/256.jpg"
                         },
                         new
                         {
@@ -2317,7 +2317,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "HYUNDAI HCD-1",
                             Number = 257,
-                            Picture = "/images/collection/257.jpg"
+                            PictureUrl = "/images/collection/257.jpg"
                         },
                         new
                         {
@@ -2325,7 +2325,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "AUDI SPYDER",
                             Number = 258,
-                            Picture = "/images/collection/258.jpg"
+                            PictureUrl = "/images/collection/258.jpg"
                         },
                         new
                         {
@@ -2333,7 +2333,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "FORD CROWN VICTORIA",
                             Number = 259,
-                            Picture = "/images/collection/259.jpg"
+                            PictureUrl = "/images/collection/259.jpg"
                         },
                         new
                         {
@@ -2341,7 +2341,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 4,
                             Name = "FORD CONNECTA PROTOTIP",
                             Number = 260,
-                            Picture = "/images/collection/260.jpg"
+                            PictureUrl = "/images/collection/260.jpg"
                         },
                         new
                         {
@@ -2349,7 +2349,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "BUGATTI",
                             Number = 261,
-                            Picture = "/images/collection/261.jpg"
+                            PictureUrl = "/images/collection/261.jpg"
                         },
                         new
                         {
@@ -2357,7 +2357,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "PORSCHE 968",
                             Number = 262,
-                            Picture = "/images/collection/262.jpg"
+                            PictureUrl = "/images/collection/262.jpg"
                         },
                         new
                         {
@@ -2365,7 +2365,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "MERCEDES C 112",
                             Number = 263,
-                            Picture = "/images/collection/263.jpg"
+                            PictureUrl = "/images/collection/263.jpg"
                         },
                         new
                         {
@@ -2373,7 +2373,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "JAGUAR XY-220",
                             Number = 264,
-                            Picture = "/images/collection/264.jpg"
+                            PictureUrl = "/images/collection/264.jpg"
                         },
                         new
                         {
@@ -2381,7 +2381,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "BUGATTI EB-110",
                             Number = 265,
-                            Picture = "/images/collection/265.jpg"
+                            PictureUrl = "/images/collection/265.jpg"
                         },
                         new
                         {
@@ -2389,7 +2389,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "FORD LTL 9000",
                             Number = 266,
-                            Picture = "/images/collection/266.jpg"
+                            PictureUrl = "/images/collection/266.jpg"
                         },
                         new
                         {
@@ -2397,7 +2397,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "VECTOR",
                             Number = 267,
-                            Picture = "/images/collection/267.jpg"
+                            PictureUrl = "/images/collection/267.jpg"
                         },
                         new
                         {
@@ -2405,7 +2405,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "LAMBORGHINI DIABLO",
                             Number = 268,
-                            Picture = "/images/collection/268.jpg"
+                            PictureUrl = "/images/collection/268.jpg"
                         },
                         new
                         {
@@ -2413,7 +2413,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "NISSAN",
                             Number = 269,
-                            Picture = "/images/collection/269.jpg"
+                            PictureUrl = "/images/collection/269.jpg"
                         },
                         new
                         {
@@ -2421,7 +2421,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "FORD PROBE GT",
                             Number = 270,
-                            Picture = "/images/collection/270.jpg"
+                            PictureUrl = "/images/collection/270.jpg"
                         },
                         new
                         {
@@ -2429,7 +2429,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "JEEP RENEGADE",
                             Number = 271,
-                            Picture = "/images/collection/271.jpg"
+                            PictureUrl = "/images/collection/271.jpg"
                         },
                         new
                         {
@@ -2437,7 +2437,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "VENTURI 260 ATLANTA",
                             Number = 272,
-                            Picture = "/images/collection/272.jpg"
+                            PictureUrl = "/images/collection/272.jpg"
                         },
                         new
                         {
@@ -2445,7 +2445,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "GM IMPACK",
                             Number = 273,
-                            Picture = "/images/collection/273.jpg"
+                            PictureUrl = "/images/collection/273.jpg"
                         },
                         new
                         {
@@ -2453,7 +2453,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "PORSCHE 944 S2 cabriolet",
                             Number = 274,
-                            Picture = "/images/collection/274.jpg"
+                            PictureUrl = "/images/collection/274.jpg"
                         },
                         new
                         {
@@ -2461,7 +2461,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "FORD EXPLORER 4x4",
                             Number = 275,
-                            Picture = "/images/collection/275.jpg"
+                            PictureUrl = "/images/collection/275.jpg"
                         },
                         new
                         {
@@ -2469,7 +2469,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "MAZDA RX-792 P GTP",
                             Number = 276,
-                            Picture = "/images/collection/276.jpg"
+                            PictureUrl = "/images/collection/276.jpg"
                         },
                         new
                         {
@@ -2477,7 +2477,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "PONTIAC TRANS AM",
                             Number = 277,
-                            Picture = "/images/collection/277.jpg"
+                            PictureUrl = "/images/collection/277.jpg"
                         },
                         new
                         {
@@ -2485,7 +2485,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "PONTIAC TRANS PORT SE",
                             Number = 278,
-                            Picture = "/images/collection/278.jpg"
+                            PictureUrl = "/images/collection/278.jpg"
                         },
                         new
                         {
@@ -2493,7 +2493,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "PORSCHE 959",
                             Number = 279,
-                            Picture = "/images/collection/279.jpg"
+                            PictureUrl = "/images/collection/279.jpg"
                         },
                         new
                         {
@@ -2501,7 +2501,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "HARLEY DAVIDSON U.S. CHOPPER",
                             Number = 280,
-                            Picture = "/images/collection/280.jpg"
+                            PictureUrl = "/images/collection/280.jpg"
                         },
                         new
                         {
@@ -2509,7 +2509,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "CHEVROLET BERETTA GT COUPE",
                             Number = 281,
-                            Picture = "/images/collection/281.jpg"
+                            PictureUrl = "/images/collection/281.jpg"
                         },
                         new
                         {
@@ -2517,7 +2517,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "PININFARINA ETHOS",
                             Number = 282,
-                            Picture = "/images/collection/282.jpg"
+                            PictureUrl = "/images/collection/282.jpg"
                         },
                         new
                         {
@@ -2525,7 +2525,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "SOLO MOTO GX",
                             Number = 283,
-                            Picture = "/images/collection/283.jpg"
+                            PictureUrl = "/images/collection/283.jpg"
                         },
                         new
                         {
@@ -2533,7 +2533,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "PONTIAC GRAND AM",
                             Number = 284,
-                            Picture = "/images/collection/284.jpg"
+                            PictureUrl = "/images/collection/284.jpg"
                         },
                         new
                         {
@@ -2541,7 +2541,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "BIMOTA YB8 FURANO",
                             Number = 285,
-                            Picture = "/images/collection/285.jpg"
+                            PictureUrl = "/images/collection/285.jpg"
                         },
                         new
                         {
@@ -2549,7 +2549,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "TRIUMPH SHOW TRIKE",
                             Number = 286,
-                            Picture = "/images/collection/286.jpg"
+                            PictureUrl = "/images/collection/286.jpg"
                         },
                         new
                         {
@@ -2557,7 +2557,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "BIMOTA YB 8 E",
                             Number = 287,
-                            Picture = "/images/collection/287.jpg"
+                            PictureUrl = "/images/collection/287.jpg"
                         },
                         new
                         {
@@ -2565,7 +2565,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "KAWASAKI ZXR 750",
                             Number = 288,
-                            Picture = "/images/collection/288.jpg"
+                            PictureUrl = "/images/collection/288.jpg"
                         },
                         new
                         {
@@ -2573,7 +2573,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "BMW PROTOTYPE",
                             Number = 289,
-                            Picture = "/images/collection/289.jpg"
+                            PictureUrl = "/images/collection/289.jpg"
                         },
                         new
                         {
@@ -2581,7 +2581,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "SUZUKI",
                             Number = 290,
-                            Picture = "/images/collection/290.jpg"
+                            PictureUrl = "/images/collection/290.jpg"
                         },
                         new
                         {
@@ -2589,7 +2589,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "CHEVY CAMARO",
                             Number = 291,
-                            Picture = "/images/collection/291.jpg"
+                            PictureUrl = "/images/collection/291.jpg"
                         },
                         new
                         {
@@ -2597,7 +2597,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "LOCKHEED SR-71",
                             Number = 292,
-                            Picture = "/images/collection/292.jpg"
+                            PictureUrl = "/images/collection/292.jpg"
                         },
                         new
                         {
@@ -2605,7 +2605,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "BMW PROTOTYPE",
                             Number = 293,
-                            Picture = "/images/collection/293.jpg"
+                            PictureUrl = "/images/collection/293.jpg"
                         },
                         new
                         {
@@ -2613,7 +2613,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "SEATEK",
                             Number = 294,
-                            Picture = "/images/collection/294.jpg"
+                            PictureUrl = "/images/collection/294.jpg"
                         },
                         new
                         {
@@ -2621,7 +2621,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "CHEVY CORVETTE",
                             Number = 295,
-                            Picture = "/images/collection/295.jpg"
+                            PictureUrl = "/images/collection/295.jpg"
                         },
                         new
                         {
@@ -2629,7 +2629,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "FERRARI 643",
                             Number = 296,
-                            Picture = "/images/collection/296.jpg"
+                            PictureUrl = "/images/collection/296.jpg"
                         },
                         new
                         {
@@ -2637,7 +2637,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "CHEVROLET 4x4 ÖZEL YAPIM",
                             Number = 297,
-                            Picture = "/images/collection/297.jpg"
+                            PictureUrl = "/images/collection/297.jpg"
                         },
                         new
                         {
@@ -2645,7 +2645,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "COMANCHE GESPANNE",
                             Number = 298,
-                            Picture = "/images/collection/298.jpg"
+                            PictureUrl = "/images/collection/298.jpg"
                         },
                         new
                         {
@@ -2653,7 +2653,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "LOTUS JPS",
                             Number = 299,
-                            Picture = "/images/collection/299.jpg"
+                            PictureUrl = "/images/collection/299.jpg"
                         },
                         new
                         {
@@ -2661,7 +2661,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "CHRYSLER",
                             Number = 300,
-                            Picture = "/images/collection/300.jpg"
+                            PictureUrl = "/images/collection/300.jpg"
                         },
                         new
                         {
@@ -2669,7 +2669,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "RENAULT WILLIAMS",
                             Number = 301,
-                            Picture = "/images/collection/301.jpg"
+                            PictureUrl = "/images/collection/301.jpg"
                         },
                         new
                         {
@@ -2677,7 +2677,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "KAWASAKI 750 SX",
                             Number = 302,
-                            Picture = "/images/collection/302.jpg"
+                            PictureUrl = "/images/collection/302.jpg"
                         },
                         new
                         {
@@ -2685,7 +2685,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "YAMAHA",
                             Number = 303,
-                            Picture = "/images/collection/303.jpg"
+                            PictureUrl = "/images/collection/303.jpg"
                         },
                         new
                         {
@@ -2693,7 +2693,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "FORD BIG FOOT",
                             Number = 304,
-                            Picture = "/images/collection/304.jpg"
+                            PictureUrl = "/images/collection/304.jpg"
                         },
                         new
                         {
@@ -2701,7 +2701,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "NISSAN R-91 CP",
                             Number = 305,
-                            Picture = "/images/collection/305.jpg"
+                            PictureUrl = "/images/collection/305.jpg"
                         },
                         new
                         {
@@ -2709,7 +2709,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "MERCEDES C-112 PROTOTYPE",
                             Number = 306,
-                            Picture = "/images/collection/306.jpg"
+                            PictureUrl = "/images/collection/306.jpg"
                         },
                         new
                         {
@@ -2717,7 +2717,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "BMW 850 CSI  COUPE",
                             Number = 307,
-                            Picture = "/images/collection/307.jpg"
+                            PictureUrl = "/images/collection/307.jpg"
                         },
                         new
                         {
@@ -2725,7 +2725,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "MX-5",
                             Number = 308,
-                            Picture = "/images/collection/308.jpg"
+                            PictureUrl = "/images/collection/308.jpg"
                         },
                         new
                         {
@@ -2733,7 +2733,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "CHEVY K 20 NITEMARE",
                             Number = 309,
-                            Picture = "/images/collection/309.jpg"
+                            PictureUrl = "/images/collection/309.jpg"
                         },
                         new
                         {
@@ -2741,7 +2741,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "CHRYSLER IMPERIAL",
                             Number = 310,
-                            Picture = "/images/collection/310.jpg"
+                            PictureUrl = "/images/collection/310.jpg"
                         },
                         new
                         {
@@ -2749,7 +2749,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "BMW-NAZCA C2",
                             Number = 311,
-                            Picture = "/images/collection/311.jpg"
+                            PictureUrl = "/images/collection/311.jpg"
                         },
                         new
                         {
@@ -2757,7 +2757,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "MERCEDES-BENZ PROTOTYPE",
                             Number = 312,
-                            Picture = "/images/collection/312.jpg"
+                            PictureUrl = "/images/collection/312.jpg"
                         },
                         new
                         {
@@ -2765,7 +2765,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "HONDA MC LAREN",
                             Number = 313,
-                            Picture = "/images/collection/313.jpg"
+                            PictureUrl = "/images/collection/313.jpg"
                         },
                         new
                         {
@@ -2773,7 +2773,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "NISSAN 300 ZXT Turbo",
                             Number = 314,
-                            Picture = "/images/collection/314.jpg"
+                            PictureUrl = "/images/collection/314.jpg"
                         },
                         new
                         {
@@ -2781,7 +2781,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "FERRARI PROTOTYPE",
                             Number = 315,
-                            Picture = "/images/collection/315.jpg"
+                            PictureUrl = "/images/collection/315.jpg"
                         },
                         new
                         {
@@ -2789,7 +2789,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "MTX TATRA",
                             Number = 316,
-                            Picture = "/images/collection/316.jpg"
+                            PictureUrl = "/images/collection/316.jpg"
                         },
                         new
                         {
@@ -2797,7 +2797,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "BMW-ISATIS CONCEPT CAR",
                             Number = 317,
-                            Picture = "/images/collection/317.jpg"
+                            PictureUrl = "/images/collection/317.jpg"
                         },
                         new
                         {
@@ -2805,7 +2805,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "LOTUS",
                             Number = 318,
-                            Picture = "/images/collection/318.jpg"
+                            PictureUrl = "/images/collection/318.jpg"
                         },
                         new
                         {
@@ -2813,7 +2813,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "F-19 STEALTH FIGHTER",
                             Number = 319,
-                            Picture = "/images/collection/319.jpg"
+                            PictureUrl = "/images/collection/319.jpg"
                         },
                         new
                         {
@@ -2821,7 +2821,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "FERRARI 456 GT",
                             Number = 320,
-                            Picture = "/images/collection/320.jpg"
+                            PictureUrl = "/images/collection/320.jpg"
                         },
                         new
                         {
@@ -2829,7 +2829,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "AUDI QUATTRO SPYDER",
                             Number = 321,
-                            Picture = "/images/collection/321.jpg"
+                            PictureUrl = "/images/collection/321.jpg"
                         },
                         new
                         {
@@ -2837,7 +2837,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "MITSUBISHI 3000 GT",
                             Number = 322,
-                            Picture = "/images/collection/322.jpg"
+                            PictureUrl = "/images/collection/322.jpg"
                         },
                         new
                         {
@@ -2845,7 +2845,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "TOYOTA PASEO",
                             Number = 323,
-                            Picture = "/images/collection/323.jpg"
+                            PictureUrl = "/images/collection/323.jpg"
                         },
                         new
                         {
@@ -2853,7 +2853,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "KAWASAKI ZZ-R 1100",
                             Number = 324,
-                            Picture = "/images/collection/324.jpg"
+                            PictureUrl = "/images/collection/324.jpg"
                         },
                         new
                         {
@@ -2861,7 +2861,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "BERTONE PROTOTYPE",
                             Number = 325,
-                            Picture = "/images/collection/325.jpg"
+                            PictureUrl = "/images/collection/325.jpg"
                         },
                         new
                         {
@@ -2869,7 +2869,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "CHEVY CORVETTE",
                             Number = 326,
-                            Picture = "/images/collection/326.jpg"
+                            PictureUrl = "/images/collection/326.jpg"
                         },
                         new
                         {
@@ -2877,7 +2877,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "YAMAHA MORPHO II",
                             Number = 327,
-                            Picture = "/images/collection/327.jpg"
+                            PictureUrl = "/images/collection/327.jpg"
                         },
                         new
                         {
@@ -2885,7 +2885,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "KENWORTH T-600",
                             Number = 328,
-                            Picture = "/images/collection/328.jpg"
+                            PictureUrl = "/images/collection/328.jpg"
                         },
                         new
                         {
@@ -2893,7 +2893,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "ARLEN-NESS",
                             Number = 329,
-                            Picture = "/images/collection/329.jpg"
+                            PictureUrl = "/images/collection/329.jpg"
                         },
                         new
                         {
@@ -2901,7 +2901,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 5,
                             Name = "MERCEDES-BENZ",
                             Number = 330,
-                            Picture = "/images/collection/330.jpg"
+                            PictureUrl = "/images/collection/330.jpg"
                         },
                         new
                         {
@@ -2909,7 +2909,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "ETHOS 3",
                             Number = 331,
-                            Picture = "/images/collection/331.jpg"
+                            PictureUrl = "/images/collection/331.jpg"
                         },
                         new
                         {
@@ -2917,7 +2917,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "PONTIAC SUNFIRE",
                             Number = 332,
-                            Picture = "/images/collection/332.jpg"
+                            PictureUrl = "/images/collection/332.jpg"
                         },
                         new
                         {
@@ -2925,7 +2925,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "GMC SONOMA PROJECT",
                             Number = 333,
-                            Picture = "/images/collection/333.jpg"
+                            PictureUrl = "/images/collection/333.jpg"
                         },
                         new
                         {
@@ -2933,7 +2933,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "CHRYSLER EXPRESSO-PROTOTIP",
                             Number = 334,
-                            Picture = "/images/collection/334.jpg"
+                            PictureUrl = "/images/collection/334.jpg"
                         },
                         new
                         {
@@ -2941,7 +2941,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "CHEVY CORVETTE CALLAWY",
                             Number = 335,
-                            Picture = "/images/collection/335.jpg"
+                            PictureUrl = "/images/collection/335.jpg"
                         },
                         new
                         {
@@ -2949,7 +2949,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "CHEVROLET ÖZEL YAPIM",
                             Number = 336,
-                            Picture = "/images/collection/336.jpg"
+                            PictureUrl = "/images/collection/336.jpg"
                         },
                         new
                         {
@@ -2957,7 +2957,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "CHEVROLET",
                             Number = 337,
-                            Picture = "/images/collection/337.jpg"
+                            PictureUrl = "/images/collection/337.jpg"
                         },
                         new
                         {
@@ -2965,7 +2965,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "CHRYSLER AVIAT-PROTOTIP",
                             Number = 338,
-                            Picture = "/images/collection/338.jpg"
+                            PictureUrl = "/images/collection/338.jpg"
                         },
                         new
                         {
@@ -2973,7 +2973,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "LAMBORGHINI CONTACH",
                             Number = 339,
-                            Picture = "/images/collection/339.jpg"
+                            PictureUrl = "/images/collection/339.jpg"
                         },
                         new
                         {
@@ -2981,7 +2981,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "FERRARI 456 GT",
                             Number = 340,
-                            Picture = "/images/collection/340.jpg"
+                            PictureUrl = "/images/collection/340.jpg"
                         },
                         new
                         {
@@ -2989,7 +2989,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "DODGE VENOM",
                             Number = 341,
-                            Picture = "/images/collection/341.jpg"
+                            PictureUrl = "/images/collection/341.jpg"
                         },
                         new
                         {
@@ -2997,7 +2997,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "DODGE STEALTH-TURBO",
                             Number = 342,
-                            Picture = "/images/collection/342.jpg"
+                            PictureUrl = "/images/collection/342.jpg"
                         },
                         new
                         {
@@ -3005,7 +3005,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "ASTON MARTIN",
                             Number = 343,
-                            Picture = "/images/collection/343.jpg"
+                            PictureUrl = "/images/collection/343.jpg"
                         },
                         new
                         {
@@ -3013,7 +3013,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "MITSUBISHI SPYDER 3000GT",
                             Number = 344,
-                            Picture = "/images/collection/344.jpg"
+                            PictureUrl = "/images/collection/344.jpg"
                         },
                         new
                         {
@@ -3021,7 +3021,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "FIAT PUNTO-ITALDESIGN-PROTOTIP",
                             Number = 345,
-                            Picture = "/images/collection/345.jpg"
+                            PictureUrl = "/images/collection/345.jpg"
                         },
                         new
                         {
@@ -3029,7 +3029,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "MITSUBISHI EXLIPS",
                             Number = 346,
-                            Picture = "/images/collection/346.jpg"
+                            PictureUrl = "/images/collection/346.jpg"
                         },
                         new
                         {
@@ -3037,7 +3037,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "LEXUS LANCLAU",
                             Number = 347,
-                            Picture = "/images/collection/347.jpg"
+                            PictureUrl = "/images/collection/347.jpg"
                         },
                         new
                         {
@@ -3045,7 +3045,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "MERCEDES BENZ SLK",
                             Number = 348,
-                            Picture = "/images/collection/348.jpg"
+                            PictureUrl = "/images/collection/348.jpg"
                         },
                         new
                         {
@@ -3053,7 +3053,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "MERCEDES BENZ CLASSE A-PROTOTIP",
                             Number = 349,
-                            Picture = "/images/collection/349.jpg"
+                            PictureUrl = "/images/collection/349.jpg"
                         },
                         new
                         {
@@ -3061,7 +3061,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "PORSCHE BOXTER",
                             Number = 350,
-                            Picture = "/images/collection/350.jpg"
+                            PictureUrl = "/images/collection/350.jpg"
                         },
                         new
                         {
@@ -3069,7 +3069,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "LOTEC-PROTOTIP",
                             Number = 351,
-                            Picture = "/images/collection/351.jpg"
+                            PictureUrl = "/images/collection/351.jpg"
                         },
                         new
                         {
@@ -3077,7 +3077,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "PORSCHE 911 CABRIOLET",
                             Number = 352,
-                            Picture = "/images/collection/352.jpg"
+                            PictureUrl = "/images/collection/352.jpg"
                         },
                         new
                         {
@@ -3085,7 +3085,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "LOTUS ESPRIT S4",
                             Number = 353,
-                            Picture = "/images/collection/353.jpg"
+                            PictureUrl = "/images/collection/353.jpg"
                         },
                         new
                         {
@@ -3093,7 +3093,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "MASERATI QATTROPORTE",
                             Number = 354,
-                            Picture = "/images/collection/354.jpg"
+                            PictureUrl = "/images/collection/354.jpg"
                         },
                         new
                         {
@@ -3101,7 +3101,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "GMC CHEVROLET S10",
                             Number = 355,
-                            Picture = "/images/collection/355.jpg"
+                            PictureUrl = "/images/collection/355.jpg"
                         },
                         new
                         {
@@ -3109,7 +3109,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "JAGUAR XJ-220",
                             Number = 356,
-                            Picture = "/images/collection/356.jpg"
+                            PictureUrl = "/images/collection/356.jpg"
                         },
                         new
                         {
@@ -3117,7 +3117,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "MAZDA RX-7",
                             Number = 357,
-                            Picture = "/images/collection/357.jpg"
+                            PictureUrl = "/images/collection/357.jpg"
                         },
                         new
                         {
@@ -3125,7 +3125,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "ETHOS II",
                             Number = 358,
-                            Picture = "/images/collection/358.jpg"
+                            PictureUrl = "/images/collection/358.jpg"
                         },
                         new
                         {
@@ -3133,7 +3133,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "FIAT S PUNTO-PROTOTIP",
                             Number = 359,
-                            Picture = "/images/collection/359.jpg"
+                            PictureUrl = "/images/collection/359.jpg"
                         },
                         new
                         {
@@ -3141,7 +3141,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "FORD MUSTANG MACH III",
                             Number = 360,
-                            Picture = "/images/collection/360.jpg"
+                            PictureUrl = "/images/collection/360.jpg"
                         },
                         new
                         {
@@ -3149,7 +3149,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "RENAULT ARGOS-PROTOTIP",
                             Number = 361,
-                            Picture = "/images/collection/361.jpg"
+                            PictureUrl = "/images/collection/361.jpg"
                         },
                         new
                         {
@@ -3157,7 +3157,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "PORSCHE 928 SPYDER-PROTOTIP",
                             Number = 362,
-                            Picture = "/images/collection/362.jpg"
+                            PictureUrl = "/images/collection/362.jpg"
                         },
                         new
                         {
@@ -3165,7 +3165,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "CHRYSLER GTS COUPE",
                             Number = 363,
-                            Picture = "/images/collection/363.jpg"
+                            PictureUrl = "/images/collection/363.jpg"
                         },
                         new
                         {
@@ -3173,7 +3173,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "RENAULT TWINGO",
                             Number = 364,
-                            Picture = "/images/collection/364.jpg"
+                            PictureUrl = "/images/collection/364.jpg"
                         },
                         new
                         {
@@ -3181,7 +3181,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "SUPERSPORTWAGEN SPIESS TC 522",
                             Number = 365,
-                            Picture = "/images/collection/365.jpg"
+                            PictureUrl = "/images/collection/365.jpg"
                         },
                         new
                         {
@@ -3189,7 +3189,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "HONDA ACCORD COUPE",
                             Number = 366,
-                            Picture = "/images/collection/366.jpg"
+                            PictureUrl = "/images/collection/366.jpg"
                         },
                         new
                         {
@@ -3197,7 +3197,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "MAZDA MX-5",
                             Number = 367,
-                            Picture = "/images/collection/367.jpg"
+                            PictureUrl = "/images/collection/367.jpg"
                         },
                         new
                         {
@@ -3205,7 +3205,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "MITSUBISHI INFINITY 3000 GT",
                             Number = 368,
-                            Picture = "/images/collection/368.jpg"
+                            PictureUrl = "/images/collection/368.jpg"
                         },
                         new
                         {
@@ -3213,7 +3213,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "BERTONE KARISMA-PROTOTIP",
                             Number = 369,
-                            Picture = "/images/collection/369.jpg"
+                            PictureUrl = "/images/collection/369.jpg"
                         },
                         new
                         {
@@ -3221,7 +3221,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "CHRYSLER TOCHTER TURBO",
                             Number = 370,
-                            Picture = "/images/collection/370.jpg"
+                            PictureUrl = "/images/collection/370.jpg"
                         },
                         new
                         {
@@ -3229,7 +3229,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "NISSAN TERRANO",
                             Number = 371,
-                            Picture = "/images/collection/371.jpg"
+                            PictureUrl = "/images/collection/371.jpg"
                         },
                         new
                         {
@@ -3237,7 +3237,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "PEUGEOT QUASAR-PROTOTIP",
                             Number = 372,
-                            Picture = "/images/collection/372.jpg"
+                            PictureUrl = "/images/collection/372.jpg"
                         },
                         new
                         {
@@ -3245,7 +3245,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "BUGATTI EB 110",
                             Number = 373,
-                            Picture = "/images/collection/373.jpg"
+                            PictureUrl = "/images/collection/373.jpg"
                         },
                         new
                         {
@@ -3253,7 +3253,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "MERCEDES SWATCH PROTOTIP",
                             Number = 374,
-                            Picture = "/images/collection/374.jpg"
+                            PictureUrl = "/images/collection/374.jpg"
                         },
                         new
                         {
@@ -3261,7 +3261,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "LAMBORGHINI CONTACH PUMA 248",
                             Number = 375,
-                            Picture = "/images/collection/375.jpg"
+                            PictureUrl = "/images/collection/375.jpg"
                         },
                         new
                         {
@@ -3269,7 +3269,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "PEUGEOT QUASAR-PROTOTIP",
                             Number = 376,
-                            Picture = "/images/collection/376.jpg"
+                            PictureUrl = "/images/collection/376.jpg"
                         },
                         new
                         {
@@ -3277,7 +3277,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "MASERATI BARCHETTA STRADELLA",
                             Number = 377,
-                            Picture = "/images/collection/377.jpg"
+                            PictureUrl = "/images/collection/377.jpg"
                         },
                         new
                         {
@@ -3285,7 +3285,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "BMW Z13-PROTOTIP",
                             Number = 378,
-                            Picture = "/images/collection/378.jpg"
+                            PictureUrl = "/images/collection/378.jpg"
                         },
                         new
                         {
@@ -3293,7 +3293,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "FIAT PUNTO",
                             Number = 379,
-                            Picture = "/images/collection/379.jpg"
+                            PictureUrl = "/images/collection/379.jpg"
                         },
                         new
                         {
@@ -3301,7 +3301,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "RENAULT MATRA ZOOM-PROTOTIP",
                             Number = 380,
-                            Picture = "/images/collection/380.jpg"
+                            PictureUrl = "/images/collection/380.jpg"
                         },
                         new
                         {
@@ -3309,7 +3309,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "VOLKSWAGEN CONCEPT ONE-PROTOTIP",
                             Number = 381,
-                            Picture = "/images/collection/381.jpg"
+                            PictureUrl = "/images/collection/381.jpg"
                         },
                         new
                         {
@@ -3317,7 +3317,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "TOYOTA BZ 2001",
                             Number = 382,
-                            Picture = "/images/collection/382.jpg"
+                            PictureUrl = "/images/collection/382.jpg"
                         },
                         new
                         {
@@ -3325,7 +3325,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "BENTLEY CONCEPT JAVA",
                             Number = 383,
-                            Picture = "/images/collection/383.jpg"
+                            PictureUrl = "/images/collection/383.jpg"
                         },
                         new
                         {
@@ -3333,7 +3333,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "DODGE CHRYSLER VIPER",
                             Number = 384,
-                            Picture = "/images/collection/384.jpg"
+                            PictureUrl = "/images/collection/384.jpg"
                         },
                         new
                         {
@@ -3341,7 +3341,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "FORD SUB-B PROTOTIP",
                             Number = 385,
-                            Picture = "/images/collection/385.jpg"
+                            PictureUrl = "/images/collection/385.jpg"
                         },
                         new
                         {
@@ -3349,7 +3349,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "PLYMOUTH PROWLER",
                             Number = 386,
-                            Picture = "/images/collection/386.jpg"
+                            PictureUrl = "/images/collection/386.jpg"
                         },
                         new
                         {
@@ -3357,7 +3357,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "MC LAREN F1",
                             Number = 387,
-                            Picture = "/images/collection/387.jpg"
+                            PictureUrl = "/images/collection/387.jpg"
                         },
                         new
                         {
@@ -3365,7 +3365,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "MONTEVERDI HAI 650 F1",
                             Number = 388,
-                            Picture = "/images/collection/388.jpg"
+                            PictureUrl = "/images/collection/388.jpg"
                         },
                         new
                         {
@@ -3373,7 +3373,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "MAZDA 929",
                             Number = 389,
-                            Picture = "/images/collection/389.jpg"
+                            PictureUrl = "/images/collection/389.jpg"
                         },
                         new
                         {
@@ -3381,7 +3381,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "HONDA ACCORD COUPE",
                             Number = 390,
-                            Picture = "/images/collection/390.jpg"
+                            PictureUrl = "/images/collection/390.jpg"
                         },
                         new
                         {
@@ -3389,7 +3389,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "SBARRO OXALYS",
                             Number = 391,
-                            Picture = "/images/collection/391.jpg"
+                            PictureUrl = "/images/collection/391.jpg"
                         },
                         new
                         {
@@ -3397,7 +3397,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "DODGE CHRYSLER VIPER",
                             Number = 392,
-                            Picture = "/images/collection/392.jpg"
+                            PictureUrl = "/images/collection/392.jpg"
                         },
                         new
                         {
@@ -3405,7 +3405,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "YEATON ISETTA ÖZEL YAPIM",
                             Number = 393,
-                            Picture = "/images/collection/393.jpg"
+                            PictureUrl = "/images/collection/393.jpg"
                         },
                         new
                         {
@@ -3413,7 +3413,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "TERRA",
                             Number = 394,
-                            Picture = "/images/collection/394.jpg"
+                            PictureUrl = "/images/collection/394.jpg"
                         },
                         new
                         {
@@ -3421,7 +3421,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "FIAT S PUNTO-PROTOTIP",
                             Number = 395,
-                            Picture = "/images/collection/395.jpg"
+                            PictureUrl = "/images/collection/395.jpg"
                         },
                         new
                         {
@@ -3429,7 +3429,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "FIAT PUNTO 850 SPYDER",
                             Number = 396,
-                            Picture = "/images/collection/396.jpg"
+                            PictureUrl = "/images/collection/396.jpg"
                         },
                         new
                         {
@@ -3437,7 +3437,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "FIOROVANTI SENSIVA-PROTOTIP",
                             Number = 397,
-                            Picture = "/images/collection/397.jpg"
+                            PictureUrl = "/images/collection/397.jpg"
                         },
                         new
                         {
@@ -3445,7 +3445,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "FIAT MAGGIORA SCIA-PROTOTIP",
                             Number = 398,
-                            Picture = "/images/collection/398.jpg"
+                            PictureUrl = "/images/collection/398.jpg"
                         },
                         new
                         {
@@ -3453,7 +3453,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "DAIHATSU ULTRA MINI-PROTOTIP",
                             Number = 399,
-                            Picture = "/images/collection/399.jpg"
+                            PictureUrl = "/images/collection/399.jpg"
                         },
                         new
                         {
@@ -3461,7 +3461,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 6,
                             Name = "MITSUBISHI HSR-IV",
                             Number = 400,
-                            Picture = "/images/collection/400.jpg"
+                            PictureUrl = "/images/collection/400.jpg"
                         },
                         new
                         {
@@ -3469,7 +3469,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "DODGE VIPER",
                             Number = 401,
-                            Picture = "/images/collection/401.jpg"
+                            PictureUrl = "/images/collection/401.jpg"
                         },
                         new
                         {
@@ -3477,7 +3477,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "OPEL TIGRA",
                             Number = 402,
-                            Picture = "/images/collection/402.jpg"
+                            PictureUrl = "/images/collection/402.jpg"
                         },
                         new
                         {
@@ -3485,7 +3485,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "CHRYSLER STUDIE PROTOTYPE",
                             Number = 403,
-                            Picture = "/images/collection/403.jpg"
+                            PictureUrl = "/images/collection/403.jpg"
                         },
                         new
                         {
@@ -3493,7 +3493,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "CHRYSLER PROWLER",
                             Number = 404,
-                            Picture = "/images/collection/404.jpg"
+                            PictureUrl = "/images/collection/404.jpg"
                         },
                         new
                         {
@@ -3501,7 +3501,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "DE TOMASO GUARRA",
                             Number = 405,
-                            Picture = "/images/collection/405.jpg"
+                            PictureUrl = "/images/collection/405.jpg"
                         },
                         new
                         {
@@ -3509,7 +3509,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "ASTON MARTIN VIGNALE",
                             Number = 406,
-                            Picture = "/images/collection/406.jpg"
+                            PictureUrl = "/images/collection/406.jpg"
                         },
                         new
                         {
@@ -3517,7 +3517,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "HONDA PRELUDE",
                             Number = 407,
-                            Picture = "/images/collection/407.jpg"
+                            PictureUrl = "/images/collection/407.jpg"
                         },
                         new
                         {
@@ -3525,7 +3525,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "CHRYSLER AVIAT PROTOTYPE",
                             Number = 408,
-                            Picture = "/images/collection/408.jpg"
+                            PictureUrl = "/images/collection/408.jpg"
                         },
                         new
                         {
@@ -3533,7 +3533,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "FORD PROBE",
                             Number = 409,
-                            Picture = "/images/collection/409.jpg"
+                            PictureUrl = "/images/collection/409.jpg"
                         },
                         new
                         {
@@ -3541,7 +3541,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "MASERATI BARCHETTA",
                             Number = 410,
-                            Picture = "/images/collection/410.jpg"
+                            PictureUrl = "/images/collection/410.jpg"
                         },
                         new
                         {
@@ -3549,7 +3549,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "FERRARI MYTHOS PROTOTYPE",
                             Number = 411,
-                            Picture = "/images/collection/411.jpg"
+                            PictureUrl = "/images/collection/411.jpg"
                         },
                         new
                         {
@@ -3557,7 +3557,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "BUGATTI EB 112",
                             Number = 412,
-                            Picture = "/images/collection/412.jpg"
+                            PictureUrl = "/images/collection/412.jpg"
                         },
                         new
                         {
@@ -3565,7 +3565,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "HONDA ACCORD",
                             Number = 413,
-                            Picture = "/images/collection/413.jpg"
+                            PictureUrl = "/images/collection/413.jpg"
                         },
                         new
                         {
@@ -3573,7 +3573,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "TOYOTA CELICA",
                             Number = 414,
-                            Picture = "/images/collection/414.jpg"
+                            PictureUrl = "/images/collection/414.jpg"
                         },
                         new
                         {
@@ -3581,7 +3581,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "MERCURY PREMYS",
                             Number = 415,
-                            Picture = "/images/collection/415.jpg"
+                            PictureUrl = "/images/collection/415.jpg"
                         },
                         new
                         {
@@ -3589,7 +3589,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "CITROEN XANTIA",
                             Number = 416,
-                            Picture = "/images/collection/416.jpg"
+                            PictureUrl = "/images/collection/416.jpg"
                         },
                         new
                         {
@@ -3597,7 +3597,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "FORD SUB-B",
                             Number = 417,
-                            Picture = "/images/collection/417.jpg"
+                            PictureUrl = "/images/collection/417.jpg"
                         },
                         new
                         {
@@ -3605,7 +3605,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "CITROEN XANAE",
                             Number = 418,
-                            Picture = "/images/collection/418.jpg"
+                            PictureUrl = "/images/collection/418.jpg"
                         },
                         new
                         {
@@ -3613,7 +3613,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "FIAT PUNTO",
                             Number = 419,
-                            Picture = "/images/collection/419.jpg"
+                            PictureUrl = "/images/collection/419.jpg"
                         },
                         new
                         {
@@ -3621,7 +3621,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "HONDA NSX-R",
                             Number = 420,
-                            Picture = "/images/collection/420.jpg"
+                            PictureUrl = "/images/collection/420.jpg"
                         },
                         new
                         {
@@ -3629,7 +3629,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "TOYOTA SUPRA",
                             Number = 421,
-                            Picture = "/images/collection/421.jpg"
+                            PictureUrl = "/images/collection/421.jpg"
                         },
                         new
                         {
@@ -3637,7 +3637,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "MITSUBISHI SPACE GEAR",
                             Number = 422,
-                            Picture = "/images/collection/422.jpg"
+                            PictureUrl = "/images/collection/422.jpg"
                         },
                         new
                         {
@@ -3645,7 +3645,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "BMW MAZCA M12 PROTOTYPE",
                             Number = 423,
-                            Picture = "/images/collection/423.jpg"
+                            PictureUrl = "/images/collection/423.jpg"
                         },
                         new
                         {
@@ -3653,7 +3653,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "BUGATTI EB 110",
                             Number = 424,
-                            Picture = "/images/collection/424.jpg"
+                            PictureUrl = "/images/collection/424.jpg"
                         },
                         new
                         {
@@ -3661,7 +3661,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "ASTON MARTIN DB7",
                             Number = 425,
-                            Picture = "/images/collection/425.jpg"
+                            PictureUrl = "/images/collection/425.jpg"
                         },
                         new
                         {
@@ -3669,7 +3669,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "ASTON MARTIN VANTAGE",
                             Number = 426,
-                            Picture = "/images/collection/426.jpg"
+                            PictureUrl = "/images/collection/426.jpg"
                         },
                         new
                         {
@@ -3677,7 +3677,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "BMW 525i",
                             Number = 427,
-                            Picture = "/images/collection/427.jpg"
+                            PictureUrl = "/images/collection/427.jpg"
                         },
                         new
                         {
@@ -3685,7 +3685,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "BMW 850i",
                             Number = 428,
-                            Picture = "/images/collection/428.jpg"
+                            PictureUrl = "/images/collection/428.jpg"
                         },
                         new
                         {
@@ -3693,7 +3693,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "ETHOS 3",
                             Number = 429,
-                            Picture = "/images/collection/429.jpg"
+                            PictureUrl = "/images/collection/429.jpg"
                         },
                         new
                         {
@@ -3701,7 +3701,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "AUSI AVUS QUATTRO PROTOTYPE",
                             Number = 430,
-                            Picture = "/images/collection/430.jpg"
+                            PictureUrl = "/images/collection/430.jpg"
                         },
                         new
                         {
@@ -3709,7 +3709,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "MERCEDES SLK",
                             Number = 431,
-                            Picture = "/images/collection/431.jpg"
+                            PictureUrl = "/images/collection/431.jpg"
                         },
                         new
                         {
@@ -3717,7 +3717,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "CORVETTE STING RAY",
                             Number = 432,
-                            Picture = "/images/collection/432.jpg"
+                            PictureUrl = "/images/collection/432.jpg"
                         },
                         new
                         {
@@ -3725,7 +3725,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "FERRARI F-30",
                             Number = 433,
-                            Picture = "/images/collection/433.jpg"
+                            PictureUrl = "/images/collection/433.jpg"
                         },
                         new
                         {
@@ -3733,7 +3733,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "MASERATI QUATTROPORTE",
                             Number = 434,
-                            Picture = "/images/collection/434.jpg"
+                            PictureUrl = "/images/collection/434.jpg"
                         },
                         new
                         {
@@ -3741,7 +3741,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "ALFA SPIDER",
                             Number = 435,
-                            Picture = "/images/collection/435.jpg"
+                            PictureUrl = "/images/collection/435.jpg"
                         },
                         new
                         {
@@ -3749,7 +3749,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "BARRAMUNDA PROTOTYPE",
                             Number = 436,
-                            Picture = "/images/collection/436.jpg"
+                            PictureUrl = "/images/collection/436.jpg"
                         },
                         new
                         {
@@ -3757,7 +3757,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "PORSCHE BOXTER",
                             Number = 437,
-                            Picture = "/images/collection/437.jpg"
+                            PictureUrl = "/images/collection/437.jpg"
                         },
                         new
                         {
@@ -3765,7 +3765,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "FORD MUSTANG MACH III",
                             Number = 438,
-                            Picture = "/images/collection/438.jpg"
+                            PictureUrl = "/images/collection/438.jpg"
                         },
                         new
                         {
@@ -3773,7 +3773,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "MONTEVERDI HAI",
                             Number = 439,
-                            Picture = "/images/collection/439.jpg"
+                            PictureUrl = "/images/collection/439.jpg"
                         },
                         new
                         {
@@ -3781,7 +3781,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "NISSAN 300ZX",
                             Number = 440,
-                            Picture = "/images/collection/440.jpg"
+                            PictureUrl = "/images/collection/440.jpg"
                         },
                         new
                         {
@@ -3789,7 +3789,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "MICHALAK PROTOTYPE",
                             Number = 441,
-                            Picture = "/images/collection/441.jpg"
+                            PictureUrl = "/images/collection/441.jpg"
                         },
                         new
                         {
@@ -3797,7 +3797,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "FIAT MAGGIORA PROTOTYPE",
                             Number = 442,
-                            Picture = "/images/collection/442.jpg"
+                            PictureUrl = "/images/collection/442.jpg"
                         },
                         new
                         {
@@ -3805,7 +3805,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "VENTURI 400GT",
                             Number = 443,
-                            Picture = "/images/collection/443.jpg"
+                            PictureUrl = "/images/collection/443.jpg"
                         },
                         new
                         {
@@ -3813,7 +3813,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "MC LAREN F1",
                             Number = 444,
-                            Picture = "/images/collection/444.jpg"
+                            PictureUrl = "/images/collection/444.jpg"
                         },
                         new
                         {
@@ -3821,7 +3821,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "VW SHARAN",
                             Number = 445,
-                            Picture = "/images/collection/445.jpg"
+                            PictureUrl = "/images/collection/445.jpg"
                         },
                         new
                         {
@@ -3829,7 +3829,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "RENAULT MATRA",
                             Number = 446,
-                            Picture = "/images/collection/446.jpg"
+                            PictureUrl = "/images/collection/446.jpg"
                         },
                         new
                         {
@@ -3837,7 +3837,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "BMW R-1 PROTOTYPE",
                             Number = 447,
-                            Picture = "/images/collection/447.jpg"
+                            PictureUrl = "/images/collection/447.jpg"
                         },
                         new
                         {
@@ -3845,7 +3845,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "BMW Z-13 PROTOTYPE",
                             Number = 448,
-                            Picture = "/images/collection/448.jpg"
+                            PictureUrl = "/images/collection/448.jpg"
                         },
                         new
                         {
@@ -3853,7 +3853,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "BENTLEY CONCEPT JAVA",
                             Number = 449,
-                            Picture = "/images/collection/449.jpg"
+                            PictureUrl = "/images/collection/449.jpg"
                         },
                         new
                         {
@@ -3861,7 +3861,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "PEUGEOT QUASAR PROTOTYPE",
                             Number = 450,
-                            Picture = "/images/collection/450.jpg"
+                            PictureUrl = "/images/collection/450.jpg"
                         },
                         new
                         {
@@ -3869,7 +3869,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "BERTONE KARISMA PROTOTYPE",
                             Number = 451,
-                            Picture = "/images/collection/451.jpg"
+                            PictureUrl = "/images/collection/451.jpg"
                         },
                         new
                         {
@@ -3877,7 +3877,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "DODGE VENOM",
                             Number = 452,
-                            Picture = "/images/collection/452.jpg"
+                            PictureUrl = "/images/collection/452.jpg"
                         },
                         new
                         {
@@ -3885,7 +3885,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "CHEVROLET CAMARO",
                             Number = 453,
-                            Picture = "/images/collection/453.jpg"
+                            PictureUrl = "/images/collection/453.jpg"
                         },
                         new
                         {
@@ -3893,7 +3893,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "FLOROVANTI SENSIVA PROTOTYPE",
                             Number = 454,
-                            Picture = "/images/collection/454.jpg"
+                            PictureUrl = "/images/collection/454.jpg"
                         },
                         new
                         {
@@ -3901,7 +3901,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "RENAULT LUDO",
                             Number = 455,
-                            Picture = "/images/collection/455.jpg"
+                            PictureUrl = "/images/collection/455.jpg"
                         },
                         new
                         {
@@ -3909,7 +3909,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "PEUGEOT ION PROTOTYPE",
                             Number = 456,
-                            Picture = "/images/collection/456.jpg"
+                            PictureUrl = "/images/collection/456.jpg"
                         },
                         new
                         {
@@ -3917,7 +3917,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "FIAT SPUNTO PROTOTYPE",
                             Number = 457,
-                            Picture = "/images/collection/457.jpg"
+                            PictureUrl = "/images/collection/457.jpg"
                         },
                         new
                         {
@@ -3925,7 +3925,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "BUICK RIVIERA",
                             Number = 458,
-                            Picture = "/images/collection/458.jpg"
+                            PictureUrl = "/images/collection/458.jpg"
                         },
                         new
                         {
@@ -3933,7 +3933,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "HYUNDAI PROTOTYPE",
                             Number = 459,
-                            Picture = "/images/collection/459.jpg"
+                            PictureUrl = "/images/collection/459.jpg"
                         },
                         new
                         {
@@ -3941,7 +3941,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "MERCEDES S - COUPE",
                             Number = 460,
-                            Picture = "/images/collection/460.jpg"
+                            PictureUrl = "/images/collection/460.jpg"
                         },
                         new
                         {
@@ -3949,7 +3949,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "DODGE STEALTH",
                             Number = 461,
-                            Picture = "/images/collection/461.jpg"
+                            PictureUrl = "/images/collection/461.jpg"
                         },
                         new
                         {
@@ -3957,7 +3957,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "JAGUAR XJ 220",
                             Number = 462,
-                            Picture = "/images/collection/462.jpg"
+                            PictureUrl = "/images/collection/462.jpg"
                         },
                         new
                         {
@@ -3965,7 +3965,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "LOTUS ESPRIT",
                             Number = 463,
-                            Picture = "/images/collection/463.jpg"
+                            PictureUrl = "/images/collection/463.jpg"
                         },
                         new
                         {
@@ -3973,7 +3973,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "PORSCHE 959",
                             Number = 464,
-                            Picture = "/images/collection/464.jpg"
+                            PictureUrl = "/images/collection/464.jpg"
                         },
                         new
                         {
@@ -3981,7 +3981,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "MERCEDES C 112",
                             Number = 465,
-                            Picture = "/images/collection/465.jpg"
+                            PictureUrl = "/images/collection/465.jpg"
                         },
                         new
                         {
@@ -3989,7 +3989,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "FERRARI F-40",
                             Number = 466,
-                            Picture = "/images/collection/466.jpg"
+                            PictureUrl = "/images/collection/466.jpg"
                         },
                         new
                         {
@@ -3997,7 +3997,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "LAMBORGHINI DIABLO",
                             Number = 467,
-                            Picture = "/images/collection/467.jpg"
+                            PictureUrl = "/images/collection/467.jpg"
                         },
                         new
                         {
@@ -4005,7 +4005,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "MERCEDES BENZ AAV PROTOTYPE",
                             Number = 468,
-                            Picture = "/images/collection/468.jpg"
+                            PictureUrl = "/images/collection/468.jpg"
                         },
                         new
                         {
@@ -4013,7 +4013,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "RHAPSODY",
                             Number = 469,
-                            Picture = "/images/collection/469.jpg"
+                            PictureUrl = "/images/collection/469.jpg"
                         },
                         new
                         {
@@ -4021,7 +4021,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 7,
                             Name = "MAZDA RX-7",
                             Number = 470,
-                            Picture = "/images/collection/470.jpg"
+                            PictureUrl = "/images/collection/470.jpg"
                         },
                         new
                         {
@@ -4029,7 +4029,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "BUGATTI EB 110",
                             Number = 471,
-                            Picture = "/images/collection/471.jpg"
+                            PictureUrl = "/images/collection/471.jpg"
                         },
                         new
                         {
@@ -4037,7 +4037,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "ROVER MGF",
                             Number = 472,
-                            Picture = "/images/collection/472.jpg"
+                            PictureUrl = "/images/collection/472.jpg"
                         },
                         new
                         {
@@ -4045,7 +4045,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "ISUZU DESEO PROTOTYPE",
                             Number = 473,
-                            Picture = "/images/collection/473.jpg"
+                            PictureUrl = "/images/collection/473.jpg"
                         },
                         new
                         {
@@ -4053,7 +4053,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "BMW 520i",
                             Number = 474,
-                            Picture = "/images/collection/474.jpg"
+                            PictureUrl = "/images/collection/474.jpg"
                         },
                         new
                         {
@@ -4061,7 +4061,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "YAMAHA YZF 600 R",
                             Number = 475,
-                            Picture = "/images/collection/475.jpg"
+                            PictureUrl = "/images/collection/475.jpg"
                         },
                         new
                         {
@@ -4069,7 +4069,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "HONDA PROTOTYPE",
                             Number = 476,
-                            Picture = "/images/collection/476.jpg"
+                            PictureUrl = "/images/collection/476.jpg"
                         },
                         new
                         {
@@ -4077,7 +4077,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "HOMMELL BARQUETTE",
                             Number = 477,
-                            Picture = "/images/collection/477.jpg"
+                            PictureUrl = "/images/collection/477.jpg"
                         },
                         new
                         {
@@ -4085,7 +4085,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "ASTON MARTIN DB7",
                             Number = 478,
-                            Picture = "/images/collection/478.jpg"
+                            PictureUrl = "/images/collection/478.jpg"
                         },
                         new
                         {
@@ -4093,7 +4093,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "FORD GT 90 PROTOTYPE",
                             Number = 479,
-                            Picture = "/images/collection/479.jpg"
+                            PictureUrl = "/images/collection/479.jpg"
                         },
                         new
                         {
@@ -4101,7 +4101,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "LOTUS ELISE",
                             Number = 480,
-                            Picture = "/images/collection/480.jpg"
+                            PictureUrl = "/images/collection/480.jpg"
                         },
                         new
                         {
@@ -4109,7 +4109,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "BMW Z3",
                             Number = 481,
-                            Picture = "/images/collection/481.jpg"
+                            PictureUrl = "/images/collection/481.jpg"
                         },
                         new
                         {
@@ -4117,7 +4117,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "HYUNDAI LANTRA COUPLE",
                             Number = 482,
-                            Picture = "/images/collection/482.jpg"
+                            PictureUrl = "/images/collection/482.jpg"
                         },
                         new
                         {
@@ -4125,7 +4125,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "JAN CAUSE SPECIAL",
                             Number = 483,
-                            Picture = "/images/collection/483.jpg"
+                            PictureUrl = "/images/collection/483.jpg"
                         },
                         new
                         {
@@ -4133,7 +4133,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "MITSUBISHI GAUS PROTOTYPE",
                             Number = 484,
-                            Picture = "/images/collection/484.jpg"
+                            PictureUrl = "/images/collection/484.jpg"
                         },
                         new
                         {
@@ -4141,7 +4141,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "SUBARU ALPHA EXIGA",
                             Number = 485,
-                            Picture = "/images/collection/485.jpg"
+                            PictureUrl = "/images/collection/485.jpg"
                         },
                         new
                         {
@@ -4149,7 +4149,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "CHRIS RICHARDS SPECIAL",
                             Number = 486,
-                            Picture = "/images/collection/486.jpg"
+                            PictureUrl = "/images/collection/486.jpg"
                         },
                         new
                         {
@@ -4157,7 +4157,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "MITSUBISHI 3000 GT",
                             Number = 487,
-                            Picture = "/images/collection/487.jpg"
+                            PictureUrl = "/images/collection/487.jpg"
                         },
                         new
                         {
@@ -4165,7 +4165,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "SLFA ROMEO SPIDER",
                             Number = 488,
-                            Picture = "/images/collection/488.jpg"
+                            PictureUrl = "/images/collection/488.jpg"
                         },
                         new
                         {
@@ -4173,7 +4173,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "ASTON MARTIN DB7 CABRIO",
                             Number = 489,
-                            Picture = "/images/collection/489.jpg"
+                            PictureUrl = "/images/collection/489.jpg"
                         },
                         new
                         {
@@ -4181,7 +4181,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "PORSCHE 911 CARRERA",
                             Number = 490,
-                            Picture = "/images/collection/490.jpg"
+                            PictureUrl = "/images/collection/490.jpg"
                         },
                         new
                         {
@@ -4189,7 +4189,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "BUEL SPECIAL",
                             Number = 491,
-                            Picture = "/images/collection/491.jpg"
+                            PictureUrl = "/images/collection/491.jpg"
                         },
                         new
                         {
@@ -4197,7 +4197,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "ASTON MARTIN DB7",
                             Number = 492,
-                            Picture = "/images/collection/492.jpg"
+                            PictureUrl = "/images/collection/492.jpg"
                         },
                         new
                         {
@@ -4205,7 +4205,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "PEUGEOT 406",
                             Number = 493,
-                            Picture = "/images/collection/493.jpg"
+                            PictureUrl = "/images/collection/493.jpg"
                         },
                         new
                         {
@@ -4213,7 +4213,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "CONSULIER MOSLER INTRUDER",
                             Number = 494,
-                            Picture = "/images/collection/494.jpg"
+                            PictureUrl = "/images/collection/494.jpg"
                         },
                         new
                         {
@@ -4221,7 +4221,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "FORD INDIGO",
                             Number = 495,
-                            Picture = "/images/collection/495.jpg"
+                            PictureUrl = "/images/collection/495.jpg"
                         },
                         new
                         {
@@ -4229,7 +4229,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "VENTURI ATLANTIQUE 300",
                             Number = 496,
-                            Picture = "/images/collection/496.jpg"
+                            PictureUrl = "/images/collection/496.jpg"
                         },
                         new
                         {
@@ -4237,7 +4237,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "OPEL CALIBRA BERTONE",
                             Number = 497,
-                            Picture = "/images/collection/497.jpg"
+                            PictureUrl = "/images/collection/497.jpg"
                         },
                         new
                         {
@@ -4245,7 +4245,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "MC LAREN F1 LM",
                             Number = 498,
-                            Picture = "/images/collection/498.jpg"
+                            PictureUrl = "/images/collection/498.jpg"
                         },
                         new
                         {
@@ -4253,7 +4253,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "BMW 328i CABRIO",
                             Number = 499,
-                            Picture = "/images/collection/499.jpg"
+                            PictureUrl = "/images/collection/499.jpg"
                         },
                         new
                         {
@@ -4261,7 +4261,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "CITROEN PROTOTYPE",
                             Number = 500,
-                            Picture = "/images/collection/500.jpg"
+                            PictureUrl = "/images/collection/500.jpg"
                         },
                         new
                         {
@@ -4269,7 +4269,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "BMW Z3",
                             Number = 501,
-                            Picture = "/images/collection/501.jpg"
+                            PictureUrl = "/images/collection/501.jpg"
                         },
                         new
                         {
@@ -4277,7 +4277,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "HONDA CR-V",
                             Number = 502,
-                            Picture = "/images/collection/502.jpg"
+                            PictureUrl = "/images/collection/502.jpg"
                         },
                         new
                         {
@@ -4285,7 +4285,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "AUDI TT-S PROTOTYPE",
                             Number = 503,
-                            Picture = "/images/collection/503.jpg"
+                            PictureUrl = "/images/collection/503.jpg"
                         },
                         new
                         {
@@ -4293,7 +4293,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "CHEVROLET CAMARO",
                             Number = 504,
-                            Picture = "/images/collection/504.jpg"
+                            PictureUrl = "/images/collection/504.jpg"
                         },
                         new
                         {
@@ -4301,7 +4301,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "LOTUS ESPRIT CABRIO",
                             Number = 505,
-                            Picture = "/images/collection/505.jpg"
+                            PictureUrl = "/images/collection/505.jpg"
                         },
                         new
                         {
@@ -4309,7 +4309,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "LAMBORGHINI DIABLO VT",
                             Number = 506,
-                            Picture = "/images/collection/506.jpg"
+                            PictureUrl = "/images/collection/506.jpg"
                         },
                         new
                         {
@@ -4317,7 +4317,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "YAMAHA YZF 600 R",
                             Number = 507,
-                            Picture = "/images/collection/507.jpg"
+                            PictureUrl = "/images/collection/507.jpg"
                         },
                         new
                         {
@@ -4325,7 +4325,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "FERRARI 456 GT COUPE",
                             Number = 508,
-                            Picture = "/images/collection/508.jpg"
+                            PictureUrl = "/images/collection/508.jpg"
                         },
                         new
                         {
@@ -4333,7 +4333,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "ASCARI FGT",
                             Number = 509,
-                            Picture = "/images/collection/509.jpg"
+                            PictureUrl = "/images/collection/509.jpg"
                         },
                         new
                         {
@@ -4341,7 +4341,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "NISSAN AA-X PROTOTYPE",
                             Number = 510,
-                            Picture = "/images/collection/510.jpg"
+                            PictureUrl = "/images/collection/510.jpg"
                         },
                         new
                         {
@@ -4349,7 +4349,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "MITSUBISHI GALANT",
                             Number = 511,
-                            Picture = "/images/collection/511.jpg"
+                            PictureUrl = "/images/collection/511.jpg"
                         },
                         new
                         {
@@ -4357,7 +4357,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "DE TOMASO GUARA BARCHETTA",
                             Number = 512,
-                            Picture = "/images/collection/512.jpg"
+                            PictureUrl = "/images/collection/512.jpg"
                         },
                         new
                         {
@@ -4365,7 +4365,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "TOYOTA PASEO CABRIO",
                             Number = 513,
-                            Picture = "/images/collection/513.jpg"
+                            PictureUrl = "/images/collection/513.jpg"
                         },
                         new
                         {
@@ -4373,7 +4373,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "LOTUS ELISE CONCEPT",
                             Number = 514,
-                            Picture = "/images/collection/514.jpg"
+                            PictureUrl = "/images/collection/514.jpg"
                         },
                         new
                         {
@@ -4381,7 +4381,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "TOYOTA F-MX PROTOTYPE",
                             Number = 515,
-                            Picture = "/images/collection/515.jpg"
+                            PictureUrl = "/images/collection/515.jpg"
                         },
                         new
                         {
@@ -4389,7 +4389,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "FERRARI GTO",
                             Number = 516,
-                            Picture = "/images/collection/516.jpg"
+                            PictureUrl = "/images/collection/516.jpg"
                         },
                         new
                         {
@@ -4397,7 +4397,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "ASTON MARTIN DB7",
                             Number = 517,
-                            Picture = "/images/collection/517.jpg"
+                            PictureUrl = "/images/collection/517.jpg"
                         },
                         new
                         {
@@ -4405,7 +4405,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "PONTIAC FIREBIRD",
                             Number = 518,
-                            Picture = "/images/collection/518.jpg"
+                            PictureUrl = "/images/collection/518.jpg"
                         },
                         new
                         {
@@ -4413,7 +4413,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "VECTOR AVTECH SC",
                             Number = 519,
-                            Picture = "/images/collection/519.jpg"
+                            PictureUrl = "/images/collection/519.jpg"
                         },
                         new
                         {
@@ -4421,7 +4421,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "ATLANTIC CONCEPT",
                             Number = 520,
-                            Picture = "/images/collection/520.jpg"
+                            PictureUrl = "/images/collection/520.jpg"
                         },
                         new
                         {
@@ -4429,7 +4429,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "PORSCHE 911 TARGA",
                             Number = 521,
-                            Picture = "/images/collection/521.jpg"
+                            PictureUrl = "/images/collection/521.jpg"
                         },
                         new
                         {
@@ -4437,7 +4437,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "RENAULT INITIALE",
                             Number = 522,
-                            Picture = "/images/collection/522.jpg"
+                            PictureUrl = "/images/collection/522.jpg"
                         },
                         new
                         {
@@ -4445,7 +4445,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "TVR CERBERA",
                             Number = 523,
-                            Picture = "/images/collection/523.jpg"
+                            PictureUrl = "/images/collection/523.jpg"
                         },
                         new
                         {
@@ -4453,7 +4453,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "TOYOTA CAVALIER PROTOTYPE",
                             Number = 524,
-                            Picture = "/images/collection/524.jpg"
+                            PictureUrl = "/images/collection/524.jpg"
                         },
                         new
                         {
@@ -4461,7 +4461,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "ROVER MFG",
                             Number = 525,
-                            Picture = "/images/collection/525.jpg"
+                            PictureUrl = "/images/collection/525.jpg"
                         },
                         new
                         {
@@ -4469,7 +4469,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "JAGUAR X3220",
                             Number = 526,
-                            Picture = "/images/collection/526.jpg"
+                            PictureUrl = "/images/collection/526.jpg"
                         },
                         new
                         {
@@ -4477,7 +4477,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "MARCOS LM 500",
                             Number = 527,
-                            Picture = "/images/collection/527.jpg"
+                            PictureUrl = "/images/collection/527.jpg"
                         },
                         new
                         {
@@ -4485,7 +4485,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "KAWASAKI GPZ 1100",
                             Number = 528,
-                            Picture = "/images/collection/528.jpg"
+                            PictureUrl = "/images/collection/528.jpg"
                         },
                         new
                         {
@@ -4493,7 +4493,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "JIMENEZ NOVIA",
                             Number = 529,
-                            Picture = "/images/collection/529.jpg"
+                            PictureUrl = "/images/collection/529.jpg"
                         },
                         new
                         {
@@ -4501,7 +4501,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "ACURA NSX",
                             Number = 530,
-                            Picture = "/images/collection/530.jpg"
+                            PictureUrl = "/images/collection/530.jpg"
                         },
                         new
                         {
@@ -4509,7 +4509,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "MAZDA MILENIA S",
                             Number = 531,
-                            Picture = "/images/collection/531.jpg"
+                            PictureUrl = "/images/collection/531.jpg"
                         },
                         new
                         {
@@ -4517,7 +4517,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "PLYMOUTH PROWLER PROTOTYPE",
                             Number = 532,
-                            Picture = "/images/collection/532.jpg"
+                            PictureUrl = "/images/collection/532.jpg"
                         },
                         new
                         {
@@ -4525,7 +4525,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "NISSAN 300 ZX",
                             Number = 533,
-                            Picture = "/images/collection/533.jpg"
+                            PictureUrl = "/images/collection/533.jpg"
                         },
                         new
                         {
@@ -4533,7 +4533,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "FERRARI TESTAROSSA",
                             Number = 534,
-                            Picture = "/images/collection/534.jpg"
+                            PictureUrl = "/images/collection/534.jpg"
                         },
                         new
                         {
@@ -4541,7 +4541,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "PONTIAC FIREBIRD RAM-AIR",
                             Number = 535,
-                            Picture = "/images/collection/535.jpg"
+                            PictureUrl = "/images/collection/535.jpg"
                         },
                         new
                         {
@@ -4549,7 +4549,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "DODGE STEALTH",
                             Number = 536,
-                            Picture = "/images/collection/536.jpg"
+                            PictureUrl = "/images/collection/536.jpg"
                         },
                         new
                         {
@@ -4557,7 +4557,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "CHRYSLER LNX PROTOTYPE",
                             Number = 537,
-                            Picture = "/images/collection/537.jpg"
+                            PictureUrl = "/images/collection/537.jpg"
                         },
                         new
                         {
@@ -4565,7 +4565,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "MUSTANG GT",
                             Number = 538,
-                            Picture = "/images/collection/538.jpg"
+                            PictureUrl = "/images/collection/538.jpg"
                         },
                         new
                         {
@@ -4573,7 +4573,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "ALFA ROMEO SPIDER",
                             Number = 539,
-                            Picture = "/images/collection/539.jpg"
+                            PictureUrl = "/images/collection/539.jpg"
                         },
                         new
                         {
@@ -4581,7 +4581,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 8,
                             Name = "CHEVROLE CORVETTE RTD",
                             Number = 540,
-                            Picture = "/images/collection/540.jpg"
+                            PictureUrl = "/images/collection/540.jpg"
                         },
                         new
                         {
@@ -4589,7 +4589,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "PORSCHE 911 CARRERA",
                             Number = 1,
-                            Picture = "/images/collection/sport001.jpg"
+                            PictureUrl = "/images/collection/sport001.jpg"
                         },
                         new
                         {
@@ -4597,7 +4597,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "FIORAVANTI SENSIVA",
                             Number = 2,
-                            Picture = "/images/collection/sport002.jpg"
+                            PictureUrl = "/images/collection/sport002.jpg"
                         },
                         new
                         {
@@ -4605,7 +4605,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "BOMBARDIER FL 4789 GK",
                             Number = 3,
-                            Picture = "/images/collection/sport003.jpg"
+                            PictureUrl = "/images/collection/sport003.jpg"
                         },
                         new
                         {
@@ -4613,7 +4613,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "KAWASAKI 550 SX",
                             Number = 4,
-                            Picture = "/images/collection/sport004.jpg"
+                            PictureUrl = "/images/collection/sport004.jpg"
                         },
                         new
                         {
@@ -4621,7 +4621,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "MAN PHOENIX",
                             Number = 5,
-                            Picture = "/images/collection/sport005.jpg"
+                            PictureUrl = "/images/collection/sport005.jpg"
                         },
                         new
                         {
@@ -4629,7 +4629,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "MERCEDES",
                             Number = 6,
-                            Picture = "/images/collection/sport006.jpg"
+                            PictureUrl = "/images/collection/sport006.jpg"
                         },
                         new
                         {
@@ -4637,7 +4637,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "FORD B 194",
                             Number = 7,
-                            Picture = "/images/collection/sport007.jpg"
+                            PictureUrl = "/images/collection/sport007.jpg"
                         },
                         new
                         {
@@ -4645,7 +4645,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "FORD B 189",
                             Number = 8,
-                            Picture = "/images/collection/sport008.jpg"
+                            PictureUrl = "/images/collection/sport008.jpg"
                         },
                         new
                         {
@@ -4653,7 +4653,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "FORD",
                             Number = 9,
-                            Picture = "/images/collection/sport009.jpg"
+                            PictureUrl = "/images/collection/sport009.jpg"
                         },
                         new
                         {
@@ -4661,7 +4661,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "BILBA",
                             Number = 10,
-                            Picture = "/images/collection/sport010.jpg"
+                            PictureUrl = "/images/collection/sport010.jpg"
                         },
                         new
                         {
@@ -4669,7 +4669,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "HONDA MC LAREN",
                             Number = 11,
-                            Picture = "/images/collection/sport011.jpg"
+                            PictureUrl = "/images/collection/sport011.jpg"
                         },
                         new
                         {
@@ -4677,7 +4677,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "RENAULT ELF",
                             Number = 12,
-                            Picture = "/images/collection/sport012.jpg"
+                            PictureUrl = "/images/collection/sport012.jpg"
                         },
                         new
                         {
@@ -4685,7 +4685,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "RENAULT RE - 30B TURBO",
                             Number = 13,
-                            Picture = "/images/collection/sport013.jpg"
+                            PictureUrl = "/images/collection/sport013.jpg"
                         },
                         new
                         {
@@ -4693,7 +4693,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "LOLA LC-87",
                             Number = 14,
-                            Picture = "/images/collection/sport014.jpg"
+                            PictureUrl = "/images/collection/sport014.jpg"
                         },
                         new
                         {
@@ -4701,7 +4701,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "MERCEDES BENZ",
                             Number = 15,
-                            Picture = "/images/collection/sport015.jpg"
+                            PictureUrl = "/images/collection/sport015.jpg"
                         },
                         new
                         {
@@ -4709,7 +4709,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "PORSCHE 956",
                             Number = 16,
-                            Picture = "/images/collection/sport016.jpg"
+                            PictureUrl = "/images/collection/sport016.jpg"
                         },
                         new
                         {
@@ -4717,7 +4717,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "FORD B 193",
                             Number = 17,
-                            Picture = "/images/collection/sport017.jpg"
+                            PictureUrl = "/images/collection/sport017.jpg"
                         },
                         new
                         {
@@ -4725,7 +4725,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "MERCEDES 280E",
                             Number = 18,
-                            Picture = "/images/collection/sport018.jpg"
+                            PictureUrl = "/images/collection/sport018.jpg"
                         },
                         new
                         {
@@ -4733,7 +4733,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "FERRARI 522",
                             Number = 19,
-                            Picture = "/images/collection/sport019.jpg"
+                            PictureUrl = "/images/collection/sport019.jpg"
                         },
                         new
                         {
@@ -4741,7 +4741,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "OPEL KADETT",
                             Number = 20,
-                            Picture = "/images/collection/sport020.jpg"
+                            PictureUrl = "/images/collection/sport020.jpg"
                         },
                         new
                         {
@@ -4749,7 +4749,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "McLAREN HONDA TEAM",
                             Number = 21,
-                            Picture = "/images/collection/sport021.jpg"
+                            PictureUrl = "/images/collection/sport021.jpg"
                         },
                         new
                         {
@@ -4757,7 +4757,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "TRIUMPH 900 DAYTONA",
                             Number = 22,
-                            Picture = "/images/collection/sport022.jpg"
+                            PictureUrl = "/images/collection/sport022.jpg"
                         },
                         new
                         {
@@ -4765,7 +4765,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "MOTION POWER BOATS",
                             Number = 23,
-                            Picture = "/images/collection/sport023.jpg"
+                            PictureUrl = "/images/collection/sport023.jpg"
                         },
                         new
                         {
@@ -4773,7 +4773,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "APRILIA EXTREMA",
                             Number = 24,
-                            Picture = "/images/collection/sport024.jpg"
+                            PictureUrl = "/images/collection/sport024.jpg"
                         },
                         new
                         {
@@ -4781,7 +4781,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "SUZUKI 750 GSX",
                             Number = 25,
-                            Picture = "/images/collection/sport025.jpg"
+                            PictureUrl = "/images/collection/sport025.jpg"
                         },
                         new
                         {
@@ -4789,7 +4789,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "DUCATI 888",
                             Number = 26,
-                            Picture = "/images/collection/sport026.jpg"
+                            PictureUrl = "/images/collection/sport026.jpg"
                         },
                         new
                         {
@@ -4797,7 +4797,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "FUTURE BIKE",
                             Number = 27,
-                            Picture = "/images/collection/sport027.jpg"
+                            PictureUrl = "/images/collection/sport027.jpg"
                         },
                         new
                         {
@@ -4805,7 +4805,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "SUZUKI 750 GSR SP",
                             Number = 28,
-                            Picture = "/images/collection/sport028.jpg"
+                            PictureUrl = "/images/collection/sport028.jpg"
                         },
                         new
                         {
@@ -4813,7 +4813,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "BMW M3",
                             Number = 29,
-                            Picture = "/images/collection/sport029.jpg"
+                            PictureUrl = "/images/collection/sport029.jpg"
                         },
                         new
                         {
@@ -4821,7 +4821,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "ALFA ROMEO",
                             Number = 30,
-                            Picture = "/images/collection/sport030.jpg"
+                            PictureUrl = "/images/collection/sport030.jpg"
                         },
                         new
                         {
@@ -4829,7 +4829,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "FORD",
                             Number = 31,
-                            Picture = "/images/collection/sport031.jpg"
+                            PictureUrl = "/images/collection/sport031.jpg"
                         },
                         new
                         {
@@ -4837,7 +4837,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "OPEL RACING TEAM",
                             Number = 32,
-                            Picture = "/images/collection/sport032.jpg"
+                            PictureUrl = "/images/collection/sport032.jpg"
                         },
                         new
                         {
@@ -4845,7 +4845,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "FORD ESCORT RS COSWORTH",
                             Number = 33,
-                            Picture = "/images/collection/sport033.jpg"
+                            PictureUrl = "/images/collection/sport033.jpg"
                         },
                         new
                         {
@@ -4853,7 +4853,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "PORSCHE 911",
                             Number = 34,
-                            Picture = "/images/collection/sport034.jpg"
+                            PictureUrl = "/images/collection/sport034.jpg"
                         },
                         new
                         {
@@ -4861,7 +4861,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "KOENIG C - 62",
                             Number = 35,
-                            Picture = "/images/collection/sport035.jpg"
+                            PictureUrl = "/images/collection/sport035.jpg"
                         },
                         new
                         {
@@ -4869,7 +4869,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "BUGATTI",
                             Number = 36,
-                            Picture = "/images/collection/sport036.jpg"
+                            PictureUrl = "/images/collection/sport036.jpg"
                         },
                         new
                         {
@@ -4877,7 +4877,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "YAMAHA",
                             Number = 37,
-                            Picture = "/images/collection/sport037.jpg"
+                            PictureUrl = "/images/collection/sport037.jpg"
                         },
                         new
                         {
@@ -4885,7 +4885,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "PORSCHE DAUER 962",
                             Number = 38,
-                            Picture = "/images/collection/sport038.jpg"
+                            PictureUrl = "/images/collection/sport038.jpg"
                         },
                         new
                         {
@@ -4893,7 +4893,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "FINNSCREW",
                             Number = 39,
-                            Picture = "/images/collection/sport039.jpg"
+                            PictureUrl = "/images/collection/sport039.jpg"
                         },
                         new
                         {
@@ -4901,7 +4901,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "RENAULT 19",
                             Number = 40,
-                            Picture = "/images/collection/sport040.jpg"
+                            PictureUrl = "/images/collection/sport040.jpg"
                         },
                         new
                         {
@@ -4909,7 +4909,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "GILERA",
                             Number = 41,
-                            Picture = "/images/collection/sport041.jpg"
+                            PictureUrl = "/images/collection/sport041.jpg"
                         },
                         new
                         {
@@ -4917,7 +4917,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "YEATON ISETTA ÖZEL YAPIM",
                             Number = 42,
-                            Picture = "/images/collection/sport042.jpg"
+                            PictureUrl = "/images/collection/sport042.jpg"
                         },
                         new
                         {
@@ -4925,7 +4925,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "GRINNALL SCORPIONS",
                             Number = 43,
-                            Picture = "/images/collection/sport043.jpg"
+                            PictureUrl = "/images/collection/sport043.jpg"
                         },
                         new
                         {
@@ -4933,7 +4933,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "Mc LAREN F1",
                             Number = 44,
-                            Picture = "/images/collection/sport044.jpg"
+                            PictureUrl = "/images/collection/sport044.jpg"
                         },
                         new
                         {
@@ -4941,7 +4941,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "CAGIVA",
                             Number = 45,
-                            Picture = "/images/collection/sport045.jpg"
+                            PictureUrl = "/images/collection/sport045.jpg"
                         },
                         new
                         {
@@ -4949,7 +4949,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "FIREBIRD III",
                             Number = 46,
-                            Picture = "/images/collection/sport046.jpg"
+                            PictureUrl = "/images/collection/sport046.jpg"
                         },
                         new
                         {
@@ -4957,7 +4957,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "KAWASAKI 750SX",
                             Number = 47,
-                            Picture = "/images/collection/sport047.jpg"
+                            PictureUrl = "/images/collection/sport047.jpg"
                         },
                         new
                         {
@@ -4965,7 +4965,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "FERRARI F-40 EVOLUZIONE",
                             Number = 48,
-                            Picture = "/images/collection/sport048.jpg"
+                            PictureUrl = "/images/collection/sport048.jpg"
                         },
                         new
                         {
@@ -4973,7 +4973,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "FORD FOOTWARK",
                             Number = 49,
-                            Picture = "/images/collection/sport049.jpg"
+                            PictureUrl = "/images/collection/sport049.jpg"
                         },
                         new
                         {
@@ -4981,7 +4981,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "BIMOTO",
                             Number = 50,
-                            Picture = "/images/collection/sport050.jpg"
+                            PictureUrl = "/images/collection/sport050.jpg"
                         },
                         new
                         {
@@ -4989,7 +4989,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "AUDI",
                             Number = 51,
-                            Picture = "/images/collection/sport051.jpg"
+                            PictureUrl = "/images/collection/sport051.jpg"
                         },
                         new
                         {
@@ -4997,7 +4997,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "KTM",
                             Number = 52,
-                            Picture = "/images/collection/sport052.jpg"
+                            PictureUrl = "/images/collection/sport052.jpg"
                         },
                         new
                         {
@@ -5005,7 +5005,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "ALFA ROMEO",
                             Number = 53,
-                            Picture = "/images/collection/sport053.jpg"
+                            PictureUrl = "/images/collection/sport053.jpg"
                         },
                         new
                         {
@@ -5013,7 +5013,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "BETA",
                             Number = 54,
-                            Picture = "/images/collection/sport054.jpg"
+                            PictureUrl = "/images/collection/sport054.jpg"
                         },
                         new
                         {
@@ -5021,7 +5021,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "MERCEDES SLK",
                             Number = 55,
-                            Picture = "/images/collection/sport055.jpg"
+                            PictureUrl = "/images/collection/sport055.jpg"
                         },
                         new
                         {
@@ -5029,7 +5029,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "HONDA",
                             Number = 56,
-                            Picture = "/images/collection/sport056.jpg"
+                            PictureUrl = "/images/collection/sport056.jpg"
                         },
                         new
                         {
@@ -5037,7 +5037,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "AUDI QUATTRO",
                             Number = 57,
-                            Picture = "/images/collection/sport057.jpg"
+                            PictureUrl = "/images/collection/sport057.jpg"
                         },
                         new
                         {
@@ -5045,7 +5045,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "PETERBILT 359",
                             Number = 58,
-                            Picture = "/images/collection/sport058.jpg"
+                            PictureUrl = "/images/collection/sport058.jpg"
                         },
                         new
                         {
@@ -5053,7 +5053,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "BIMOTA COLOR DELTA",
                             Number = 59,
-                            Picture = "/images/collection/sport059.jpg"
+                            PictureUrl = "/images/collection/sport059.jpg"
                         },
                         new
                         {
@@ -5061,7 +5061,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "LAMBORGHINI DIABLO SE",
                             Number = 60,
-                            Picture = "/images/collection/sport060.jpg"
+                            PictureUrl = "/images/collection/sport060.jpg"
                         },
                         new
                         {
@@ -5069,7 +5069,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "LOTUS ESPRIT S4",
                             Number = 61,
-                            Picture = "/images/collection/sport061.jpg"
+                            PictureUrl = "/images/collection/sport061.jpg"
                         },
                         new
                         {
@@ -5077,7 +5077,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "APACHE SPORTBOAT",
                             Number = 62,
-                            Picture = "/images/collection/sport062.jpg"
+                            PictureUrl = "/images/collection/sport062.jpg"
                         },
                         new
                         {
@@ -5085,7 +5085,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "CAGIVA SUPER CITY",
                             Number = 63,
-                            Picture = "/images/collection/sport063.jpg"
+                            PictureUrl = "/images/collection/sport063.jpg"
                         },
                         new
                         {
@@ -5093,7 +5093,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "NISSAN OFF - ROAD",
                             Number = 64,
-                            Picture = "/images/collection/sport064.jpg"
+                            PictureUrl = "/images/collection/sport064.jpg"
                         },
                         new
                         {
@@ -5101,7 +5101,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "HONDA CR 125",
                             Number = 65,
-                            Picture = "/images/collection/sport065.jpg"
+                            PictureUrl = "/images/collection/sport065.jpg"
                         },
                         new
                         {
@@ -5109,7 +5109,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "CITROEN XM",
                             Number = 66,
-                            Picture = "/images/collection/sport066.jpg"
+                            PictureUrl = "/images/collection/sport066.jpg"
                         },
                         new
                         {
@@ -5117,7 +5117,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "HONDA",
                             Number = 67,
-                            Picture = "/images/collection/sport067.jpg"
+                            PictureUrl = "/images/collection/sport067.jpg"
                         },
                         new
                         {
@@ -5125,7 +5125,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "PORSCHE 917",
                             Number = 68,
-                            Picture = "/images/collection/sport068.jpg"
+                            PictureUrl = "/images/collection/sport068.jpg"
                         },
                         new
                         {
@@ -5133,7 +5133,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "HONDA",
                             Number = 69,
-                            Picture = "/images/collection/sport069.jpg"
+                            PictureUrl = "/images/collection/sport069.jpg"
                         },
                         new
                         {
@@ -5141,7 +5141,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 9,
                             Name = "KAWASAKI ZZR 1100",
                             Number = 70,
-                            Picture = "/images/collection/sport070.jpg"
+                            PictureUrl = "/images/collection/sport070.jpg"
                         },
                         new
                         {
@@ -5149,7 +5149,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "VAUXHALL VECTRA",
                             Number = 71,
-                            Picture = "/images/collection/sport071.jpg"
+                            PictureUrl = "/images/collection/sport071.jpg"
                         },
                         new
                         {
@@ -5157,7 +5157,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "SUZUKI GSX-R 750",
                             Number = 72,
-                            Picture = "/images/collection/sport072.jpg"
+                            PictureUrl = "/images/collection/sport072.jpg"
                         },
                         new
                         {
@@ -5165,7 +5165,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "FORD F-100 OUTLOW 35",
                             Number = 73,
-                            Picture = "/images/collection/sport073.jpg"
+                            PictureUrl = "/images/collection/sport073.jpg"
                         },
                         new
                         {
@@ -5173,7 +5173,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "REYNARD 941 FORD",
                             Number = 74,
-                            Picture = "/images/collection/sport074.jpg"
+                            PictureUrl = "/images/collection/sport074.jpg"
                         },
                         new
                         {
@@ -5181,7 +5181,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "MITSUBISHI HSR-V",
                             Number = 75,
-                            Picture = "/images/collection/sport075.jpg"
+                            PictureUrl = "/images/collection/sport075.jpg"
                         },
                         new
                         {
@@ -5189,7 +5189,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "BMW MC LAREN F1 GTR",
                             Number = 76,
-                            Picture = "/images/collection/sport076.jpg"
+                            PictureUrl = "/images/collection/sport076.jpg"
                         },
                         new
                         {
@@ -5197,7 +5197,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "SONIC",
                             Number = 77,
-                            Picture = "/images/collection/sport077.jpg"
+                            PictureUrl = "/images/collection/sport077.jpg"
                         },
                         new
                         {
@@ -5205,7 +5205,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "RENAULT SPIDER",
                             Number = 78,
-                            Picture = "/images/collection/sport078.jpg"
+                            PictureUrl = "/images/collection/sport078.jpg"
                         },
                         new
                         {
@@ -5213,7 +5213,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "SPIRIT OF AMERICA SONIC ARROW",
                             Number = 79,
-                            Picture = "/images/collection/sport079.jpg"
+                            PictureUrl = "/images/collection/sport079.jpg"
                         },
                         new
                         {
@@ -5221,7 +5221,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "MC LAREN F1 GTR",
                             Number = 80,
-                            Picture = "/images/collection/sport080.jpg"
+                            PictureUrl = "/images/collection/sport080.jpg"
                         },
                         new
                         {
@@ -5229,7 +5229,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "AUDI A4 QUATTRO",
                             Number = 81,
-                            Picture = "/images/collection/sport081.jpg"
+                            PictureUrl = "/images/collection/sport081.jpg"
                         },
                         new
                         {
@@ -5237,7 +5237,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "FORD BRONCO",
                             Number = 82,
-                            Picture = "/images/collection/sport082.jpg"
+                            PictureUrl = "/images/collection/sport082.jpg"
                         },
                         new
                         {
@@ -5245,7 +5245,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "ROVER",
                             Number = 83,
-                            Picture = "/images/collection/sport083.jpg"
+                            PictureUrl = "/images/collection/sport083.jpg"
                         },
                         new
                         {
@@ -5253,7 +5253,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "GO-KART",
                             Number = 84,
-                            Picture = "/images/collection/sport084.jpg"
+                            PictureUrl = "/images/collection/sport084.jpg"
                         },
                         new
                         {
@@ -5261,7 +5261,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "MERCEDES 280 E",
                             Number = 85,
-                            Picture = "/images/collection/sport085.jpg"
+                            PictureUrl = "/images/collection/sport085.jpg"
                         },
                         new
                         {
@@ -5269,7 +5269,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "PORSCHE 917",
                             Number = 86,
-                            Picture = "/images/collection/sport086.jpg"
+                            PictureUrl = "/images/collection/sport086.jpg"
                         },
                         new
                         {
@@ -5277,7 +5277,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "GO-KART",
                             Number = 87,
-                            Picture = "/images/collection/sport087.jpg"
+                            PictureUrl = "/images/collection/sport087.jpg"
                         },
                         new
                         {
@@ -5285,7 +5285,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "FORD F-250",
                             Number = 88,
-                            Picture = "/images/collection/sport088.jpg"
+                            PictureUrl = "/images/collection/sport088.jpg"
                         },
                         new
                         {
@@ -5293,7 +5293,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "HONDA FOURTRAX 250 X",
                             Number = 89,
-                            Picture = "/images/collection/sport089.jpg"
+                            PictureUrl = "/images/collection/sport089.jpg"
                         },
                         new
                         {
@@ -5301,7 +5301,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "RENAULT-ELF",
                             Number = 90,
-                            Picture = "/images/collection/sport090.jpg"
+                            PictureUrl = "/images/collection/sport090.jpg"
                         },
                         new
                         {
@@ -5309,7 +5309,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "LOLA T 96/50 FORD",
                             Number = 91,
-                            Picture = "/images/collection/sport091.jpg"
+                            PictureUrl = "/images/collection/sport091.jpg"
                         },
                         new
                         {
@@ -5317,7 +5317,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "RENAULT F3",
                             Number = 92,
-                            Picture = "/images/collection/sport092.jpg"
+                            PictureUrl = "/images/collection/sport092.jpg"
                         },
                         new
                         {
@@ -5325,7 +5325,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "MC LAREN F1 GTR",
                             Number = 93,
-                            Picture = "/images/collection/sport093.jpg"
+                            PictureUrl = "/images/collection/sport093.jpg"
                         },
                         new
                         {
@@ -5333,7 +5333,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "PORSCHE 911 TURBO",
                             Number = 94,
-                            Picture = "/images/collection/sport094.jpg"
+                            PictureUrl = "/images/collection/sport094.jpg"
                         },
                         new
                         {
@@ -5341,7 +5341,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "BMW MC LAREN F1 GTR",
                             Number = 95,
-                            Picture = "/images/collection/sport095.jpg"
+                            PictureUrl = "/images/collection/sport095.jpg"
                         },
                         new
                         {
@@ -5349,7 +5349,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "OPEL CALIBRA",
                             Number = 96,
-                            Picture = "/images/collection/sport096.jpg"
+                            PictureUrl = "/images/collection/sport096.jpg"
                         },
                         new
                         {
@@ -5357,7 +5357,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "KAWASAKI KX 650",
                             Number = 97,
-                            Picture = "/images/collection/sport097.jpg"
+                            PictureUrl = "/images/collection/sport097.jpg"
                         },
                         new
                         {
@@ -5365,7 +5365,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "JAGUAR XJR 14",
                             Number = 98,
-                            Picture = "/images/collection/sport098.jpg"
+                            PictureUrl = "/images/collection/sport098.jpg"
                         },
                         new
                         {
@@ -5373,7 +5373,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "CORVETTE GT2 CALLAWAY",
                             Number = 99,
-                            Picture = "/images/collection/sport099.jpg"
+                            PictureUrl = "/images/collection/sport099.jpg"
                         },
                         new
                         {
@@ -5381,7 +5381,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "HONDA",
                             Number = 100,
-                            Picture = "/images/collection/sport100.jpg"
+                            PictureUrl = "/images/collection/sport100.jpg"
                         },
                         new
                         {
@@ -5389,7 +5389,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "JEEP SPORT",
                             Number = 101,
-                            Picture = "/images/collection/sport101.jpg"
+                            PictureUrl = "/images/collection/sport101.jpg"
                         },
                         new
                         {
@@ -5397,7 +5397,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "RENAULT LAGUNA",
                             Number = 102,
-                            Picture = "/images/collection/sport102.jpg"
+                            PictureUrl = "/images/collection/sport102.jpg"
                         },
                         new
                         {
@@ -5405,7 +5405,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "SUZUKI",
                             Number = 103,
-                            Picture = "/images/collection/sport103.jpg"
+                            PictureUrl = "/images/collection/sport103.jpg"
                         },
                         new
                         {
@@ -5413,7 +5413,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "MACROS MANTARA COUPE",
                             Number = 104,
-                            Picture = "/images/collection/sport104.jpg"
+                            PictureUrl = "/images/collection/sport104.jpg"
                         },
                         new
                         {
@@ -5421,7 +5421,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "DODGE VIPER GT",
                             Number = 105,
-                            Picture = "/images/collection/sport105.jpg"
+                            PictureUrl = "/images/collection/sport105.jpg"
                         },
                         new
                         {
@@ -5429,7 +5429,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "FORD B 193 FORMULA 1",
                             Number = 106,
-                            Picture = "/images/collection/sport106.jpg"
+                            PictureUrl = "/images/collection/sport106.jpg"
                         },
                         new
                         {
@@ -5437,7 +5437,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "FORD F-100",
                             Number = 107,
-                            Picture = "/images/collection/sport107.jpg"
+                            PictureUrl = "/images/collection/sport107.jpg"
                         },
                         new
                         {
@@ -5445,7 +5445,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "MERCEDES FORMULA 1",
                             Number = 108,
-                            Picture = "/images/collection/sport108.jpg"
+                            PictureUrl = "/images/collection/sport108.jpg"
                         },
                         new
                         {
@@ -5453,7 +5453,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "VOLVO 850 R",
                             Number = 109,
-                            Picture = "/images/collection/sport109.jpg"
+                            PictureUrl = "/images/collection/sport109.jpg"
                         },
                         new
                         {
@@ -5461,7 +5461,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "FERRARI 333 SP",
                             Number = 110,
-                            Picture = "/images/collection/sport110.jpg"
+                            PictureUrl = "/images/collection/sport110.jpg"
                         },
                         new
                         {
@@ -5469,7 +5469,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "LAVERDA 668",
                             Number = 111,
-                            Picture = "/images/collection/sport111.jpg"
+                            PictureUrl = "/images/collection/sport111.jpg"
                         },
                         new
                         {
@@ -5477,7 +5477,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "BMW RACING TEAM",
                             Number = 112,
-                            Picture = "/images/collection/sport112.jpg"
+                            PictureUrl = "/images/collection/sport112.jpg"
                         },
                         new
                         {
@@ -5485,7 +5485,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "JORDAN-PEUGEOT F1",
                             Number = 113,
-                            Picture = "/images/collection/sport113.jpg"
+                            PictureUrl = "/images/collection/sport113.jpg"
                         },
                         new
                         {
@@ -5493,7 +5493,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "REYNARD 93 D",
                             Number = 114,
-                            Picture = "/images/collection/sport114.jpg"
+                            PictureUrl = "/images/collection/sport114.jpg"
                         },
                         new
                         {
@@ -5501,7 +5501,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "MC LAREN F1 GTR",
                             Number = 115,
-                            Picture = "/images/collection/sport115.jpg"
+                            PictureUrl = "/images/collection/sport115.jpg"
                         },
                         new
                         {
@@ -5509,7 +5509,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "PORSCHE CARRERA 3,6",
                             Number = 116,
-                            Picture = "/images/collection/sport116.jpg"
+                            PictureUrl = "/images/collection/sport116.jpg"
                         },
                         new
                         {
@@ -5517,7 +5517,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "TOYOTA RANCHO",
                             Number = 117,
-                            Picture = "/images/collection/sport117.jpg"
+                            PictureUrl = "/images/collection/sport117.jpg"
                         },
                         new
                         {
@@ -5525,7 +5525,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "42' FOUNTAIN",
                             Number = 118,
-                            Picture = "/images/collection/sport118.jpg"
+                            PictureUrl = "/images/collection/sport118.jpg"
                         },
                         new
                         {
@@ -5533,7 +5533,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "APRILIA MOTO 6.5",
                             Number = 119,
-                            Picture = "/images/collection/sport119.jpg"
+                            PictureUrl = "/images/collection/sport119.jpg"
                         },
                         new
                         {
@@ -5541,7 +5541,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "FERRARI 512 M",
                             Number = 120,
-                            Picture = "/images/collection/sport120.jpg"
+                            PictureUrl = "/images/collection/sport120.jpg"
                         },
                         new
                         {
@@ -5549,7 +5549,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "BMW M12",
                             Number = 121,
-                            Picture = "/images/collection/sport121.jpg"
+                            PictureUrl = "/images/collection/sport121.jpg"
                         },
                         new
                         {
@@ -5557,7 +5557,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "HONDA NSR",
                             Number = 122,
-                            Picture = "/images/collection/sport122.jpg"
+                            PictureUrl = "/images/collection/sport122.jpg"
                         },
                         new
                         {
@@ -5565,7 +5565,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "VAUXHALL FORMULA",
                             Number = 123,
-                            Picture = "/images/collection/sport123.jpg"
+                            PictureUrl = "/images/collection/sport123.jpg"
                         },
                         new
                         {
@@ -5573,7 +5573,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "KAWASAKI 1100 ZXI",
                             Number = 124,
-                            Picture = "/images/collection/sport124.jpg"
+                            PictureUrl = "/images/collection/sport124.jpg"
                         },
                         new
                         {
@@ -5581,7 +5581,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "YAMAHA TRX 850",
                             Number = 125,
-                            Picture = "/images/collection/sport125.jpg"
+                            PictureUrl = "/images/collection/sport125.jpg"
                         },
                         new
                         {
@@ -5589,7 +5589,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "VAUXHALL FORMULA JUNIOR",
                             Number = 126,
-                            Picture = "/images/collection/sport126.jpg"
+                            PictureUrl = "/images/collection/sport126.jpg"
                         },
                         new
                         {
@@ -5597,7 +5597,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "JORDAN-PEUGEOT 195",
                             Number = 127,
-                            Picture = "/images/collection/sport127.jpg"
+                            PictureUrl = "/images/collection/sport127.jpg"
                         },
                         new
                         {
@@ -5605,7 +5605,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "DALLARA-MUGEN",
                             Number = 128,
-                            Picture = "/images/collection/sport128.jpg"
+                            PictureUrl = "/images/collection/sport128.jpg"
                         },
                         new
                         {
@@ -5613,7 +5613,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "FERRARI F40 EVOLUZIONE",
                             Number = 129,
-                            Picture = "/images/collection/sport129.jpg"
+                            PictureUrl = "/images/collection/sport129.jpg"
                         },
                         new
                         {
@@ -5621,7 +5621,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "CORVETTE GT2 CALLAWAY",
                             Number = 130,
-                            Picture = "/images/collection/sport130.jpg"
+                            PictureUrl = "/images/collection/sport130.jpg"
                         },
                         new
                         {
@@ -5629,7 +5629,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "GINIETTA G 27",
                             Number = 131,
-                            Picture = "/images/collection/sport131.jpg"
+                            PictureUrl = "/images/collection/sport131.jpg"
                         },
                         new
                         {
@@ -5637,7 +5637,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "FERRARI F 40",
                             Number = 132,
-                            Picture = "/images/collection/sport132.jpg"
+                            PictureUrl = "/images/collection/sport132.jpg"
                         },
                         new
                         {
@@ -5645,7 +5645,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "YAMAHA",
                             Number = 133,
-                            Picture = "/images/collection/sport133.jpg"
+                            PictureUrl = "/images/collection/sport133.jpg"
                         },
                         new
                         {
@@ -5653,7 +5653,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "YAMITSU-DUNLOP",
                             Number = 134,
-                            Picture = "/images/collection/sport134.jpg"
+                            PictureUrl = "/images/collection/sport134.jpg"
                         },
                         new
                         {
@@ -5661,7 +5661,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "MC LAREN F1 GTR",
                             Number = 135,
-                            Picture = "/images/collection/sport135.jpg"
+                            PictureUrl = "/images/collection/sport135.jpg"
                         },
                         new
                         {
@@ -5669,7 +5669,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "FERRARI F40",
                             Number = 136,
-                            Picture = "/images/collection/sport136.jpg"
+                            PictureUrl = "/images/collection/sport136.jpg"
                         },
                         new
                         {
@@ -5677,7 +5677,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "DODGE VIPER GT",
                             Number = 137,
-                            Picture = "/images/collection/sport137.jpg"
+                            PictureUrl = "/images/collection/sport137.jpg"
                         },
                         new
                         {
@@ -5685,7 +5685,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "JORDAN-PEUGEOT F1",
                             Number = 138,
-                            Picture = "/images/collection/sport138.jpg"
+                            PictureUrl = "/images/collection/sport138.jpg"
                         },
                         new
                         {
@@ -5693,7 +5693,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "ALEXI C-96",
                             Number = 139,
-                            Picture = "/images/collection/sport139.jpg"
+                            PictureUrl = "/images/collection/sport139.jpg"
                         },
                         new
                         {
@@ -5701,7 +5701,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 10,
                             Name = "RENAULT SPIDER",
                             Number = 140,
-                            Picture = "/images/collection/sport140.jpg"
+                            PictureUrl = "/images/collection/sport140.jpg"
                         },
                         new
                         {
@@ -5709,7 +5709,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "SUZUKI",
                             Number = 141,
-                            Picture = "/images/collection/sport141.jpg"
+                            PictureUrl = "/images/collection/sport141.jpg"
                         },
                         new
                         {
@@ -5717,7 +5717,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "LAMBORGHINI DIABLO",
                             Number = 142,
-                            Picture = "/images/collection/sport142.jpg"
+                            PictureUrl = "/images/collection/sport142.jpg"
                         },
                         new
                         {
@@ -5725,7 +5725,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "PLYMOUTH PROWLER",
                             Number = 143,
-                            Picture = "/images/collection/sport143.jpg"
+                            PictureUrl = "/images/collection/sport143.jpg"
                         },
                         new
                         {
@@ -5733,7 +5733,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "RENAULT-ELF FORMULA 1",
                             Number = 144,
-                            Picture = "/images/collection/sport144.jpg"
+                            PictureUrl = "/images/collection/sport144.jpg"
                         },
                         new
                         {
@@ -5741,7 +5741,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "JAGUAR",
                             Number = 145,
-                            Picture = "/images/collection/sport145.jpg"
+                            PictureUrl = "/images/collection/sport145.jpg"
                         },
                         new
                         {
@@ -5749,7 +5749,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "JORAN-PEUGEOT",
                             Number = 146,
-                            Picture = "/images/collection/sport146.jpg"
+                            PictureUrl = "/images/collection/sport146.jpg"
                         },
                         new
                         {
@@ -5757,7 +5757,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "McLAREN F-1",
                             Number = 147,
-                            Picture = "/images/collection/sport147.jpg"
+                            PictureUrl = "/images/collection/sport147.jpg"
                         },
                         new
                         {
@@ -5765,7 +5765,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "CORVETTE CALLAVAY",
                             Number = 148,
-                            Picture = "/images/collection/sport148.jpg"
+                            PictureUrl = "/images/collection/sport148.jpg"
                         },
                         new
                         {
@@ -5773,7 +5773,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "FERRARI F-40",
                             Number = 149,
-                            Picture = "/images/collection/sport149.jpg"
+                            PictureUrl = "/images/collection/sport149.jpg"
                         },
                         new
                         {
@@ -5781,7 +5781,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "ALEXI C-96",
                             Number = 150,
-                            Picture = "/images/collection/sport150.jpg"
+                            PictureUrl = "/images/collection/sport150.jpg"
                         },
                         new
                         {
@@ -5789,7 +5789,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "RENAULT SPIDER",
                             Number = 151,
-                            Picture = "/images/collection/sport151.jpg"
+                            PictureUrl = "/images/collection/sport151.jpg"
                         },
                         new
                         {
@@ -5797,7 +5797,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "HARLEY DAVIDSON",
                             Number = 152,
-                            Picture = "/images/collection/sport152.jpg"
+                            PictureUrl = "/images/collection/sport152.jpg"
                         },
                         new
                         {
@@ -5805,7 +5805,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "JAWS car from Spielberg's film",
                             Number = 153,
-                            Picture = "/images/collection/sport153.jpg"
+                            PictureUrl = "/images/collection/sport153.jpg"
                         },
                         new
                         {
@@ -5813,7 +5813,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "LOTUS ELISE",
                             Number = 154,
-                            Picture = "/images/collection/sport154.jpg"
+                            PictureUrl = "/images/collection/sport154.jpg"
                         },
                         new
                         {
@@ -5821,7 +5821,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "ALFA ROMEO SCIGHERA",
                             Number = 155,
-                            Picture = "/images/collection/sport155.jpg"
+                            PictureUrl = "/images/collection/sport155.jpg"
                         },
                         new
                         {
@@ -5829,7 +5829,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "PONTIAC",
                             Number = 156,
-                            Picture = "/images/collection/sport156.jpg"
+                            PictureUrl = "/images/collection/sport156.jpg"
                         },
                         new
                         {
@@ -5837,7 +5837,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "BIG TRUCK",
                             Number = 157,
-                            Picture = "/images/collection/sport157.jpg"
+                            PictureUrl = "/images/collection/sport157.jpg"
                         },
                         new
                         {
@@ -5845,7 +5845,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "941 FORD-REYNARD",
                             Number = 158,
-                            Picture = "/images/collection/sport158.jpg"
+                            PictureUrl = "/images/collection/sport158.jpg"
                         },
                         new
                         {
@@ -5853,7 +5853,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "APE SPEED CAR",
                             Number = 159,
-                            Picture = "/images/collection/sport159.jpg"
+                            PictureUrl = "/images/collection/sport159.jpg"
                         },
                         new
                         {
@@ -5861,7 +5861,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "MERCEDES 280 E",
                             Number = 160,
-                            Picture = "/images/collection/sport160.jpg"
+                            PictureUrl = "/images/collection/sport160.jpg"
                         },
                         new
                         {
@@ -5869,7 +5869,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "OPEL CALIBRA",
                             Number = 161,
-                            Picture = "/images/collection/sport161.jpg"
+                            PictureUrl = "/images/collection/sport161.jpg"
                         },
                         new
                         {
@@ -5877,7 +5877,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "GRINHALL SCORPIONS",
                             Number = 162,
-                            Picture = "/images/collection/sport162.jpg"
+                            PictureUrl = "/images/collection/sport162.jpg"
                         },
                         new
                         {
@@ -5885,7 +5885,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "YAMAHA ZF",
                             Number = 163,
-                            Picture = "/images/collection/sport163.jpg"
+                            PictureUrl = "/images/collection/sport163.jpg"
                         },
                         new
                         {
@@ -5893,7 +5893,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "CATERHAM",
                             Number = 164,
-                            Picture = "/images/collection/sport164.jpg"
+                            PictureUrl = "/images/collection/sport164.jpg"
                         },
                         new
                         {
@@ -5901,7 +5901,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "AERON HAWLEY",
                             Number = 165,
-                            Picture = "/images/collection/sport165.jpg"
+                            PictureUrl = "/images/collection/sport165.jpg"
                         },
                         new
                         {
@@ -5909,7 +5909,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "SUZUKI TL 1000S",
                             Number = 166,
-                            Picture = "/images/collection/sport166.jpg"
+                            PictureUrl = "/images/collection/sport166.jpg"
                         },
                         new
                         {
@@ -5917,7 +5917,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "RENAULT-ELF",
                             Number = 167,
-                            Picture = "/images/collection/sport167.jpg"
+                            PictureUrl = "/images/collection/sport167.jpg"
                         },
                         new
                         {
@@ -5925,7 +5925,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "LOLA T 163",
                             Number = 168,
-                            Picture = "/images/collection/sport168.jpg"
+                            PictureUrl = "/images/collection/sport168.jpg"
                         },
                         new
                         {
@@ -5933,7 +5933,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "FERRARI 550 MARANELLO",
                             Number = 169,
-                            Picture = "/images/collection/sport169.jpg"
+                            PictureUrl = "/images/collection/sport169.jpg"
                         },
                         new
                         {
@@ -5941,7 +5941,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "FERRARI BAGLIETTO",
                             Number = 170,
-                            Picture = "/images/collection/sport170.jpg"
+                            PictureUrl = "/images/collection/sport170.jpg"
                         },
                         new
                         {
@@ -5949,7 +5949,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "HONDA CBR 900 FIRE BLADE",
                             Number = 171,
-                            Picture = "/images/collection/sport171.jpg"
+                            PictureUrl = "/images/collection/sport171.jpg"
                         },
                         new
                         {
@@ -5957,7 +5957,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "CUDA SPEED CAR",
                             Number = 172,
-                            Picture = "/images/collection/sport172.jpg"
+                            PictureUrl = "/images/collection/sport172.jpg"
                         },
                         new
                         {
@@ -5965,7 +5965,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "FERRARI 550 MARANELLO",
                             Number = 173,
-                            Picture = "/images/collection/sport173.jpg"
+                            PictureUrl = "/images/collection/sport173.jpg"
                         },
                         new
                         {
@@ -5973,7 +5973,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "WILLUS GASSER",
                             Number = 174,
-                            Picture = "/images/collection/sport174.jpg"
+                            PictureUrl = "/images/collection/sport174.jpg"
                         },
                         new
                         {
@@ -5981,7 +5981,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "BAT-CAR FROM BATMAN'S FILM",
                             Number = 175,
-                            Picture = "/images/collection/sport175.jpg"
+                            PictureUrl = "/images/collection/sport175.jpg"
                         },
                         new
                         {
@@ -5989,7 +5989,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "MERCEDES F-200",
                             Number = 176,
-                            Picture = "/images/collection/sport176.jpg"
+                            PictureUrl = "/images/collection/sport176.jpg"
                         },
                         new
                         {
@@ -5997,7 +5997,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "BIG FOOT",
                             Number = 177,
-                            Picture = "/images/collection/sport177.jpg"
+                            PictureUrl = "/images/collection/sport177.jpg"
                         },
                         new
                         {
@@ -6005,7 +6005,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "RENAULT MEGANE",
                             Number = 178,
-                            Picture = "/images/collection/sport178.jpg"
+                            PictureUrl = "/images/collection/sport178.jpg"
                         },
                         new
                         {
@@ -6013,7 +6013,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "DAYTON T 595",
                             Number = 179,
-                            Picture = "/images/collection/sport179.jpg"
+                            PictureUrl = "/images/collection/sport179.jpg"
                         },
                         new
                         {
@@ -6021,7 +6021,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "OLDSMOBILE AURORA",
                             Number = 180,
-                            Picture = "/images/collection/sport180.jpg"
+                            PictureUrl = "/images/collection/sport180.jpg"
                         },
                         new
                         {
@@ -6029,7 +6029,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "ELF-PEPSI RACING TEAM",
                             Number = 181,
-                            Picture = "/images/collection/sport181.jpg"
+                            PictureUrl = "/images/collection/sport181.jpg"
                         },
                         new
                         {
@@ -6037,7 +6037,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "MONACO F.3",
                             Number = 182,
-                            Picture = "/images/collection/sport182.jpg"
+                            PictureUrl = "/images/collection/sport182.jpg"
                         },
                         new
                         {
@@ -6045,7 +6045,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "PORSCHE 911GT-2",
                             Number = 183,
-                            Picture = "/images/collection/sport183.jpg"
+                            PictureUrl = "/images/collection/sport183.jpg"
                         },
                         new
                         {
@@ -6053,7 +6053,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "PROTOTYPE By COVENTRY UNIVERSITY",
                             Number = 184,
-                            Picture = "/images/collection/sport184.jpg"
+                            PictureUrl = "/images/collection/sport184.jpg"
                         },
                         new
                         {
@@ -6061,7 +6061,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "MARCOS GT LE MANS",
                             Number = 185,
-                            Picture = "/images/collection/sport185.jpg"
+                            PictureUrl = "/images/collection/sport185.jpg"
                         },
                         new
                         {
@@ -6069,7 +6069,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "FERRARI",
                             Number = 186,
-                            Picture = "/images/collection/sport186.jpg"
+                            PictureUrl = "/images/collection/sport186.jpg"
                         },
                         new
                         {
@@ -6077,7 +6077,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "FORD KRUSHER",
                             Number = 187,
-                            Picture = "/images/collection/sport187.jpg"
+                            PictureUrl = "/images/collection/sport187.jpg"
                         },
                         new
                         {
@@ -6085,7 +6085,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "VOLKSWAGEN POWER CAR",
                             Number = 188,
-                            Picture = "/images/collection/sport188.jpg"
+                            PictureUrl = "/images/collection/sport188.jpg"
                         },
                         new
                         {
@@ -6093,7 +6093,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "RENAULT SPIDER SPORT",
                             Number = 189,
-                            Picture = "/images/collection/sport189.jpg"
+                            PictureUrl = "/images/collection/sport189.jpg"
                         },
                         new
                         {
@@ -6101,7 +6101,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "OLDSMOBILE AURORA",
                             Number = 190,
-                            Picture = "/images/collection/sport190.jpg"
+                            PictureUrl = "/images/collection/sport190.jpg"
                         },
                         new
                         {
@@ -6109,7 +6109,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "PORSCHE 911 TURBO S",
                             Number = 191,
-                            Picture = "/images/collection/sport191.jpg"
+                            PictureUrl = "/images/collection/sport191.jpg"
                         },
                         new
                         {
@@ -6117,7 +6117,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "YAMAHA V-MAX",
                             Number = 192,
-                            Picture = "/images/collection/sport192.jpg"
+                            PictureUrl = "/images/collection/sport192.jpg"
                         },
                         new
                         {
@@ -6125,7 +6125,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "RENAULT MEGANE",
                             Number = 193,
-                            Picture = "/images/collection/sport193.jpg"
+                            PictureUrl = "/images/collection/sport193.jpg"
                         },
                         new
                         {
@@ -6133,7 +6133,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "BMW PANDA",
                             Number = 194,
-                            Picture = "/images/collection/sport194.jpg"
+                            PictureUrl = "/images/collection/sport194.jpg"
                         },
                         new
                         {
@@ -6141,7 +6141,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "FORD MUSTANG",
                             Number = 195,
-                            Picture = "/images/collection/sport195.jpg"
+                            PictureUrl = "/images/collection/sport195.jpg"
                         },
                         new
                         {
@@ -6149,7 +6149,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "McLAREN F-1 GTRS",
                             Number = 196,
-                            Picture = "/images/collection/sport196.jpg"
+                            PictureUrl = "/images/collection/sport196.jpg"
                         },
                         new
                         {
@@ -6157,7 +6157,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "FORD VALVOLINE",
                             Number = 197,
-                            Picture = "/images/collection/sport197.jpg"
+                            PictureUrl = "/images/collection/sport197.jpg"
                         },
                         new
                         {
@@ -6165,7 +6165,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "McLAREN F-1 GTR",
                             Number = 198,
-                            Picture = "/images/collection/sport198.jpg"
+                            PictureUrl = "/images/collection/sport198.jpg"
                         },
                         new
                         {
@@ -6173,7 +6173,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "VENTURI 600",
                             Number = 199,
-                            Picture = "/images/collection/sport199.jpg"
+                            PictureUrl = "/images/collection/sport199.jpg"
                         },
                         new
                         {
@@ -6181,7 +6181,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "MORGAN",
                             Number = 200,
-                            Picture = "/images/collection/sport200.jpg"
+                            PictureUrl = "/images/collection/sport200.jpg"
                         },
                         new
                         {
@@ -6189,7 +6189,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "MARCOS LM 600 GTR",
                             Number = 201,
-                            Picture = "/images/collection/sport201.jpg"
+                            PictureUrl = "/images/collection/sport201.jpg"
                         },
                         new
                         {
@@ -6197,7 +6197,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "SUZUKI GSX-R",
                             Number = 202,
-                            Picture = "/images/collection/sport202.jpg"
+                            PictureUrl = "/images/collection/sport202.jpg"
                         },
                         new
                         {
@@ -6205,7 +6205,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "RENAULT LAGUNA",
                             Number = 203,
-                            Picture = "/images/collection/sport203.jpg"
+                            PictureUrl = "/images/collection/sport203.jpg"
                         },
                         new
                         {
@@ -6213,7 +6213,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "FORD",
                             Number = 204,
-                            Picture = "/images/collection/sport204.jpg"
+                            PictureUrl = "/images/collection/sport204.jpg"
                         },
                         new
                         {
@@ -6221,7 +6221,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "McLAREN F-1 GT",
                             Number = 205,
-                            Picture = "/images/collection/sport205.jpg"
+                            PictureUrl = "/images/collection/sport205.jpg"
                         },
                         new
                         {
@@ -6229,7 +6229,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "WACKY RACER",
                             Number = 206,
-                            Picture = "/images/collection/sport206.jpg"
+                            PictureUrl = "/images/collection/sport206.jpg"
                         },
                         new
                         {
@@ -6237,7 +6237,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "DODGE VELENO (VIPER)",
                             Number = 207,
-                            Picture = "/images/collection/sport207.jpg"
+                            PictureUrl = "/images/collection/sport207.jpg"
                         },
                         new
                         {
@@ -6245,7 +6245,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "VAUXHALL",
                             Number = 208,
-                            Picture = "/images/collection/sport208.jpg"
+                            PictureUrl = "/images/collection/sport208.jpg"
                         },
                         new
                         {
@@ -6253,7 +6253,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "FERRARI BAGLIETTO",
                             Number = 209,
-                            Picture = "/images/collection/sport209.jpg"
+                            PictureUrl = "/images/collection/sport209.jpg"
                         },
                         new
                         {
@@ -6261,7 +6261,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 11,
                             Name = "RENAULT-ELF",
                             Number = 210,
-                            Picture = "/images/collection/sport210.jpg"
+                            PictureUrl = "/images/collection/sport210.jpg"
                         },
                         new
                         {
@@ -6269,7 +6269,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "JAGUAR XK 120 ROADSTER 1954",
                             Number = 1,
-                            Picture = "/images/collection/classic001.jpg"
+                            PictureUrl = "/images/collection/classic001.jpg"
                         },
                         new
                         {
@@ -6277,7 +6277,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "FERRARI 400 SuperAmerica 1963",
                             Number = 2,
-                            Picture = "/images/collection/classic002.jpg"
+                            PictureUrl = "/images/collection/classic002.jpg"
                         },
                         new
                         {
@@ -6285,7 +6285,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "LAMBORGHINI P400 MIURA S 1971",
                             Number = 3,
-                            Picture = "/images/collection/classic003.jpg"
+                            PictureUrl = "/images/collection/classic003.jpg"
                         },
                         new
                         {
@@ -6293,7 +6293,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "CORVETTE STINGRAY 1971",
                             Number = 4,
-                            Picture = "/images/collection/classic004.jpg"
+                            PictureUrl = "/images/collection/classic004.jpg"
                         },
                         new
                         {
@@ -6301,7 +6301,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "RILEY ROADSTER RMC 1950",
                             Number = 5,
-                            Picture = "/images/collection/classic005.jpg"
+                            PictureUrl = "/images/collection/classic005.jpg"
                         },
                         new
                         {
@@ -6309,7 +6309,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "MG-TC 1949",
                             Number = 6,
-                            Picture = "/images/collection/classic006.jpg"
+                            PictureUrl = "/images/collection/classic006.jpg"
                         },
                         new
                         {
@@ -6317,7 +6317,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "BMW 507 1958",
                             Number = 7,
-                            Picture = "/images/collection/classic007.jpg"
+                            PictureUrl = "/images/collection/classic007.jpg"
                         },
                         new
                         {
@@ -6325,7 +6325,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "JAGUAR E-Type Coupe 1967",
                             Number = 8,
-                            Picture = "/images/collection/classic008.jpg"
+                            PictureUrl = "/images/collection/classic008.jpg"
                         },
                         new
                         {
@@ -6333,7 +6333,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "MORGAN 1967",
                             Number = 9,
-                            Picture = "/images/collection/classic009.jpg"
+                            PictureUrl = "/images/collection/classic009.jpg"
                         },
                         new
                         {
@@ -6341,7 +6341,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "CHEVROLET CORVETTE 1969",
                             Number = 10,
-                            Picture = "/images/collection/classic010.jpg"
+                            PictureUrl = "/images/collection/classic010.jpg"
                         },
                         new
                         {
@@ -6349,7 +6349,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "DAIMLER SP 50 1961",
                             Number = 11,
-                            Picture = "/images/collection/classic011.jpg"
+                            PictureUrl = "/images/collection/classic011.jpg"
                         },
                         new
                         {
@@ -6357,7 +6357,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "AC COBRA 1966",
                             Number = 12,
-                            Picture = "/images/collection/classic012.jpg"
+                            PictureUrl = "/images/collection/classic012.jpg"
                         },
                         new
                         {
@@ -6365,7 +6365,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "LAMBORGHINI COUNTACH 1981",
                             Number = 13,
-                            Picture = "/images/collection/classic013.jpg"
+                            PictureUrl = "/images/collection/classic013.jpg"
                         },
                         new
                         {
@@ -6373,7 +6373,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "JAGUAR XK 120 COUPE 1953",
                             Number = 14,
-                            Picture = "/images/collection/classic014.jpg"
+                            PictureUrl = "/images/collection/classic014.jpg"
                         },
                         new
                         {
@@ -6381,7 +6381,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "TRIUMPH TR2 1954",
                             Number = 15,
-                            Picture = "/images/collection/classic015.jpg"
+                            PictureUrl = "/images/collection/classic015.jpg"
                         },
                         new
                         {
@@ -6389,7 +6389,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "MG TF 1954",
                             Number = 16,
-                            Picture = "/images/collection/classic016.jpg"
+                            PictureUrl = "/images/collection/classic016.jpg"
                         },
                         new
                         {
@@ -6397,7 +6397,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "LAMBORGHNI SILHOUETTE 1978",
                             Number = 17,
-                            Picture = "/images/collection/classic017.jpg"
+                            PictureUrl = "/images/collection/classic017.jpg"
                         },
                         new
                         {
@@ -6405,7 +6405,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "FERRARI 365GTS DAYTONA 1970",
                             Number = 18,
-                            Picture = "/images/collection/classic018.jpg"
+                            PictureUrl = "/images/collection/classic018.jpg"
                         },
                         new
                         {
@@ -6413,7 +6413,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "JAGUAR XK140 ROADSTER 1957",
                             Number = 19,
-                            Picture = "/images/collection/classic019.jpg"
+                            PictureUrl = "/images/collection/classic019.jpg"
                         },
                         new
                         {
@@ -6421,7 +6421,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "PORSCHE 130PS 1965",
                             Number = 20,
-                            Picture = "/images/collection/classic020.jpg"
+                            PictureUrl = "/images/collection/classic020.jpg"
                         },
                         new
                         {
@@ -6429,7 +6429,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "HARLEY DAVIDSON 1980",
                             Number = 21,
-                            Picture = "/images/collection/classic021.jpg"
+                            PictureUrl = "/images/collection/classic021.jpg"
                         },
                         new
                         {
@@ -6437,7 +6437,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "BENTLEY BOWER Pheaton 1950",
                             Number = 22,
-                            Picture = "/images/collection/classic022.jpg"
+                            PictureUrl = "/images/collection/classic022.jpg"
                         },
                         new
                         {
@@ -6445,7 +6445,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "MGA 1500 1968",
                             Number = 23,
-                            Picture = "/images/collection/classic023.jpg"
+                            PictureUrl = "/images/collection/classic023.jpg"
                         },
                         new
                         {
@@ -6453,7 +6453,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "JAGUAR XJ-12 1985",
                             Number = 24,
-                            Picture = "/images/collection/classic024.jpg"
+                            PictureUrl = "/images/collection/classic024.jpg"
                         },
                         new
                         {
@@ -6461,7 +6461,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "PACKARD CARABEAN 1956",
                             Number = 25,
-                            Picture = "/images/collection/classic025.jpg"
+                            PictureUrl = "/images/collection/classic025.jpg"
                         },
                         new
                         {
@@ -6469,7 +6469,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "JAGUAR SS-100 1948",
                             Number = 26,
-                            Picture = "/images/collection/classic026.jpg"
+                            PictureUrl = "/images/collection/classic026.jpg"
                         },
                         new
                         {
@@ -6477,7 +6477,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "PACKARD Peaton Sport 1950",
                             Number = 27,
-                            Picture = "/images/collection/classic027.jpg"
+                            PictureUrl = "/images/collection/classic027.jpg"
                         },
                         new
                         {
@@ -6485,7 +6485,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "HUDSON RAMBLER 1932",
                             Number = 28,
-                            Picture = "/images/collection/classic028.jpg"
+                            PictureUrl = "/images/collection/classic028.jpg"
                         },
                         new
                         {
@@ -6493,7 +6493,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "CADILLAC 452A 1949",
                             Number = 29,
-                            Picture = "/images/collection/classic029.jpg"
+                            PictureUrl = "/images/collection/classic029.jpg"
                         },
                         new
                         {
@@ -6501,7 +6501,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "PACKARD Twin Six 1951",
                             Number = 30,
-                            Picture = "/images/collection/classic030.jpg"
+                            PictureUrl = "/images/collection/classic030.jpg"
                         },
                         new
                         {
@@ -6509,7 +6509,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "JAGUAR MK VII 1960",
                             Number = 31,
-                            Picture = "/images/collection/classic031.jpg"
+                            PictureUrl = "/images/collection/classic031.jpg"
                         },
                         new
                         {
@@ -6517,7 +6517,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "VW Kafer 13403 1990",
                             Number = 32,
-                            Picture = "/images/collection/classic032.jpg"
+                            PictureUrl = "/images/collection/classic032.jpg"
                         },
                         new
                         {
@@ -6525,7 +6525,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "FERRARI 246 1968",
                             Number = 33,
-                            Picture = "/images/collection/classic033.jpg"
+                            PictureUrl = "/images/collection/classic033.jpg"
                         },
                         new
                         {
@@ -6533,7 +6533,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "CADILLAC 452A 1942",
                             Number = 34,
-                            Picture = "/images/collection/classic034.jpg"
+                            PictureUrl = "/images/collection/classic034.jpg"
                         },
                         new
                         {
@@ -6541,7 +6541,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "LOMAX 223 1955",
                             Number = 35,
-                            Picture = "/images/collection/classic035.jpg"
+                            PictureUrl = "/images/collection/classic035.jpg"
                         },
                         new
                         {
@@ -6549,7 +6549,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "MERCEDES 1903",
                             Number = 36,
-                            Picture = "/images/collection/classic036.jpg"
+                            PictureUrl = "/images/collection/classic036.jpg"
                         },
                         new
                         {
@@ -6557,7 +6557,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "FORD F 100 1959",
                             Number = 37,
-                            Picture = "/images/collection/classic037.jpg"
+                            PictureUrl = "/images/collection/classic037.jpg"
                         },
                         new
                         {
@@ -6565,7 +6565,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "FERRARI 312 1969",
                             Number = 38,
-                            Picture = "/images/collection/classic038.jpg"
+                            PictureUrl = "/images/collection/classic038.jpg"
                         },
                         new
                         {
@@ -6573,7 +6573,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "CADILLAC CABRIO 1962",
                             Number = 39,
-                            Picture = "/images/collection/classic039.jpg"
+                            PictureUrl = "/images/collection/classic039.jpg"
                         },
                         new
                         {
@@ -6581,7 +6581,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "JAGUAR SS-100 1949",
                             Number = 40,
-                            Picture = "/images/collection/classic040.jpg"
+                            PictureUrl = "/images/collection/classic040.jpg"
                         },
                         new
                         {
@@ -6589,7 +6589,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "PACKARD Twelwe Victoria 1937",
                             Number = 41,
-                            Picture = "/images/collection/classic041.jpg"
+                            PictureUrl = "/images/collection/classic041.jpg"
                         },
                         new
                         {
@@ -6597,7 +6597,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "BUGATTI 35B 1938",
                             Number = 42,
-                            Picture = "/images/collection/classic042.jpg"
+                            PictureUrl = "/images/collection/classic042.jpg"
                         },
                         new
                         {
@@ -6605,7 +6605,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "FORD 1933",
                             Number = 43,
-                            Picture = "/images/collection/classic043.jpg"
+                            PictureUrl = "/images/collection/classic043.jpg"
                         },
                         new
                         {
@@ -6613,7 +6613,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "SUPER SEVEN 1970",
                             Number = 44,
-                            Picture = "/images/collection/classic044.jpg"
+                            PictureUrl = "/images/collection/classic044.jpg"
                         },
                         new
                         {
@@ -6621,7 +6621,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "INVICTA 1935",
                             Number = 45,
-                            Picture = "/images/collection/classic045.jpg"
+                            PictureUrl = "/images/collection/classic045.jpg"
                         },
                         new
                         {
@@ -6629,7 +6629,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "ALFA ROMEO SPIDER 1936",
                             Number = 46,
-                            Picture = "/images/collection/classic046.jpg"
+                            PictureUrl = "/images/collection/classic046.jpg"
                         },
                         new
                         {
@@ -6637,7 +6637,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "PACKARD 1607 VICTORIA 1948",
                             Number = 47,
-                            Picture = "/images/collection/classic047.jpg"
+                            PictureUrl = "/images/collection/classic047.jpg"
                         },
                         new
                         {
@@ -6645,7 +6645,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "MOTEVERDI HAI 450 GTS 1973",
                             Number = 48,
-                            Picture = "/images/collection/classic048.jpg"
+                            PictureUrl = "/images/collection/classic048.jpg"
                         },
                         new
                         {
@@ -6653,7 +6653,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "OLDSMOBILE FUTURAMIC 1949",
                             Number = 49,
-                            Picture = "/images/collection/classic049.jpg"
+                            PictureUrl = "/images/collection/classic049.jpg"
                         },
                         new
                         {
@@ -6661,7 +6661,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "BENTLEY 1936",
                             Number = 50,
-                            Picture = "/images/collection/classic050.jpg"
+                            PictureUrl = "/images/collection/classic050.jpg"
                         },
                         new
                         {
@@ -6669,7 +6669,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "FORD Tomazso Street 1933",
                             Number = 51,
-                            Picture = "/images/collection/classic051.jpg"
+                            PictureUrl = "/images/collection/classic051.jpg"
                         },
                         new
                         {
@@ -6677,7 +6677,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "JAGUAR XK140 Drophead 1956",
                             Number = 52,
-                            Picture = "/images/collection/classic052.jpg"
+                            PictureUrl = "/images/collection/classic052.jpg"
                         },
                         new
                         {
@@ -6685,7 +6685,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "MERCEDES 300SL 1955",
                             Number = 53,
-                            Picture = "/images/collection/classic053.jpg"
+                            PictureUrl = "/images/collection/classic053.jpg"
                         },
                         new
                         {
@@ -6693,7 +6693,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "FORD ZODIAC",
                             Number = 54,
-                            Picture = "/images/collection/classic054.jpg"
+                            PictureUrl = "/images/collection/classic054.jpg"
                         },
                         new
                         {
@@ -6701,7 +6701,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "MERCEDES S-680 1928",
                             Number = 55,
-                            Picture = "/images/collection/classic055.jpg"
+                            PictureUrl = "/images/collection/classic055.jpg"
                         },
                         new
                         {
@@ -6709,7 +6709,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "DELAGE D85 1936",
                             Number = 56,
-                            Picture = "/images/collection/classic056.jpg"
+                            PictureUrl = "/images/collection/classic056.jpg"
                         },
                         new
                         {
@@ -6717,7 +6717,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "DEUSENBERG J-532 1935",
                             Number = 57,
-                            Picture = "/images/collection/classic057.jpg"
+                            PictureUrl = "/images/collection/classic057.jpg"
                         },
                         new
                         {
@@ -6725,7 +6725,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "TALBOT LAGO 1944",
                             Number = 58,
-                            Picture = "/images/collection/classic058.jpg"
+                            PictureUrl = "/images/collection/classic058.jpg"
                         },
                         new
                         {
@@ -6733,7 +6733,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "AVIONS VIOSIN 1933",
                             Number = 59,
-                            Picture = "/images/collection/classic059.jpg"
+                            PictureUrl = "/images/collection/classic059.jpg"
                         },
                         new
                         {
@@ -6741,7 +6741,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "MAYBACH ZEPPELIN 1938",
                             Number = 60,
-                            Picture = "/images/collection/classic060.jpg"
+                            PictureUrl = "/images/collection/classic060.jpg"
                         },
                         new
                         {
@@ -6749,7 +6749,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "CHEVOROLET CAISER 1954",
                             Number = 61,
-                            Picture = "/images/collection/classic061.jpg"
+                            PictureUrl = "/images/collection/classic061.jpg"
                         },
                         new
                         {
@@ -6757,7 +6757,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "CADILLAC Model 75 1940",
                             Number = 62,
-                            Picture = "/images/collection/classic062.jpg"
+                            PictureUrl = "/images/collection/classic062.jpg"
                         },
                         new
                         {
@@ -6765,7 +6765,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "HARLEY DAVIDSON ElectroGlide 1988",
                             Number = 63,
-                            Picture = "/images/collection/classic063.jpg"
+                            PictureUrl = "/images/collection/classic063.jpg"
                         },
                         new
                         {
@@ -6773,7 +6773,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "DELAHAYE 135M 1950",
                             Number = 64,
-                            Picture = "/images/collection/classic064.jpg"
+                            PictureUrl = "/images/collection/classic064.jpg"
                         },
                         new
                         {
@@ -6781,7 +6781,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "MERCEDES S 1953",
                             Number = 65,
-                            Picture = "/images/collection/classic065.jpg"
+                            PictureUrl = "/images/collection/classic065.jpg"
                         },
                         new
                         {
@@ -6789,7 +6789,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "DAYTONA EVOLUTION 1991",
                             Number = 66,
-                            Picture = "/images/collection/classic066.jpg"
+                            PictureUrl = "/images/collection/classic066.jpg"
                         },
                         new
                         {
@@ -6797,7 +6797,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "ROLLS ROYCE Phantom III 1966",
                             Number = 67,
-                            Picture = "/images/collection/classic067.jpg"
+                            PictureUrl = "/images/collection/classic067.jpg"
                         },
                         new
                         {
@@ -6805,7 +6805,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "BUGATTI 55 SuperSport 1955",
                             Number = 68,
-                            Picture = "/images/collection/classic068.jpg"
+                            PictureUrl = "/images/collection/classic068.jpg"
                         },
                         new
                         {
@@ -6813,7 +6813,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "HARLEY DAVIDSON 1989",
                             Number = 69,
-                            Picture = "/images/collection/classic069.jpg"
+                            PictureUrl = "/images/collection/classic069.jpg"
                         },
                         new
                         {
@@ -6821,7 +6821,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 12,
                             Name = "PURPLE HAZE 1993",
                             Number = 70,
-                            Picture = "/images/collection/classic070.jpg"
+                            PictureUrl = "/images/collection/classic070.jpg"
                         },
                         new
                         {
@@ -6829,7 +6829,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "MANDIAL SPYDER",
                             Number = 71,
-                            Picture = "/images/collection/classic071.jpg"
+                            PictureUrl = "/images/collection/classic071.jpg"
                         },
                         new
                         {
@@ -6837,7 +6837,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "JAGUAR NUM 120-1 1950",
                             Number = 72,
-                            Picture = "/images/collection/classic072.jpg"
+                            PictureUrl = "/images/collection/classic072.jpg"
                         },
                         new
                         {
@@ -6845,7 +6845,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "CHEVROLET 1954",
                             Number = 73,
-                            Picture = "/images/collection/classic073.jpg"
+                            PictureUrl = "/images/collection/classic073.jpg"
                         },
                         new
                         {
@@ -6853,7 +6853,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "CHRYSLER TOWN & COUNTRY 1",
                             Number = 74,
-                            Picture = "/images/collection/classic074.jpg"
+                            PictureUrl = "/images/collection/classic074.jpg"
                         },
                         new
                         {
@@ -6861,7 +6861,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "",
                             Number = 75,
-                            Picture = "/images/collection/classic075.jpg"
+                            PictureUrl = "/images/collection/classic075.jpg"
                         },
                         new
                         {
@@ -6869,7 +6869,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "",
                             Number = 76,
-                            Picture = "/images/collection/classic076.jpg"
+                            PictureUrl = "/images/collection/classic076.jpg"
                         },
                         new
                         {
@@ -6877,7 +6877,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "",
                             Number = 77,
-                            Picture = "/images/collection/classic077.jpg"
+                            PictureUrl = "/images/collection/classic077.jpg"
                         },
                         new
                         {
@@ -6885,7 +6885,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "",
                             Number = 78,
-                            Picture = "/images/collection/classic078.jpg"
+                            PictureUrl = "/images/collection/classic078.jpg"
                         },
                         new
                         {
@@ -6893,7 +6893,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "JAGUAR 59",
                             Number = 79,
-                            Picture = "/images/collection/classic079.jpg"
+                            PictureUrl = "/images/collection/classic079.jpg"
                         },
                         new
                         {
@@ -6901,7 +6901,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "ROLLS ROYCE BENTLEY 95",
                             Number = 80,
-                            Picture = "/images/collection/classic080.jpg"
+                            PictureUrl = "/images/collection/classic080.jpg"
                         },
                         new
                         {
@@ -6909,7 +6909,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "FERRARI 275 GTB",
                             Number = 81,
-                            Picture = "/images/collection/classic081.jpg"
+                            PictureUrl = "/images/collection/classic081.jpg"
                         },
                         new
                         {
@@ -6917,7 +6917,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "CHRYSLER CD 8 ROADSTER 1",
                             Number = 82,
-                            Picture = "/images/collection/classic082.jpg"
+                            PictureUrl = "/images/collection/classic082.jpg"
                         },
                         new
                         {
@@ -6925,7 +6925,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "1971",
                             Number = 83,
-                            Picture = "/images/collection/classic083.jpg"
+                            PictureUrl = "/images/collection/classic083.jpg"
                         },
                         new
                         {
@@ -6933,7 +6933,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "MASERATI 1953",
                             Number = 84,
-                            Picture = "/images/collection/classic084.jpg"
+                            PictureUrl = "/images/collection/classic084.jpg"
                         },
                         new
                         {
@@ -6941,7 +6941,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "FLAVIA ZAGATO",
                             Number = 85,
-                            Picture = "/images/collection/classic085.jpg"
+                            PictureUrl = "/images/collection/classic085.jpg"
                         },
                         new
                         {
@@ -6949,7 +6949,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "HALDONE",
                             Number = 86,
-                            Picture = "/images/collection/classic086.jpg"
+                            PictureUrl = "/images/collection/classic086.jpg"
                         },
                         new
                         {
@@ -6957,7 +6957,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "HARLEY DAVIDSON ElectroGlide 1988",
                             Number = 87,
-                            Picture = "/images/collection/classic087.jpg"
+                            PictureUrl = "/images/collection/classic087.jpg"
                         },
                         new
                         {
@@ -6965,7 +6965,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "HURRIANCE",
                             Number = 88,
-                            Picture = "/images/collection/classic088.jpg"
+                            PictureUrl = "/images/collection/classic088.jpg"
                         },
                         new
                         {
@@ -6973,7 +6973,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "JAGUAR",
                             Number = 89,
-                            Picture = "/images/collection/classic089.jpg"
+                            PictureUrl = "/images/collection/classic089.jpg"
                         },
                         new
                         {
@@ -6981,7 +6981,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "PORSCHE 356A SPEEDST 1",
                             Number = 90,
-                            Picture = "/images/collection/classic090.jpg"
+                            PictureUrl = "/images/collection/classic090.jpg"
                         },
                         new
                         {
@@ -6989,7 +6989,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "FERRARI 125 S",
                             Number = 91,
-                            Picture = "/images/collection/classic091.jpg"
+                            PictureUrl = "/images/collection/classic091.jpg"
                         },
                         new
                         {
@@ -6997,7 +6997,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "LAGONDA LOW CLASSIS",
                             Number = 92,
-                            Picture = "/images/collection/classic092.jpg"
+                            PictureUrl = "/images/collection/classic092.jpg"
                         },
                         new
                         {
@@ -7005,7 +7005,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "MERCEDES",
                             Number = 93,
-                            Picture = "/images/collection/classic093.jpg"
+                            PictureUrl = "/images/collection/classic093.jpg"
                         },
                         new
                         {
@@ -7013,7 +7013,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "JAGUAR DAIMLER HERITAGE",
                             Number = 94,
-                            Picture = "/images/collection/classic094.jpg"
+                            PictureUrl = "/images/collection/classic094.jpg"
                         },
                         new
                         {
@@ -7021,7 +7021,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "MG",
                             Number = 95,
-                            Picture = "/images/collection/classic095.jpg"
+                            PictureUrl = "/images/collection/classic095.jpg"
                         },
                         new
                         {
@@ -7029,7 +7029,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "",
                             Number = 96,
-                            Picture = "/images/collection/classic096.jpg"
+                            PictureUrl = "/images/collection/classic096.jpg"
                         },
                         new
                         {
@@ -7037,7 +7037,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "",
                             Number = 97,
-                            Picture = "/images/collection/classic097.jpg"
+                            PictureUrl = "/images/collection/classic097.jpg"
                         },
                         new
                         {
@@ -7045,7 +7045,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "FERRARI PROVA",
                             Number = 98,
-                            Picture = "/images/collection/classic098.jpg"
+                            PictureUrl = "/images/collection/classic098.jpg"
                         },
                         new
                         {
@@ -7053,7 +7053,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "ALFA ROMEO BIMOTORE-193",
                             Number = 99,
-                            Picture = "/images/collection/classic099.jpg"
+                            PictureUrl = "/images/collection/classic099.jpg"
                         },
                         new
                         {
@@ -7061,7 +7061,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "BMW 4/2",
                             Number = 100,
-                            Picture = "/images/collection/classic100.jpg"
+                            PictureUrl = "/images/collection/classic100.jpg"
                         },
                         new
                         {
@@ -7069,7 +7069,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "CHEVROLET 1955",
                             Number = 101,
-                            Picture = "/images/collection/classic101.jpg"
+                            PictureUrl = "/images/collection/classic101.jpg"
                         },
                         new
                         {
@@ -7077,7 +7077,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "YAMAHA XV2 1300 A ROYAL STAR",
                             Number = 102,
-                            Picture = "/images/collection/classic102.jpg"
+                            PictureUrl = "/images/collection/classic102.jpg"
                         },
                         new
                         {
@@ -7085,7 +7085,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "CORVETTE VIGNALE 1957",
                             Number = 103,
-                            Picture = "/images/collection/classic103.jpg"
+                            PictureUrl = "/images/collection/classic103.jpg"
                         },
                         new
                         {
@@ -7093,7 +7093,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "DAX TOJEIRO 1967, 1900",
                             Number = 104,
-                            Picture = "/images/collection/classic104.jpg"
+                            PictureUrl = "/images/collection/classic104.jpg"
                         },
                         new
                         {
@@ -7101,7 +7101,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "DE DION BOUTON 1902",
                             Number = 105,
-                            Picture = "/images/collection/classic105.jpg"
+                            PictureUrl = "/images/collection/classic105.jpg"
                         },
                         new
                         {
@@ -7109,7 +7109,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "",
                             Number = 106,
-                            Picture = "/images/collection/classic106.jpg"
+                            PictureUrl = "/images/collection/classic106.jpg"
                         },
                         new
                         {
@@ -7117,7 +7117,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "DUESENBERG 1920",
                             Number = 107,
-                            Picture = "/images/collection/classic107.jpg"
+                            PictureUrl = "/images/collection/classic107.jpg"
                         },
                         new
                         {
@@ -7125,7 +7125,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "MERCEDES BENZ 770K 1935",
                             Number = 108,
-                            Picture = "/images/collection/classic108.jpg"
+                            PictureUrl = "/images/collection/classic108.jpg"
                         },
                         new
                         {
@@ -7133,7 +7133,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "FERRARI TR 59/60 1959",
                             Number = 109,
-                            Picture = "/images/collection/classic109.jpg"
+                            PictureUrl = "/images/collection/classic109.jpg"
                         },
                         new
                         {
@@ -7141,7 +7141,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "FORD 1933",
                             Number = 110,
-                            Picture = "/images/collection/classic110.jpg"
+                            PictureUrl = "/images/collection/classic110.jpg"
                         },
                         new
                         {
@@ -7149,7 +7149,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "HUMMER 1965",
                             Number = 111,
-                            Picture = "/images/collection/classic111.jpg"
+                            PictureUrl = "/images/collection/classic111.jpg"
                         },
                         new
                         {
@@ -7157,7 +7157,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "MERCEDES",
                             Number = 112,
-                            Picture = "/images/collection/classic112.jpg"
+                            PictureUrl = "/images/collection/classic112.jpg"
                         },
                         new
                         {
@@ -7165,7 +7165,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "JAGUAR NUM 120 1950",
                             Number = 113,
-                            Picture = "/images/collection/classic113.jpg"
+                            PictureUrl = "/images/collection/classic113.jpg"
                         },
                         new
                         {
@@ -7173,7 +7173,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "BMW",
                             Number = 114,
-                            Picture = "/images/collection/classic114.jpg"
+                            PictureUrl = "/images/collection/classic114.jpg"
                         },
                         new
                         {
@@ -7181,7 +7181,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "KAWASAKI UN 1500 1978",
                             Number = 115,
-                            Picture = "/images/collection/classic115.jpg"
+                            PictureUrl = "/images/collection/classic115.jpg"
                         },
                         new
                         {
@@ -7189,7 +7189,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "FERRARI 250 gt berlinettolus",
                             Number = 116,
-                            Picture = "/images/collection/classic116.jpg"
+                            PictureUrl = "/images/collection/classic116.jpg"
                         },
                         new
                         {
@@ -7197,7 +7197,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "ROLLS ROYCE",
                             Number = 117,
-                            Picture = "/images/collection/classic117.jpg"
+                            PictureUrl = "/images/collection/classic117.jpg"
                         },
                         new
                         {
@@ -7205,7 +7205,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "MORGAN SS 1934",
                             Number = 118,
-                            Picture = "/images/collection/classic118.jpg"
+                            PictureUrl = "/images/collection/classic118.jpg"
                         },
                         new
                         {
@@ -7213,7 +7213,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "PLYMOUTH PROWLER 1995",
                             Number = 119,
-                            Picture = "/images/collection/classic119.jpg"
+                            PictureUrl = "/images/collection/classic119.jpg"
                         },
                         new
                         {
@@ -7221,7 +7221,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "JAGUAR 4.2 E TYPE",
                             Number = 120,
-                            Picture = "/images/collection/classic120.jpg"
+                            PictureUrl = "/images/collection/classic120.jpg"
                         },
                         new
                         {
@@ -7229,7 +7229,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "ROLLS ROYCE 1955",
                             Number = 121,
-                            Picture = "/images/collection/classic121.jpg"
+                            PictureUrl = "/images/collection/classic121.jpg"
                         },
                         new
                         {
@@ -7237,7 +7237,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "ZIMMER OPERA COUPE 1988",
                             Number = 122,
-                            Picture = "/images/collection/classic122.jpg"
+                            PictureUrl = "/images/collection/classic122.jpg"
                         },
                         new
                         {
@@ -7245,7 +7245,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "PORSCHE 1600",
                             Number = 123,
-                            Picture = "/images/collection/classic123.jpg"
+                            PictureUrl = "/images/collection/classic123.jpg"
                         },
                         new
                         {
@@ -7253,7 +7253,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "R.R PHANTOM 1965",
                             Number = 124,
-                            Picture = "/images/collection/classic124.jpg"
+                            PictureUrl = "/images/collection/classic124.jpg"
                         },
                         new
                         {
@@ -7261,7 +7261,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "MERCEDES 170 S 1935",
                             Number = 125,
-                            Picture = "/images/collection/classic125.jpg"
+                            PictureUrl = "/images/collection/classic125.jpg"
                         },
                         new
                         {
@@ -7269,7 +7269,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "FERRARI 250 1960",
                             Number = 126,
-                            Picture = "/images/collection/classic126.jpg"
+                            PictureUrl = "/images/collection/classic126.jpg"
                         },
                         new
                         {
@@ -7277,7 +7277,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "CHRYSLER ATLANTIC 1995",
                             Number = 127,
-                            Picture = "/images/collection/classic127.jpg"
+                            PictureUrl = "/images/collection/classic127.jpg"
                         },
                         new
                         {
@@ -7285,7 +7285,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "AUSTIN-HEALEY",
                             Number = 128,
-                            Picture = "/images/collection/classic128.jpg"
+                            PictureUrl = "/images/collection/classic128.jpg"
                         },
                         new
                         {
@@ -7293,7 +7293,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "M6 AGATHA 1932",
                             Number = 129,
-                            Picture = "/images/collection/classic129.jpg"
+                            PictureUrl = "/images/collection/classic129.jpg"
                         },
                         new
                         {
@@ -7301,7 +7301,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "FERRARI TR 1965",
                             Number = 130,
-                            Picture = "/images/collection/classic130.jpg"
+                            PictureUrl = "/images/collection/classic130.jpg"
                         },
                         new
                         {
@@ -7309,7 +7309,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "MERCEDES BENZ 770K 1935",
                             Number = 131,
-                            Picture = "/images/collection/classic131.jpg"
+                            PictureUrl = "/images/collection/classic131.jpg"
                         },
                         new
                         {
@@ -7317,7 +7317,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "",
                             Number = 132,
-                            Picture = "/images/collection/classic132.jpg"
+                            PictureUrl = "/images/collection/classic132.jpg"
                         },
                         new
                         {
@@ -7325,7 +7325,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "",
                             Number = 133,
-                            Picture = "/images/collection/classic133.jpg"
+                            PictureUrl = "/images/collection/classic133.jpg"
                         },
                         new
                         {
@@ -7333,7 +7333,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "",
                             Number = 134,
-                            Picture = "/images/collection/classic134.jpg"
+                            PictureUrl = "/images/collection/classic134.jpg"
                         },
                         new
                         {
@@ -7341,7 +7341,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "TALBO",
                             Number = 135,
-                            Picture = "/images/collection/classic135.jpg"
+                            PictureUrl = "/images/collection/classic135.jpg"
                         },
                         new
                         {
@@ -7349,7 +7349,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "VOLKSWAGEN KAFER CABRIOLET",
                             Number = 136,
-                            Picture = "/images/collection/classic136.jpg"
+                            PictureUrl = "/images/collection/classic136.jpg"
                         },
                         new
                         {
@@ -7357,7 +7357,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "YAMAHA XU 750 VIGARO",
                             Number = 137,
-                            Picture = "/images/collection/classic137.jpg"
+                            PictureUrl = "/images/collection/classic137.jpg"
                         },
                         new
                         {
@@ -7365,7 +7365,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "CHEVROLET CORVETTE 1956",
                             Number = 138,
-                            Picture = "/images/collection/classic138.jpg"
+                            PictureUrl = "/images/collection/classic138.jpg"
                         },
                         new
                         {
@@ -7373,7 +7373,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "FERRARI 212 VIGNALE 1951",
                             Number = 139,
-                            Picture = "/images/collection/classic139.jpg"
+                            PictureUrl = "/images/collection/classic139.jpg"
                         },
                         new
                         {
@@ -7381,7 +7381,7 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                             CollectionId = 13,
                             Name = "MASERATI 300S 1964",
                             Number = 140,
-                            Picture = "/images/collection/classic140.jpg"
+                            PictureUrl = "/images/collection/classic140.jpg"
                         });
                 });
 
@@ -7440,6 +7440,371 @@ namespace TurboCollection.Infrastructure.Data.Migrations.Application
                         new
                         {
                             TurboItemId = 11,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 23,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 29,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 34,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 48,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 52,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 59,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 70,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 82,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 107,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 108,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 119,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 126,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 179,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 233,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 234,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 235,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 280,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 285,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 287,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 288,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 324,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 327,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 329,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 475,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 486,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 491,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 507,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 528,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 562,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 564,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 565,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 566,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 568,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 577,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 581,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 585,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 590,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 592,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 594,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 596,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 599,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 603,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 605,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 607,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 609,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 610,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 612,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 637,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 643,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 651,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 659,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 662,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 665,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 673,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 681,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 692,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 703,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 706,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 711,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 719,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 721,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 732,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 742,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 771,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 813,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 816,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 819,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 820,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 837,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 852,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 865,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 884,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            TurboItemId = 887,
                             TagId = 1
                         },
                         new
